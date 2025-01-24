@@ -1,0 +1,381 @@
+.portfolio__thirdSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {}
+}
+.portfolio_main{
+    
+}
+.portfolio__thirdSection__title {
+   
+    h1 {
+        -webkit-text-stroke: 1px rgb(40, 172, 148);
+        font-weight: bold;
+        font-size: 5rem;
+        // color: black;
+    }
+}
+
+.portfolio__thirdSection__Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.portfolio_FirstCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto !important;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    margin: 10px;
+}
+
+.firstCard_left_portfolio {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px;
+    // box-shadow: #3BBEEF;
+    border: 1px solid rgb(40, 172, 148);
+    border-radius: 10px;
+    box-shadow:
+        rgba(40, 172, 148, 0.8) 5px 5px 15px,
+        rgba(40, 172, 148, 0.8) -5px 5px 15px,
+        rgba(40, 172, 148, 0.8) 5px -5px 15px,
+        rgba(40, 172, 148, 0.8) -5px -5px 15px !important;
+    margin-right: 20px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+.free_div_portfolio {
+    width: 3px;
+    min-height: 500px !important;
+    background-color: rgb(40, 172, 148) !important;
+    color: red;
+}
+
+.firstCard_right_portfolio {
+    flex: 1;
+    padding: 31px;
+    // font-size: 1rem;
+    line-height: 1.5;
+    box-shadow: #3BBEEF;
+    padding: 20px;
+
+    h1 {
+        // color: rgb(40, 172, 148);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: gray;
+    }
+}
+
+.firstCard_right_portfolio_opposite {
+    flex: 1;
+    // padding: 31px;
+    // font-size: 1rem;
+    line-height: 1.5;
+    box-shadow: #3BBEEF;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 0px;
+
+    h1 {
+        // color: rgb(40, 172, 148);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        max-width: 420px;
+    }
+
+    p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: gray;
+    }
+}
+
+.portfolio_More_opposite {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+
+    a {
+        font-size: 26px;
+        color: green;
+        text-decoration: none;
+        // padding-right: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 15px;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateX(10px);
+            color: green;
+        }
+
+        .text {
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            position: relative;
+            width: 64px; // SVG ölçüsü
+            height: 32px;
+
+            transition: all 0.3s ease-in-out;
+
+            .ss {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.3s ease-in-out;
+
+                circle {
+                    stroke: green;
+                    transition: stroke 0.3s ease-in-out;
+                }
+
+                path {
+                    stroke: green;
+                    transition: stroke 0.3s ease-in-out;
+                }
+            }
+        }
+
+        &:hover .icon-container {
+            svg {
+                transform: translateX(5px); // SVG hover zamanı sağa hərəkət edir
+
+                circle {
+                    stroke: #1E90FF;
+                }
+
+                path {
+                    stroke: #1E90FF;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.portfolio_More {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    
+    a {
+        font-size: 26px;
+        color: green;
+        text-decoration: none;
+        padding-right: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateX(10px);
+            color: green;
+        }
+
+        .text {
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 64px; // SVG ölçüsü
+            height: 32px;
+            transition: all 0.3s ease-in-out;
+
+            .ss {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.3s ease-in-out;
+
+                circle {
+                    stroke: green;
+                    transition: stroke 0.3s ease-in-out;
+                }
+
+                path {
+                    stroke: green;
+                    transition: stroke 0.3s ease-in-out;
+                }
+            }
+        }
+
+        &:hover .icon-container {
+            svg {
+                transform: translateX(5px); // SVG hover zamanı sağa hərəkət edir
+
+                circle {
+                    stroke: #1E90FF;
+                }
+
+                path {
+                    stroke: #1E90FF;
+                }
+            }
+        }
+    }
+   
+}
+
+.portfolio_FirstCard_opposite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto !important;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+    .free_div_portfolio {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .portfolio_FirstCard {
+        flex-direction: column;
+        padding: 10px !important;
+        margin: 10x !important;
+    }
+
+    .portfolio_FirstCard_opposite {
+        flex-direction: column-reverse;
+        align-items: start;
+        justify-content: start;
+        padding: 10px !important;
+        margin: 10x !important;
+    }
+
+    .firstCard_right_portfolio_opposite {
+        flex: 1;
+        // padding: 31px;
+        // font-size: 1rem;
+        line-height: 1.5;
+        box-shadow: #3BBEEF;
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 0px;
+
+        h1 {
+            // color: rgb(40, 172, 148);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            max-width: 420px;
+        }
+
+        p {
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+    }
+
+    .firstCard_left_portfolio {
+        margin-right: 0px;
+    }
+
+    .portfolio_More_opposite {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+
+
+
+
+
+
+
+
+    .free_div_portfolio {
+        width: 1px;
+        height: 2px !important;
+        border: 3px solid red;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .portfolio__thirdSection h1 {
+        font-size: 23px !important;
+    }
+}

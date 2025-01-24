@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <head class="header">
+        <div class="header_All">
+            <a href="./Home.html"> <img
+                    src="https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                    alt=""></a>
+            <div class="header_Right">
+                <div class="header_moods">
+                    <button id="toggleTheme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <div class="home-custom-select">
+                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changePortfolioLanguage('az')">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changePortfolioLanguage('en')">
+                            <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changePortfolioLanguage('ru')">
+                            <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button style="border: none;" class="offcanvas__btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                        class="fa-solid fa-bars"></i></button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </head>
+    <main class="portfolio_main">
+        <section class="portfolio__thirdSection">
+            <div class="portfolio__thirdSection__title">
+                <h1 data-key="portfolio">Portfolio</h1>
+            </div>
+            <div class="portfolio__thirdSection__Cards">
+                <div class="portfolio_FirstCard">
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInLeft">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/September2022/cTFIKRzBaxJHhMU8HDvx.png"
+                            alt="">
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_right_portfolio animate__animated" data-animation="animate__backInRight">
+                        <h1 data-key="horecaTitle">Horeca</h1>
+                        <h3 data-key="horecaDescription">Təmizlik sektorunda qabaqcıl şirkətlərdən olan "Horeca" şirkəti
+                            üçün veb sayt hazırladıq.</h3>
+                        <div class="portfolio_More">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p id="web_development" data-key="webDevelopment">Web development</p>
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard_opposite">
+                    <div class="firstCard_right_portfolio_opposite animate__animated"
+                        data-animation="animate__backInLeft">
+                        <h1 data-key="wideTravelTitle">Wide Travel</h1>
+                        <h3 data-key="wideTravelDescription">Azərbaycanda turizm brendi olan "Wide Travel" şirkəti üçün
+                            veb sayt hazırladıq.</h3>
+                        <div class="portfolio_More_opposite">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInRight">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/September2022/ODcTv3izS8vxklEDEdZk.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard">
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInLeft">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/September2022/XNmdD5J6jS4lcC5tFZrA.png"
+                            alt="">
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_right_portfolio animate__animated" data-animation="animate__backInRight">
+                        <h1 data-key="avtobusTitle">Avtobus</h1>
+                        <h3 data-key="avtobusDescription">Sərnişin daşımaçılıq sahəsində qabaqcıl şirkətlərdən olan
+                            "Avtobus" şirkətinə back-end xidmətimizi göstərdik.</h3>
+                        <div class="portfolio_More">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard_opposite">
+                    <div class="firstCard_right_portfolio_opposite animate__animated"
+                        data-animation="animate__backInLeft">
+                        <h1 data-key="azstandartTitle">Azstandart Service</h1>
+                        <h3 data-key="azstandartDescription">Standartlaşdırma və patentləşdirmə şirkəti olan “Azstandart
+                            Service” üçün vebsayt hazırladıq.</h3>
+                        <div class="portfolio_More_opposite">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInRight">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/March2023/YnXNxbvWGHI1DlfKmIQ7.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard">
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInLeft">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/March2023/8dOjcgiVqQGlyL4VRTXs.png"
+                            alt="">
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_right_portfolio animate__animated" data-animation="animate__backInRight">
+                        <h1 data-key="azunivetTitle">Azunivet</h1>
+                        <h3 data-key="azunivetDescription">Baytarlıq üçün məhsulların inkişafı və ixracı ilə məşğul olan
+                            "Azunivet" şirkəti üçün veb sayt hazırladıq.</h3>
+                        <div class="portfolio_More">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard_opposite">
+                    <div class="firstCard_right_portfolio_opposite animate__animated"
+                        data-animation="animate__backInLeft">
+                        <h1 data-key="chevikTitle">Chevik</h1>
+                        <h3 data-key="chevikDescription">Çevik.az üçün hazırladığımız vebsayt</h3>
+                        <div class="portfolio_More_opposite">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInRight">
+                        <img src="	https://admin.thejavachip.com/storage/portfolios/March2023/jhkVBkMYtwGKK3AbhTm4.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard">
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInLeft">
+                        <img src="	https://admin.thejavachip.com/storage/portfolios/March2023/ZcKOcq3bCi7OEuWM2tlN.png"
+                            alt="">
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_right_portfolio animate__animated" data-animation="animate__backInRight">
+                        <h1 data-key="preneoTitle">ProNeo</h1>
+                        <h3 data-key="preneoDescription">"ProNeo Industrial Engineering" şirkəti üçün hazırladığımız
+                            vebsayt.</h3>
+                        <div class="portfolio_More">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p id="web_development" data-key="webDevelopment">Web development</p>
+                    </div>
+                </div>
+
+                <div class="portfolio_FirstCard_opposite">
+                    <div class="firstCard_right_portfolio_opposite animate__animated"
+                        data-animation="animate__backInLeft">
+                        <h1 data-key="veteransOrganizationTitle">Azərbaycan Respublikası Müharibə, Əmək və Silahlı
+                            Qüvvələr Veteranları Təşkilatı</h1>
+                        <h3 data-key="veteransOrganizationDescription">Azərbaycan Respublikası Müharibə, Əmək və Silahlı
+                            Qüvvələr Veteranları Təşkilatı üçün vebsayt hazırladıq.</h3>
+                        <div class="portfolio_More_opposite">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInRight">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/March2023/Tv4pMeqpW76hnizda0WD.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="portfolio_FirstCard">
+                    <div class="firstCard_left_portfolio animate__animated" data-animation="animate__backInLeft">
+                        <img src="https://admin.thejavachip.com/storage/portfolios/March2023/ADN3sxPUQgq1w15Tj7i8.png"
+                            alt="">
+                    </div>
+                    <div class="free_div_portfolio animate__animated" data-animation="animate__fadeInDown"></div>
+                    <div class="firstCard_right_portfolio animate__animated" data-animation="animate__backInRight">
+                        <h1 data-key="adbtiaTitle">Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası</h1>
+                        <h3 data-key="adbtiaDescription">"Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyası" üçün
+                            radio vebsaytı hazırladıq.</h3>
+                        <div class="portfolio_More">
+                            <a href="#">
+                                <span class="text" data-key="more">Ətraflı</span>
+                                <span class="icon-container">
+                                    <div class="ss">
+                                        <svg class="button-arrow" viewBox="0 0 70 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="16" r="15" stroke="#3BBEEF" stroke-width="2" />
+                                            <path d="M0 16H32M24 10L32 16L24 22" stroke="#3BBEEF" stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                        <p data-key="webDevelopment">Web development</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
+                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
+                        class="bold">}</span></p>
+                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Keçidlər</h3>
+                <ul>
+                    <li><a href="#">Xidmətlərimiz</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Bizimlə əlaqə</a></li>
+                    <li><a href="#">Gizlilik Siyasəti</a></li>
+                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Bizimlə əlaqə</h3>
+                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
+                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Bizi izləyin</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© JAVACHIP 2022</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="../asset/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../asset/js/animate.js"></script>
+    <script src="../asset/js/portfolioLanguage.js"></script>
+    <script src="../asset/js/languages.js"></script>
+    <script src="../asset/js/moods.js"></script>
+    <script src="../asset/js/homeHeader.js"></script>
+    <script src="../asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

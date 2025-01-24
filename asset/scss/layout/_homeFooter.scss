@@ -1,0 +1,112 @@
+.footer {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+    // border-top-left-radius: 40px;
+    // border-top-right-radius: 40px;
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: #000;
+    }
+
+    .footer-logo {
+        text-align: left;
+
+        .company-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+
+            .bold {
+                color: black;
+            }
+
+            .green {
+                color: #16c4f4;
+            }
+        }
+
+        .slogan {
+            color: #118c06;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-social h3 {
+        color: #118c06;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+
+                &:hover {
+                    color: #118c06;
+                }
+            }
+        }
+    }
+
+    .footer-contact p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+
+        i {
+            color: #118c06;
+            margin-right: 10px;
+        }
+    }
+
+    .footer-social {
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+            a {
+                width: 40px;
+                height: 40px;
+                background: #fff;
+                border: 1px solid #000;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000;
+                font-size: 18px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #118c06;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,19 @@
+.home-custom-select-options {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px;
+    z-index: 10;
+    flex-direction: column;
+}
+
+.home-custom-select-options.home-show {
+    display: flex;
+}
+
+.home-custom-select-option img {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin: 5px 0;
+}
