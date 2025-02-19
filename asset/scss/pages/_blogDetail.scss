@@ -1,0 +1,286 @@
+@media only screen and (max-width: 1200px) {
+    .detail_right_img {
+
+        // max-width: 500px;
+        img {
+            // max-width: 500px;
+        }
+    }
+
+    .detail_right {
+        max-width: 600px !important;
+        // border: 3px solid red;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .detail_container_bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detail_right {
+        min-width: 100% !important;
+    }
+}
+
+
+
+
+.blog-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        color: #008000;
+        font-size: 23px;
+        margin: 10px;
+    }
+
+    p {
+        font-size: 23px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+    }
+}
+
+.blog_detail_image {
+    // max-width: 400px;
+    // border-radius: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 10px;
+    background: conic-gradient(from 270deg,
+            /* Başlanğıc nöqtəsini tənzimləyirik */
+            #00AEEF 0deg,
+            /* Yuxarı hissədə mavi başlayır */
+            #00AEEF 60deg,
+            /* Mavi 40 dərəcəyə qədər gedir */
+            #008000 140deg,
+            /* Yaşıl yumşaq şəkildə 120 dərəcəyə keçir */
+            #008000 210deg,
+            /* Alt tərəfdə yaşıl davam edir */
+            #00AEEF 320deg,
+            /* Yenidən yuxarıda mavi ilə birləşir */
+            #00AEEF 360deg
+            /* Tam mavi ilə qapanır */
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 450px;
+    max-height: 450px;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+        width: 400px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 8px solid black;
+    }
+}
+
+.detail_main {
+    margin-top: 120px;
+    min-height: 100vh;
+}
+
+.detail_differ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    hr {
+        width: 90%;
+
+    }
+}
+
+
+
+
+
+/* Axtarış qutusu */
+.search-container-blogdetail {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00ff99;
+    padding-bottom: 5px;
+    width: 250px;
+}
+
+.search-container-blogdetail input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #00ff99;
+    font-size: 16px;
+}
+
+.search-container-blogdetail input::placeholder {
+    color: #00ff99;
+}
+
+.search-button-blogdetail {
+    background-color: #00ff99;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.search-button-blogdetail:hover {
+    background-color: #00cc77;
+}
+
+/* Bölmə başlığı */
+.section-title-blogdetail {
+    color: #00ff99;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Blog Siyahısı */
+.blog-list-blogdetail {
+    margin-top: 10px;
+}
+
+/* Blog elementləri */
+.blog-item-blogdetail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Profil şəkilləri */
+.avatar-blogdetail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin-right: 15px;
+    border: 3px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(from 270deg,
+            /* Başlanğıc nöqtəsini tənzimləyirik */
+            #00AEEF 0deg,
+            /* Yuxarı hissədə mavi başlayır */
+            #00AEEF 60deg,
+            /* Mavi 40 dərəcəyə qədər gedir */
+            #008000 140deg,
+            /* Yaşıl yumşaq şəkildə 120 dərəcəyə keçir */
+            #008000 210deg,
+            /* Alt tərəfdə yaşıl davam edir */
+            #00AEEF 320deg,
+            /* Yenidən yuxarıda mavi ilə birləşir */
+            #00AEEF 360deg
+            /* Tam mavi ilə qapanır */
+        );
+}
+
+.avatar-blogdetail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid black;
+    background-color: black !important;
+    object-fit: contain;
+}
+
+/* Blog məzmunu */
+.blog-content-blogdetail h3 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.date-blogdetail {
+    color: #888;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+.detail_container_bottom {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+
+}
+
+
+.detail_right {
+    max-width: 900px;
+
+    img {
+        // max-width: 100%;
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
+
+.detail_right_content {
+    p {
+        margin-top: 10px;
+
+        strong {
+            font-weight: bold;
+
+            span {
+                color: #FF9900;
+            }
+        }
+    }
+}
+
+.detail_right_questions {
+    .question_name {
+        span {
+            font-size: 24px;
+            color: #FF9900;
+            margin-top: 10px;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    h2 {
+        margin-top: 20px;
+
+        span {
+            color: #339966;
+            font-size: 24px;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+
+        strong {
+            span {
+                color: #FF9900;
+            }
+        }
+    }
+}

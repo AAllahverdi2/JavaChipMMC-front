@@ -1,0 +1,322 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 40px 0;
+    flex-direction: column;
+}
+
+.about_main {
+    margin-top: 100px;
+}
+
+.about_all {
+    display: flex;
+    width: 100% !important;
+}
+
+.about-left {
+    width: 50%;
+    padding: 30px;
+}
+
+.about-title {
+    color: #159939;
+    font-size: 3.5rem;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 22.4px;
+    line-height: 1.6;
+}
+
+.about-right {
+    width: 50%;
+    padding: 20px;
+}
+
+.about-highlight {
+    color: #159939;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.about-list {}
+
+.about-item {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 760px) {
+    .about_all {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+}
+
+$primary-color: #00ff00;
+$background-color: black;
+$text-color: white;
+
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.team-member {
+    text-align: center;
+
+    img {
+        min-height: 230px;
+        // border: 3px solid red;
+    }
+}
+
+.team-img {
+    width: 150px;
+    height: auto;
+    // border-radius: 50%;
+}
+
+.team-name {
+    color: $text-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.team-role {
+    color: $primary-color;
+    font-size: 1.2rem;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 650px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+
+    @media (max-width: 650px) {
+        width: 120px;
+    }
+}
+
+.team-name {
+    color: $text-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    @media (max-width: 650px) {
+        font-size: 1.3rem;
+    }
+}
+
+.team-role {
+    color: $primary-color;
+    font-size: 1.2rem;
+
+    @media (max-width: 650px) {
+        font-size: 1rem;
+    }
+}
+
+
+.team_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: #159939;
+    font-weight: bold;
+}
+
+// ///////
+
+
+
+$primary-color: #00ff00;
+$background-color: black;
+$text-color: white;
+$circle-bg: #333;
+$circle-shadow: rgba(255, 255, 255, 0.3);
+
+
+$primary-color: #00ff00;
+$background-color: black;
+$text-color: white;
+$circle-bg: #333;
+$circle-shadow: rgba(255, 255, 255, 0.3);
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-services {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.about-services-line {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: gray;
+    transform: translateX(-50%);
+    max-height: 80%;
+    min-height: 500px;
+    margin-top: 100px;
+}
+
+.about-services-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Alternasiya olunmuş düzülüş */
+.about-services-item:nth-child(odd) {
+    flex-direction: row-reverse;
+    /* Tək rəqəmlər üçün (1,3,5) sağ tərəfdə olacaq */
+}
+
+.about-services-item:nth-child(even) {
+    flex-direction: row;
+    /* Cüt rəqəmlər üçün (2,4,6) sol tərəfdə olacaq */
+}
+
+.about-services-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, $circle-bg 40%, $circle-shadow 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+.about-services-circle span {
+    font-size: 1.5rem;
+}
+
+/* Mətn hissəsinin düzülməsi */
+.about-services-content {
+    width: 45%;
+}
+
+
+@media (max-width: 768px) {
+    .about-services {
+        width: 90%;
+    }
+
+    .about-services-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* 📌 Dairələr olduğu kimi qalır */
+    .about-services-circle {
+        position: absolute;
+        left: 20%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+
+    .about-services-line {
+        left: 20%;
+        width: 2px;
+        min-height: 75%;
+    }
+
+    .about-services-content {
+        width: 70%;
+        margin-left: 150px !important;
+        text-align: center;
+    }
+}
+
+/* 📌 300px qədər ən kiçik ekranlar üçün */
+
+
+@media (max-width: 430px) {
+    .about-services {
+        width: 95%;
+    }
+
+    .about-services-line {
+        // left: 18%;
+        width: 2px;
+        min-height: 77%;
+    }
+
+    .about-services-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .about-services-content {
+        width: 80%;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 30px !important;
+    }
+}

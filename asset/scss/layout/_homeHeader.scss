@@ -1,11 +1,10 @@
 body {
     overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
-body {
-    overflow-y: scroll;
-}
+
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -20,16 +19,17 @@ body {
 ::-webkit-scrollbar-track {
     background-color: #f0f0f0;
     border-radius: 10px;
+    
 }
 
 .header_All {
-    background-color: rgba(156, 153, 153, 0.7);
+    background-color: rgba(156, 153, 153, 0.7) !important;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    position: sticky;
+    position: fixed !important;
     // position: absolute;
     width: 100% !important;
     top: 0;
@@ -41,6 +41,10 @@ body {
         width: 200px;
         height: 50px;
     }
+}
+.fixed{
+        position: absolute;
+        top: 0px !important
 }
 
 
@@ -135,9 +139,28 @@ body {
         }
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
+   .header_All{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px !important;
+    width: auto;
+    // display: none;
+   }
+   .header{
+    border: 3px solid red;
+   }
    .header_moods{
-    display: none;
+    padding: 0px;
+    margin: 0px;
+    width: 30px;
+   }
+   .Header_logo{
+    width: 30px;
+    img{
+        width: 100px !important;
+    }
    }
   }
 

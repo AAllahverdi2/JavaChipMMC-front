@@ -19,7 +19,19 @@ const translations = {
         cyberTitle: "Kibertəhlükəsizlik",
         cyberSubTitle: "Sistemlərinizi və Məlumatlarınızı Qoruyun",
         cyberText: "Şirkətinizi qurmaq üçün çox çalışmısınız. Sahibkar kimi biznesinizi kibertəhlükələrdən qorumağın vacibliyini bilirsiniz. " +
-            "Buna görə də, bir kiberhücumun sistemlərinizi və şirkətinizin məxfi məlumatlarını ələ keçirməsinə icazə verməməlisiniz."
+            "Buna görə də, bir kiberhücumun sistemlərinizi və şirkətinizin məxfi məlumatlarını ələ keçirməsinə icazə verməməlisiniz.",
+        digitalTitle: "Rəqəmsal Marketing",
+        smmsubtitle: "Potensial müştərilərini müəyyən edərək satışları artır",
+        smmtext: "Sosial media platformaları potensial müştərilərlə <br>əlaqə saxlamağın və brendinizi tanıtmanın ən asan yoludur..",
+        smmbrand: "Brendini sosial mediada bizimlə tanıt",
+        seotitle: "SEO",
+        seosubtitle: "Vebsaytın optimizasiyası nəticəsində üzvi trafik qazan",
+        seotext: "Uzunmüddətli marka dəyəri yaratmaq, hədəf auditoriyanızı genişlətmək <br> istəyirsinizsə, vebsaytınızın optimizasiyası çox vacibdir.",
+        seolink: "Pulsuz vebsayt auditi üçün müraciət et",
+        semtitle: "SEM",
+        semsubtitle: "SEM ilə brend şüurunu artır",
+        semtext: "SEM, axtarış sistemi səhifələrində vebsaytınızın önə <br> çıxarılması üçün istifadə edilən onlayn reklamdır.",
+        semlink: "Reklamlarını indi yerləşdir",
     },
     en: {
         services: "Our Services",
@@ -41,7 +53,21 @@ const translations = {
         cyberTitle: "Cybersecurity",
         cyberSubTitle: "Protect Your Systems and Data",
         cyberText: "You have worked hard to build your company. As an entrepreneur, you know the importance of protecting your business from cyber threats. " +
-            "With the rise of cyberattacks, having serious security measures in place is more important than ever."
+            "With the rise of cyberattacks, having serious security measures in place is more important than ever.",
+        digitalTitle: "Digital Marketing",
+        smmsubtitle: "Identify potential customers and increase sales",
+        smmtext: "Social media platforms are the easiest way to connect with potential customers and promote your brand.",
+        smmbrand: "Promote your brand on social media with us",
+        seotitle: "SEO",
+        seosubtitle: "Gain organic traffic through website optimization",
+        seotext: "If you want to build long-term brand value and expand your target audience, <br> optimizing your website is crucial.",
+        seolink: "Request a free website audit",
+        semtitle: "SEM",
+        semsubtitle: "Increase brand awareness with SEM",
+        semtext: "SEM is an online advertising method used to <br> boost your website’s visibility on search engine result pages.",
+        semlink: "Place your ads now"
+
+
     },
     ru: {
         services: "Наши услуги",
@@ -63,13 +89,28 @@ const translations = {
         cyberTitle: "Кибербезопасность",
         cyberSubTitle: "Защитите свои системы и данные",
         cyberText: "Вы много работали, чтобы построить свою компанию. Как предприниматель, вы знаете, насколько важно защитить свой бизнес от киберугроз. " +
-            "С ростом числа кибератак наличие серьезных мер безопасности становится важнее, чем когда-либо."
+            "С ростом числа кибератак наличие серьезных мер безопасности становится важнее, чем когда-либо.",
+        digitalTitle: "СТРАТЕГИЧЕСКИЙ МАРКЕТИНГ",
+        smmtitle:"СММ",
+        smmsubtitle: "Определите потенциальных клиентов и увеличьте продажи",
+        smmtext: "Платформы социальных сетей – это самый простой способ <br>связаться с потенциальными клиентами и продвигать свой бренд.",
+        smmbrand: "Продвигай свой бренд в социальных сетях вместе с нами",
+        seotitle: "СЕО",
+        seosubtitle: "Получите органический трафик благодаря оптимизации сайта",
+        seotext: "Если вы хотите создать долгосрочную ценность бренда и расширить целевую аудиторию, <br> оптимизация вашего сайта имеет решающее значение.",
+        seolink: "Запросите бесплатный аудит сайта",
+
+        semtitle: "СЭМ",
+        semsubtitle: "Увеличьте осведомленность о бренде с помощью SEM",
+        semtext: "SEM – это онлайн-реклама, используемая для продвижения вашего веб-сайта <br> на страницах поисковых систем.",
+        semlink: "Разместите рекламу прямо сейчас"
+
     }
 };
 
 
 function changeLanguage(lang) {
-    localStorage.setItem('selectedLanguage', lang); 
+    localStorage.setItem('selectedLanguage', lang);
 
     const elements = document.querySelectorAll("[data-key]");
     elements.forEach((element) => {

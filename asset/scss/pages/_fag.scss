@@ -1,0 +1,181 @@
+.faq-all {
+    margin-top: 100px;
+}
+
+// .faq-container.faq {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     padding: 50px;
+//     position: relative;
+// }
+
+// .faq-item.faq {
+//     width: 45%;
+//     margin-bottom: 50px;
+//     position: relative;
+
+// }
+
+// .faq-item.faq h2 {
+//     color: #00bfff;
+//     position: relative;
+//     z-index: 2;
+// }
+
+// .faq-item.faq p {
+//     color: white;
+//     position: relative;
+//     z-index: 2;
+// }
+
+// .faq-item.faq::before {
+//     content: attr(data-number);
+//     font-size: 200px;
+//     font-weight: bold;
+//     // color: rgba(10, 10, 212, 0.597);
+//     position: absolute;
+//     top: -30px;
+//     // right: 70px;
+//     z-index: 1;
+//     display: inline-block;
+//     // border: 2px solid red; /* Sadece rəqəmin özünə border verir */
+//     padding: 10px;
+//     border: 3px solid green !important;
+
+//     data-number {
+//         color: #00bfff !important;
+//     }
+// }
+
+// .faq-item.faq:nth-child(1)::before {
+//     right: 10px;
+// }
+
+// .faq-item.faq:nth-child(2)::before {
+//     right: 50px;
+// }
+
+// .faq-item.faq:nth-child(3)::before {
+//     right: 190px;
+// }
+
+// .faq-item.faq:nth-child(4)::before {
+//     right: 40px;
+// }
+
+// .faq-item.faq:nth-child(5)::before {
+//     right: 80px;
+// }
+
+// .faq-item.faq:nth-child(6)::before {
+//     right: 60px;
+//     color: red;
+
+
+// }
+
+
+// .faq-item.faq::before::after {
+//     content: attr(data-number);
+//     display: inline-block;
+//     padding: 10px;
+//     border: 2px solid blue !important;
+//     /* Təkcə rəqəmin ətrafında border olacaq */
+// }
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+    position: relative;
+}
+
+.faq-item {
+    width: 45%;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faq-item h2,
+.faq-item p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Rəqəmi arxa plana yerləşdirən div */
+.faq-number {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    z-index: -1;
+    font-size: 150px;
+    font-weight: bold;
+    color: rgba(0, 191, 255, 0.1);
+    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #3bbeef, 1px -1px 0 #3bbeef, -1px 1px 0 #3bbeef, 1px 1px 0 #3bbeef;
+    background-color: transparent !important;
+}
+
+.body:not(.dark-mode) .faq-number {
+    color: white !important;
+    background-color: white !important;
+    /* Arxa fonu dəyişir */
+    padding: 10px;
+    /* Arxa fonun görünməsi üçün boşluq əlavə edir */
+    display: inline-block;
+    /* Rəqəmin ətrafında fonun olması üçün */
+    text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #3bbeef, 1px -1px 0 #3bbeef, -1px 1px 0 #3bbeef, 1px 1px 0 #3bbeef;
+}
+
+
+/* Dark mode üçün - qara rəqəm və text-shadow */
+.body.dark-mode .faq-number {
+    color: black !important;
+    text-shadow: 2px 2px 5px rgba(59, 190, 239, 0.7),
+                 -2px -2px 5px rgba(59, 190, 239, 0.7);
+}
+
+body:not(.dark-mode) .faq-number {
+    color: white !important;
+    background-color: transparent !important;
+    text-shadow: 2px 2px 5px rgba(59, 190, 239, 0.7), 
+                 -2px -2px 5px rgba(59, 190, 239, 0.7),
+                 2px -2px 5px rgba(59, 190, 239, 0.7),
+                 -2px 2px 5px rgba(59, 190, 239, 0.7);
+}
+
+
+
+@media (max-width: 1024px) {
+    .faq-item {
+        width: 100%;
+        /* Bütün genişliyi əhatə etsin */
+    }
+
+    .faq-number {
+        font-size: 10vw;
+        right: 30px;
+    }
+}
+
+/* Mobil telefonlar üçün */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 20px;
+    }
+
+    .faq-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .faq-number {
+        font-size: 12vw;
+        right: 10px;
+        /* Mobil cihazlarda rəqəmləri bir az sola yaxınlaşdırırıq */
+        top: -10px;
+    }
+}

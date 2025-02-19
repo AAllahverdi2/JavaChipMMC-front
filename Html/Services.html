@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <head class="header">
+        <div class="header_All">
+            <a href="./Home.html"> <img
+                    src="https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                    alt=""></a>
+            <div class="header_Right">
+                <div class="header_moods">
+                    <button id="toggleTheme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <div class="home-custom-select">
+                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('az')">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('en')">
+                            <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('ru')">
+                            <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button style="border: none;" class="offcanvas__btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                        class="fa-solid fa-bars"></i></button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <hr>
+                            <li><a href="./Contact.html">Contact</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </head>
+    <main>
+        <section class="services-section">
+            <div class="tab">
+                <div class="tab_all">
+                    <li class="tab_list"> <button class="tablinks active" onclick="openCity(event, 'Veb')">Vebsaytların
+                            hazırlanması</button>
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openCity(event, 'Mobile')">Mobil tətbiqlərin
+                            hazırlanması</button>
+
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openCity(event, 'Ai')">Süni İntellekt</button>
+
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openCity(event, 'Security')">Kibertəhlükəsizlik</button>
+
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openCity(event, 'Marketing')">Rəqəmsal Marketinq</button>
+
+                    </li>
+                </div>
+            </div>
+
+            <div id="Veb" class="tabcontent" style="display: block;">
+                <div class="services">
+                    <div class="services__content">
+                        <h1 class="services__title" data-key="websiteTitle">Vebsaytların hazırlanması</h1>
+                        <p class="services__description" data-key="websiteDescription">
+                            Bir biznes sahibi olaraq müştərilərinizi cəlb etmək və brendinizi tanıtmaq üçün
+                            müasir və funksional vebsaytın vacibliyini bilirsiniz. Doğru vebsayt sizə
+                            rəqiblərinizdən fərqlənməyə və satışlarınızı artırmağa kömək edə bilər.
+                            Vebsayt potensial müştərilərə nə etdiyiniz, şirkətinizlə necə əlaqə quracaqları
+                            və məhsul və ya xidmətlərinizi necə satın alacaqları barədə məlumat verir.
+                            Veb sayt brendinq və marketinq strategiyasının vacib hissəsidir.
+                        </p>
+                    </div>
+                    <div class="services__image">
+                        <img src="https://thejavachip.com/static/media/web-1.57982ed5343ac17433b7.png"
+                            alt="Vebsayt hazırlanması" data-key="servicesImageAlt">
+                    </div>
+                </div>
+
+                <div class="services-opposite">
+                    <div class="services-opposite__image">
+                        <img src="https://thejavachip.com/static/media/web-2.848c2ea0e8a8726a8abd.png"
+                            alt="Veb inkişaf xidmətləri">
+                    </div>
+                    <div class="services-opposite__content">
+                        <p class="services-opposite__description">
+                            Buna görə də bizim veb inkişaf xidmətlərimiz sizin fərdi ehtiyaclarınıza uyğunlaşdırılıb.
+                            İstər sadə scroll sayt istəyən kiçik biznes, istərsə də mürəkkəb e-ticarət platforması
+                            tələb edən böyük müəssisə olsun, bizim bu layihələri uğurla təhvil vermək üçün yetərli
+                            təcrübəmiz var. Komandamız prosesin hər bir addımında sizinlə birgə işləyərək, şirkət
+                            vizyonunuza uyğun bir saytın hazırlanmasını təmin edəcək. Biz başa düşürük ki, yaxşı bir
+                            vebsayt sadəcə müasir dizayndan ibarət deyil. O, funksional, sürətli və responsiv olmalıdır.
+                            Məqsədimiz müştərilərinizin sevəcəyi və konversiyaya yönümlü bir veb saytınızın olmasıdır.
+                        </p>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <h2 class="benefits__title">Nə əldə edəcəksiniz?</h2>
+                    <div class="benefits__content">
+                        <ul class="benefits__list">
+                            <li>Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və biznesinizi böyüdəcək
+                                mükəmməl və müasir onlayn mövcudluqla salamlaşmağın vaxtıdır.</li>
+                            <li>Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv veb-sayt xoşbəxt müştərilər və
+                                artan konversiya deməkdir.</li>
+                            <li>24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış meneceri olacaq.</li>
+                        </ul>
+                        <ul class="benefits__list">
+                            <li>Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət üstünlüyü verə bilər və sizi öz
+                                sahənizdə arzulanan brendə çevirə bilər.</li>
+                            <li>Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın, çünki bizim həllimiz
+                                vebsaytınızı yeniləməyi və saxlamağı asanlaşdıracaq.</li>
+                            <li>İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt istənilən cihaz üçün mükəmməl
+                                görünüş təmin edir.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="services-images">
+                    <h2>Hazirlama Merheleleri</h2>
+                    <img src="https://example.com/path/to/svg-file.svg" alt="SVG Image">
+
+                </div> -->
+
+            </div>
+
+            <div id="Mobile" class="tabcontent">
+                <div class="services-images mobile">
+                    <div class="content">
+                        <div class="text">
+                            <h2>Mobil tətbiqlərin hazırlanması</h2>
+                            <p>
+                                Günümüzdə smartfonlar və digər texnoloji cihazlar bütün sektorlarda və bazarlarda önəmli
+                                bir yer tutmuşdur.
+                                Bilirsiniz ki, daha çox insanın hər şey üçün telefonlarına güvəndiyi bir vaxtda mobil
+                                proqramlara investisiya
+                                etmək şirkətiniz üçün önəmli bir qərar ola bilər. Mobil tətbiqi qurmaqla biznesiniz bir
+                                cihazda məhdudlaşmayacaq,
+                                istənilən cihazda hər kəs üçün əlçatan olacaqdır. Tətbiq müştərilərinizin biznesinizlə
+                                əlaqə saxlamasını və
+                                ehtiyac duyduqları məhsul və xidmətlərə daxil olmasını asanlaşdıran istifadəçi dostu
+                                olmalıdır.
+                            </p>
+                        </div>
+                        <div class="mobile-image">
+                            <img src="https://thejavachip.com/static/media/mobile-2.04a54f501b530d9ffdf1.png"
+                                alt="Mobil tətbiqlərin hazırlanması">
+                        </div>
+                    </div>
+                </div>
+                <div class="services-images mobile-section">
+                    <div class="content">
+                        <div class="image">
+                            <img src="https://thejavachip.com/static/media/mobile-1.e7aa8bee7b5b78339f2e.png"
+                                alt="Mobil tətbiqlər">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Çoxillik təcrübəyə malik komandamız biznes ehtiyaclarınıza uyğunlaşdırılmış və
+                                gözləntilərinizi üstələyən fərdi mobil proqrama sahib olmağınıza kömək etmək üçün
+                                buradadır.
+                                Tətbiqinizin təkcə vizual olaraq heyrətamiz deyil, həm də yüksək funksional və
+                                istifadəsi
+                                asan olmasını təmin etmək üçün əlimizdən gələni edəcəyik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <h2 class="benefits__title">Nə əldə edəcəksiniz?</h2>
+                    <div class="benefits__content">
+                        <ul class="benefits__list">
+                            <li>Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və biznesinizi böyüdəcək
+                                mükəmməl və müasir onlayn mövcudluqla salamlaşmağın vaxtıdır.</li>
+                            <li>Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv veb-sayt xoşbəxt müştərilər və
+                                artan konversiya deməkdir.</li>
+                            <li>24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış meneceri olacaq.</li>
+                        </ul>
+                        <ul class="benefits__list">
+                            <li>Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət üstünlüyü verə bilər və sizi öz
+                                sahənizdə arzulanan brendə çevirə bilər.</li>
+                            <li>Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın, çünki bizim həllimiz
+                                vebsaytınızı yeniləməyi və saxlamağı asanlaşdıracaq.</li>
+                            <li>İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt istənilən cihaz üçün mükəmməl
+                                görünüş təmin edir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Ai" class="tabcontent">
+                <div class="services-images ai-section">
+                    <div class="content">
+                        <div class="text">
+                            <h2>Süni İntellekt</h2>
+                            <p>
+                                Təsəvvür edin ki, məlumatların daxil edilməsinə əsaslanaraq qərarlar qəbul edən,
+                                tək başına öyrənə və işləyə bilən maşınlardan ibarət komandanız var. Süni intellektlə bu
+                                arzu
+                                artıq realdır və bu imkanlar sonsuzdur! Səhiyyədən nəqliyyata, logistikadan bank işinə
+                                və
+                                pərakəndə satışdan telekommunikasiyaya qədər süni intellekt biznes əməliyyatlarını
+                                dəyişdirmək
+                                və sizi yeni uğur zirvələrinə çatdırmaq gücünə malikdir. Biznesinizin böyüməsinə və uğur
+                                qazanmasına kömək etmək üçün düzgün texnologiyalara sahib olmağın nə qədər vacib
+                                olduğunu bilirik
+                                və buna görə də sizin xidmətinizdəyik.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="https://thejavachip.com/static/media/ai-1.b46a36b0c8eeb831416d.png"
+                                alt="Süni intellekt">
+                        </div>
+                    </div>
+                </div>
+                <div class="services-images ai-section-reverse">
+                    <div class="content">
+                        <div class="image">
+                            <img src="https://thejavachip.com/static/media/ai-2.d738055dfbe64f082b38.png"
+                                alt="Süni intellekt">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Javachip-də biz sizə ağıllı və avtomatlaşdırılmış həllər təqdim etməklə biznes
+                                məqsədlərinizə
+                                çatmağınıza kömək edəcəyik. Ən müasir süni intellekt texnologiyalarımızla
+                                müştərilərinizə onların
+                                unikal ehtiyaclarına cavab verən fərdi təcrübə təklif edə bilərsiniz. Maşın öyrənməsi,
+                                təbii dil
+                                emalı (NLP), proqnozlaşdırma və ya optimallaşdırma təklif etdiyimiz süni intellekt
+                                həllərindəndir.
+                                Süni intellekt komandamız texnologiyanın gücündən istifadə edərək biznesinizi üst
+                                səviyyəyə
+                                qaldırmağa kömək edə biləcək innovativ həllər təqdim etməyə hazırdır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-benefits">
+                    <h2>Nə əldə edəcəksiniz?</h2>
+                    <div class="benefits-container">
+                        <ul class="benefits-list">
+                            <li><strong>Daha ağıllı biznes qərarları:</strong> Süni intellekt həlləri ilə
+                                instinktlərinizə yox, dəqiq məlumatlara əsaslanan qərarlara güvənməlisiniz.</li>
+                            <li><strong>Artan Məhsuldarlıq:</strong> Süni intellekt sizin və komandanızın gördüyü rutin
+                                işləri avtomatlaşdıra bilər.</li>
+                            <li><strong>Gələcək Buradadır:</strong> Rəqabətdən öndə olun və texnologiyanın gücü ilə yeni
+                                nailiyyətlər əldə edin.</li>
+                        </ul>
+                        <ul class="benefits-list">
+                            <li><strong>Zehni oxuma:</strong> Süni intellekt müştəri davranışını və seçimlərini təhlil
+                                edərək fərdi təcrübələr təqdim edir.</li>
+                            <li><strong>Keyfiyyətin yox, xərclərin azaldılması:</strong> Süni intellekt yüksək
+                                keyfiyyətli nəticələri qoruyaraq xərclərinizi azaldır.</li>
+                            <li><strong>Sərhədsiz İmkanlar:</strong> Süni intellekt sonsuz imkanlar təqdim edərək
+                                şirkətinizin böyüməsinə şərait yaradır.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="Security" class="tabcontent">
+                <div class="cybersecurity">
+                    <div class="cybersecurity-content">
+                        <h2>Kibertəhlükəsizlik</h2>
+                        <p>
+                            Bugünkü rəqəmsal dünyada onlayn platformalarda mövcud olan hər bir şirkət
+                            kiberhücumların riski altındadır. Buna görə də, veb saytınız və rəqəmsal aktivləriniz
+                            həmişə qorunmalıdır. Təəssüf ki, məlumatların pozulmasının nəticələri şirkət üçün
+                            inanılmaz dərəcədə zərərli ola bilər, bu həm müştərilərinizə, həm də biznesinizə təsir
+                            edə bilər.
+                        </p>
+                    </div>
+                    <div class="cybersecurity-image">
+                        <img src="https://thejavachip.com/static/media/cyber-1.ac6a25c0e8f76abd02ba.png"
+                            alt="Kibertəhlükəsizlik">
+                    </div>
+                </div>
+                <div class="cybersecurity-advanced">
+                    <div class="cybersecurity-advanced-image">
+                        <img src="https://thejavachip.com/static/media/cyber-2.5263691a4c42b23cd04f.png"
+                            alt="Kibertəhlükəsizlik Xidmətləri">
+                    </div>
+                    <div class="cybersecurity-advanced-content">
+                        <p>
+                            Amma biz kömək etmək üçün buradayıq. Biz bilirik ki, sizin diqqətiniz
+                            şirkətin inkişafı və uğur qazanmasındadır və məşğul olmaq istədiyiniz son
+                            şey kiberhücumdur. Buna görə də biz sistemlərinizi qorumaq üçün
+                            hərtərəfli kibertəhlükəsizlik xidmətləri təklif edirik. Bizim xidmətlərimizə
+                            firewalllar, anti-virus müdafiəsi, müdaxilənin aşkar edilməsi və digər
+                            kibertəhlükəsizlik xidmətləri aiddir.
+                        </p>
+                    </div>
+                </div>
+                <div class="security-benefit">
+                    <h1 class="secruty_advanced">Ne elde edeceksiniz??</h1>
+                    <div class="security-section">
+                        <ul class="security-list">
+                            <li class="security-item">Gecələr Rahat Yuxu: Hər an biznesinizin kiberhücumlardan
+                                qorunduğundan əmin ola bilərsiniz.</li>
+                            <li class="security-item">Onlayn Dünyanızı Təhlükəsiz Saxlayın: Yüksək səviyyəli
+                                kibertəhlükəsizlik həllərimizlə həssas məlumatlarınızı qoruyun.</li>
+                            <li class="security-item">Müştərilərinizin Gözündə Qəhrəman olun: Kibertəhlükəsizlik
+                                xidmətlərinə sərmayə qoymaqla müştərilərinə onların məxfiliyinə və təhlükəsizliyinə
+                                dəyər verdiyinizi göstərin.</li>
+                            <li class="security-item">Növbəti Xəbər Başlığı Olmayın: Biznesinizi kiberhücumun növbəti
+                                hədəfinə çevrilməkdən qoruya bilərsiniz.</li>
+                            <li class="security-item">Biznesinizi Hack-Proof edin: Bizim hərtərəfli təhlükəsizlik
+                                həllərimizlə şirkət və müştərilərinizi məlumatların pozulmasının zərərli təsirlərindən
+                                qoruyun.</li>
+                            <li class="security-item">Effektiv Xidmət: İstifadəsi asan, effektiv kibertəhlükəsizlik
+                                həllərimizlə hər şey sadə olacaqdır.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div id="Marketing" class="tabcontent">
+                <div class="smm-section">
+                    <div class="smm-content">
+                        <h2 class="smm-title">SMM</h2>
+                        <h3 class="smm-subtitle">Üstünlükləri:</h3>
+                        <ul class="smm-list">
+                            <li>Brend şüurunun artması</li>
+                            <li>Təkmilləşdirilmiş müştəri əlaqəsi</li>
+                            <li>Daha çox konversiya</li>
+                            <li>Hədəf kütlənin daha yaxşı təyini</li>
+                            <li>Brend reputasiyası</li>
+                            <li>Artan potensial müştəri və satışlar</li>
+                            <li>Artan müştəri məmnuniyyəti</li>
+                            <li>Bazar məlumatlarının əldə olunması</li>
+                            <li>Rəqabət üstünlüyü</li>
+                            <li>Müştəri loyallığının yaxşılaşdırılması</li>
+                        </ul>
+                    </div>
+                    <div class="smm-image">
+                        <img src="https://thejavachip.com/static/media/smm-first-image.75f85b6c6a73e3852425.png"
+                            alt="SMM Image">
+                    </div>
+                </div>
+                <div class="smm-service">
+                    <div class="smm-service-image">
+                        <img src="https://thejavachip.com/static/media/smm-second-image.723e897b8980dea5a79e.png"
+                            alt="SMM Service">
+                    </div>
+                    <div class="smm-service-content">
+                        <h3 class="smm-service-title">SMM xidmətinə daxil olanlar:</h3>
+                        <ul class="smm-service-list">
+                            <li>SMM strategiyasının hazırlanması</li>
+                            <li>Aylıq məzmun planı</li>
+                            <li>Biznes hesablarının yaradılması və idarə olunması</li>
+                            <li>Yaradıcı postlar</li>
+                            <li>Reklam kampaniyalarının yaradılması</li>
+                            <li>Zənglər və mesajlar üçün avtomatlaşdırılmış cavab sistemi</li>
+                            <li>Professional foto və video çəkilişi</li>
+                            <li>Müxtəlif yarışların təşkili</li>
+                            <li>Aylıq hesabat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="seo-section">
+                    <div class="seo-content">
+                        <h2 class="seo-title">SEO</h2>
+                        <h3 class="seo-subtitle">Üstünlükləri:</h3>
+                        <ul class="seo-list">
+                            <li>Brend etibarının artması</li>
+                            <li>Axtarış sistemlərində üzvi olaraq üst sıralarda olmaq</li>
+                            <li>Veb sayta artan trafik</li>
+                            <li>Təkmilləşdirilmiş istifadəçi təcrübəsi</li>
+                            <li>Brend şüurunun artması</li>
+                            <li>Daha yaxşı istifadəçi təcrübəsi</li>
+                            <li>Uzunmüddətli marketinq strategiyası</li>
+                            <li>Artan potensial müştəri və satışlar</li>
+                            <li>Daha yüksək investisiya gəliri</li>
+                            <li>Rəqabət üstünlüyü</li>
+                        </ul>
+                    </div>
+                    <div class="seo-image">
+                        <img src="https://thejavachip.com/static/media/seo-first-image.7a2b150330458f6485f2.png"
+                            alt="SEO image">
+                    </div>
+                </div>
+                <div class="seo-services">
+                    <div class="seo-services__image">
+                        <img src="https://thejavachip.com/static/media/seo-second-image.32bb4dcc2a961510421e.png"
+                            alt="SEO Services">
+                    </div>
+                    <div class="seo-services__content">
+                        <h3 class="seo-services__title">SEO xidmətinə daxil olanlar:</h3>
+                        <ul class="seo-services__list">
+                            <li>Vebsayt auditi</li>
+                            <li>SEO strategiyasının hazırlanması</li>
+                            <li>Açar sözlərin təyini</li>
+                            <li>Texniki SEO</li>
+                            <li>Şəkillərin optimizasiyası</li>
+                            <li>Schema markup</li>
+                            <li>Səhifə daxili SEO</li>
+                            <li>Semantik SEO</li>
+                            <li>Rəqiblərin təhlili</li>
+                            <li>Məzmun optimizasiyası</li>
+                            <li>Backlink auditi</li>
+                            <li>Link yaradılması</li>
+                            <li>SEO əsaslı bloq</li>
+                            <li>Aylıq hesabat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sem-section">
+                    <div class="sem-content">
+                        <h2 class="sem-title">SEM</h2>
+                        <h3 class="sem-subtitle">Üstünlükləri:</h3>
+                        <ul class="sem-list">
+                            <li>Veb-sayt trafikinın artması</li>
+                            <li>Xərc baxımından səmərəli</li>
+                            <li>Hədəf auditoriyasına uyğun reklam</li>
+                            <li>Ölçülə bilən nəticələr</li>
+                            <li>Brend şüurunun artması</li>
+                            <li>Artan konversiya</li>
+                            <li>Daha yaxşı istifadəçi təcrübəsi</li>
+                            <li>Rəqabət üstünlüyü</li>
+                            <li>Reklam büdcəsinə nəzarət</li>
+                            <li>Uzunmüddətli faydalar</li>
+                        </ul>
+                    </div>
+                    <div class="sem-image">
+                        <img src="https://thejavachip.com/static/media/sem-first-image.7785acc662696ff034dd.png"
+                            alt="SEM image">
+                    </div>
+                </div>
+
+                <div class="sem-services">
+                    <div class="sem-services__content">
+                        <div class="sem-services__image">
+                            <img src="https://thejavachip.com/static/media/sem-second-image.07db77fb533eac064d55.png"
+                                alt="SEM Services">
+                        </div>
+                        <div class="sem-services__text">
+                            <h3 class="sem-services__title">SEM xidmətinə daxil olanlar:</h3>
+                            <ul class="sem-services__list">
+                                <li>Açar sözlərin araşdırılması və analizi</li>
+                                <li>Rəqiblərin reklam kampaniyalarının analizi və təhlili</li>
+                                <li>Reklam kampaniyalarının yaradılması</li>
+                                <li>Reklam kampaniyalarının monitorinqi və optimizasiyası</li>
+                                <li>Reklam üçün A/B testi</li>
+                                <li>Performans hesabatlarının hazırlanması</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
+                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
+                        class="bold">}</span></p>
+                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Keçidlər</h3>
+                <ul>
+                    <li><a href="#">Xidmətlərimiz</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Bizimlə əlaqə</a></li>
+                    <li><a href="#">Gizlilik Siyasəti</a></li>
+                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Bizimlə əlaqə</h3>
+                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
+                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Bizi izləyin</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© JAVACHIP 2022</p>
+        </div>
+    </footer>
+
+    <div class="fixed-icons">
+        <div class="container">
+            <div class="centerCircle">
+                <img class="Jcip" src="https://thejavachip.com/static/media/favicon.46b6658e648123c737ec.png"
+                    alt="Main Icon" width="40">
+
+                <a href="#" class="littleCircle facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M9 8H6v4h3v12h3V12h3.642L15 8h-3V6.667c0-.955.192-1.333 1.115-1.333h2.885V0h-3.808C10.404 0 9 1.583 9 4.615V8z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.175-.896-.959-2.173-1.559-3.591-1.559-3.179 0-5.515 3.067-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.946 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.377 4.6 3.419-2.07 1.624-4.678 2.348-7.29 2.04 2.179 1.396 4.768 2.214 7.557 2.214 9.054 0 14-7.496 14-13.986 0-.209-.008-.42-.017-.63.961-.689 1.797-1.56 2.457-2.549z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.645.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.645-.069-1.645-.069-4.849 0-3.205.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-4.354.2-6.782 1.618-8.978 3.814-2.196 2.196-3.614 4.624-3.814 8.978-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.2 4.354 1.618 6.782 3.814 8.978 2.196 2.196 4.624 3.614 8.978 3.814 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.354-.2 6.782-1.618 8.978-3.814 2.196-2.196 3.614-4.624 3.814-8.978.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.354-1.618-6.782-3.814-8.978-2.196-2.196-4.624-3.614-8.978-3.814-1.28-.058-1.688-.072-4.947-.072zm0 5.838a6.162 6.162 0 0 0-6.162 6.162 6.162 6.162 0 0 0 6.162 6.162 6.162 6.162 0 0 0 6.162-6.162 6.162 6.162 0 0 0-6.162-6.162zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.796 1.796 0 1 1 1.796-1.796 1.796 1.796 0 0 1-1.796 1.796z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M24.4 6C24.895 6 25.4 6.4 25.4 6.895V18.6C25.4 19.105 25 19.6 24.4 19.6H6C5.505 19.6 5 19.105 5 18.6V6.895C5 6.4 5.505 6 6 6h18.4M10.954 22h2v-9.492H9.449V22M9.449 11.151c0 .951.1 1.72.771 1.72.949 0 1.719-.771 1.72-1.72 0-.949-.771-1.719-1.719-1.719-.949 0-1.72.771-1.72 1.719m11.168 10.397h2v-10.397h-2M22.004 22h2v-2.948h-2M22.004 19.052h2v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.535 1.771-1.771 2.437V22h-2V12.948h2V14.63c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M15 4C10.814 4 5.3808594 5.0488281 5.3808594 5.0488281L5.3671875 5.0644531C3.4606632 5.3693645 2.7007625 2.9 2 9L2 15L2 21C2.7007625 27.099238 3.4606632 24.630636 5.3671875 24.935547L5.3808594 24.951172C5.3808594 24.951172 10.814 26.001953 15 26.001953L19.186 26.001953C24.619141 24.951172 24.619141 24.951172 24.621094 24.949219A4 4 0 0 0 28 21.001953L28 21L28 15.001953L28 9A4 4 0 0 0 24.623047 5.0546875C24.619141 5.0488281 24.619141 5.0488281 24.619141 5.0488281L19.186 4Z M12 10.398438L20 15L12 19.601562Z" />
+                    </svg>
+                </a>
+
+
+                <a href="#" class="littleCircle whatsapp">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-.209-.832-.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53-.115-.746-.315-.688-.645-1.032-1.318-1.06-2.264V4.114c-.015-.99.472-1.977 1.017-2.78 1.23-1.82 2.596-3.41 4.554-4.34 4.616-2.87 8.035-4.28 8.722-.888.817 0 2.15-.515 2.478-1.318 1.33-.244 3.73-.244 4.088 0 .058 0 .144-.03.215-.1.172-2.434-1.39-2.678-1.392-7.08 7.593-1.747 0-3.48-53-4.942-1.49 1.793 24.411 132-3.337 8.955 0 1 1.72-5.272c0-4.955 4.04-8.995 8.997-8.995 2.5 10.845 25.2 15.8 4.958-4.04 8.998-8.998 8.998 0-19.798-5.96-10.8-8.842-10.8 0 1.964 5.3 8.98 1.546 5.574L5 27.176 15.974 1.92 10.807 10.807 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" />
+                    </svg> -->
+
+                    <i class="fa-brands fa-whatsapp" style="color:white;"></i>
+
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="../asset/js/services.js"></script>
+    <script src="../asset/js/serviceslanguages.js"></script>
+    <script src="../asset/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../asset/js/animate.js"></script>
+    <script src="../asset/js/languages.js"></script>
+    <script src="../asset/js/moods.js"></script>
+    <script src="../asset/js/homeHeader.js"></script>
+    <script src="../asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

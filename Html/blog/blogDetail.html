@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detalları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+
+    <head class="header">
+        <div class="header_All fixed">
+            <a class="Header_logo" href="./Home.html"> <img
+                    src="https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                    alt=""></a>
+            <div class="header_Right">
+                <div class="header_moods">
+                    <button id="toggleTheme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <div class="home-custom-select">
+                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeLanguage('az')">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeLanguage('en')">
+                            <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeLanguage('ru')">
+                            <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button style="border: none;" class="offcanvas__btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                        class="fa-solid fa-bars"></i></button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+
+                            <li><a href="../Home.html">Home</a></li>
+                            <hr>
+                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <hr>
+                            <li><a href="./Contact.html">Contact</a></li>
+                            <hr>
+                            <li><a href="./Secrecy.html">Secrety</a></li>
+                            <hr>
+                            <li><a href="./Blog.html">Blog</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </head>
+
+
+
+
+
+
+
+    <main class="detail_main">
+        <section>
+            <div class="blog-detail-container">
+                <div class="blog_detail_image">
+                    <img id="blogImage" src="" alt="Blog Image">
+                </div>
+                <h1 id="blogTitle"></h1>
+                <p id="blogDescription"></p>
+                <p><strong>Kateqoriyalar:</strong> <span id="blogCategories"></span></p>
+
+                <a href="../blog/Blog.html">← Geri</a>
+            </div>
+        </section>
+        <div class="detail_differ">
+            <hr>
+        </div>
+
+        <section>
+            <div class="detail_container_bottom">
+                <div class="detail_left">
+                    <div class="search-container-blogdetail">
+                        <input type="text" placeholder="AXTAR...">
+                        <button class="search-button-blogdetail">AXTAR</button>
+                    </div>
+
+                    <h2 class="section-title-blogdetail">Son bloqlar</h2>
+
+                    <div class="blog-list-blogdetail">
+                        <!-- 1-ci blog -->
+                        <div class="blog-item-blogdetail">
+                            <div class="avatar-blogdetail">
+                                <img src="	https://thejavachip.com/static/media/atakishiyeva.6f6fa73dd5aa16e0740f.png"
+                                    alt="Profile Image">
+                            </div>
+                            <div class="blog-content-blogdetail">
+                                <h3>SEO nədir? 9 Addımda SEO haqqında ilkin anlayışlara sahib ol</h3>
+                                <p class="date-blogdetail">2022.09.10</p>
+                            </div>
+                        </div>
+
+                        <!-- 2-ci blog -->
+                        <div class="blog-item-blogdetail">
+                            <div class="avatar-blogdetail">
+                                <img src="data:image/png;base64,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"
+                                    alt="Profile Image">
+                            </div>
+                            <div class="blog-content-blogdetail">
+                                <h3>10 Məşhur vebsayt növü</h3>
+                                <p class="date-blogdetail">2022.09.10</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="detail_right">
+                    <h1>Mobil Tətbiqin Biznesinizə 6 Əsas Faydası</h1>
+
+                    <div class="detail_right_img">
+                        <img src="https://admin.thejavachip.com/storage/posts/September2022/44288613.jpg" alt="">
+
+                    </div>
+                    <div class="detail_right_content">
+                        <p>
+                            <strong>
+                                Bu gün smartfon istifadəçiləri sürətlə artmaqdadır. Hesab olunur ki, əhalinin təxminən
+                                <span>80% -i</span>
+                                mobil telefonlardan istifadə edir. Və onlar öz mobil cihazlarından gündəlik
+                                ehtiyaclarını ödəmək üçün, məsələn, taksi sifariş etmək, alış-veriş etmək, yemək sifariş
+                                etmək və ya onlayn bilet almaq üçün istifadə edirlər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Əlbəttə ki, hər bir biznes öz auditoriyasını hədəfləyərək satışlarını artırmaq istəyir.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Buna görə də, şirkətlər potensial müştərilərini tapmaq üçün ən yaxşı seçim kimi mobil
+                                proqramları düşünürlər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Mobil proqramların yalnız supermarketlər və ya banklar üçün olduğunu düşünürsünüzsə,
+                                yanılırsınız. Getdikcə daha çox kiçik və orta ölçülü müəssisələr mobil tendensiyanı
+                                izləyir və onların biznesinin də mobil proqrama ehtiyacı olduğunu başa düşürlər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                İş dünyası artıq bukletlərin verilməsi, reklamların çapı, bilbordların asılması və hər
+                                bir müştəri sorğusuna cavab verən texniki işçilərinizdən ibarət deyil.
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="detail_right_questions">
+                        <h2 class="question_name">
+                            <span>
+                                Bəs mobil tətbiqdən biznesin hədəflərinə uyğun necə istifadə edə bilərsiniz?
+                            </span>
+                        </h2>
+                        <h2>
+                            <span>
+                                1. Satışları artırın
+                            </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Əminəm ki, hər birimiz pizzanı sevirik. Aparıcı Amerika pizza restoranları şəbəkəsi olan
+                                Domino's pizza, pizzalarının çatdırılması və ya mağazadan götürülməsi üçün bir tətbiq
+                                yaratdıqdan sonra,
+                                <span>6 ay</span> ərzində gəlirlərində <span>28% artım</span> əldə etdi.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Bəs sizcə 6 ay ərzində sizin və mənim kimi pizza sevənlərin sayı artdı? Yox!
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Bu, mobil tətbiqetməni təqdim etmək və müştəriləri üçün hər şeyi sadələşdirmək üçün sadə
+                                bir strategiya idi. </strong>
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                İstənilən gündə hər hansı bir müştəri mağazaya zəng etməkdənsə, tətbiqindən istifadə
+                                etməyi üstün tutur. </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Digər tərəfdən, bir araşdırmaya görə, keçən il Qara Cümə (Black Friday) satışlarının
+                                <span>35,4%-i</span>
+                                mobil cihazlardan istifadə etməklə tamamlanıb. Əgər şirkətinizin öz tətbiqi yoxdursa,
+                                potensial müştərilərinizi itirmə riskiniz var.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Tətbiqlə siz məhsul təkliflərinizi asanlıqla göstərə bilərsiniz. Beləliklə, müştərilərin
+                                şirkətinizdən məhsul almasını mümkün qədər asanlaşdıra bilərsiniz.
+
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Müştərilər üçün alışları asanlaşdırmaq məqsədilə, hətta tətbiqdaxili ödənişlərdən
+                                istifadə edə bilərsiniz. Bundan əlavə, siz proqramdan xüsusi promosyonlar təklif etmək,
+                                yeni məhsul təqdimatlarını izləmək və müştəri rəyini toplamaq üçün istifadə edə
+                                bilərsiniz.
+                            </strong>
+                        </p>
+
+                    </div>
+
+                    <!-- seconr -->
+
+                    <div class="detail_right_questions">
+
+                        <h2>
+                            <span>
+                                2. Brendinizi tanıdın
+                            </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Statistikalar göstərir ki, orta yaşlı insanlar orta hesabla mobil cihazında
+                                <span>3 saat 43 dəqiqə</span> vaxt keçirir. Bu müddət ərzində onlar müxtəlif proqramları
+                                araşdırır və onlardan ehtiyaclarına uyğun istifadə edirlər. Belə ki, proqramlardan
+                                istifadə edərkən onlar tez-tez tətbiqlərin daxil olduğu markanın loqosunu, şəkillərini
+                                və s. görürlər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Tətbiqə hər dəfə daxil olduqda eyni şəkil və ya loqonu görürlərsə, markanı asanlıqla
+                                tanıyırlar. </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Müştəriləri yeni məhsul və ya xidmətləri sınamağa cəlb etməyin ən yaxşı yolu
+                                <span>
+                                    brend şüurunu
+                                </span> artırmaqdır.
+                            </strong>
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Mobil tətbiq reklam və marketinq kimi digər üsullarla müqayisədə ictimaiyyət üçün daha
+                                əlçatandır. Brend şüurunu yaratmağın ən təsirli yolu məhsul və ya xidmətinizi mümkün
+                                qədər çox müştərinin nəzərinə çatdırmaqdır. Mobil proqramla siz harada olurlarsa
+                                olsunlar, şirkətinizi müştərilərinizin diqqət mərkəzində saxlaya bilərsiniz. </strong>
+                        </p>
+
+
+
+
+                    </div>
+
+                    <!-- third -->
+                    <div class="detail_right_questions">
+
+                        <h2>
+                            <span>
+                                3. Müştəri xidmətini yaxşılaşdırın
+                            </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Təsəvvür edin ki, bir şəxs gecə yarısı sizin şirkətiniz haqqında məlumat alır və onun
+                                bəzi sualları yaranır. Saatın həmin vaxtı həmin şəxsə cavab vermək üçün bir tətbiqiniz
+                                (istənilən vaxtda cavab verən) və ya insan (yalnız normal iş saatlarında cavab verən)
+                                varmı?
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Məsələn, OpenTable şirkəti bütün biznes modelini bu prinsip ətrafında qurdu. Bir masa
+                                üçün restorana zəng etmək əvəzinə, onların tətbiqində bir kliklə masanızı rezervasiya
+                                edə bilərsiniz.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+
+                                İndi düşünün: Neçə müştəri sizinlə telefonla deyil, tətbiq üzərindən əlaqə saxlamağa
+                                üstünlük verir?
+                            </strong>
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Müştərilər markaların 7/24 onlara təqdim olunmasını gözləyirlər. Tətbiqlə siz
+                                müştərilərinizə proqramdaxili dəstək və ehtiyac duyduqları zaman yardım göstərə
+                                bilərsiniz.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Siz həmçinin müştərilərə şirkətinizdə baş verən mühüm hadisələr, məsələn, satış və ya
+                                yeni məhsulun təqdimatı barədə xəbərdarlıq etmək üçün
+                                <span>
+                                    push bildirişlərindən
+                                </span>
+                                istifadə edə bilərsiniz. Müştərilər veb saytınızı daim yoxlamadan bu xəbərdarlıqları
+                                mobil cihazlarında asanlıqla ala bilərlər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Push bildirişi sahibkarlara hər hansı kuponlar, endirimlər, təkliflər və s. haqqında
+                                xəbərdarlıq formasında istifadəçilərə mesaj göndərməyə imkan verir. Bunu etmək onlara
+                                məhsul satışlarını və gəlir əldə etməyi yaxşılaşdırmağa kömək edir.
+                            </strong>
+                        </p>
+
+
+
+
+                    </div>
+
+                    <!-- fourth -->
+
+                    <div class="detail_right_questions">
+
+                        <h2>
+                            <span>
+                                4. Komandanızın daha səmərəli işləməsinə kömək edin
+                            </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Proqramlar bir çox funksiyaya xidmət edir: onlar ümumi məlumat, qiymətlər, sifariş
+                                formaları, axtarış xüsusiyyətləri, istifadəçi hesabları, mesajlaşma, xəbər lentləri və
+                                s. təmin edə bilər.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Ofisdən kənarda olan işçiləri idarə etməyə kömək etməklə yanaşı, mobil tətbiqiniz
+                                komanda üzvləri arasında əməkdaşlığı inkişaf etdirməyə də kömək edə bilər.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+
+                                Tətbiqlə siz işçilərin mühüm şirkət sənədlərinə daxil ola biləcəyi, komanda ilə əlaqə
+                                saxlaya biləcəyi, fikirlərini bölüşə, layihələrdə irəliləyişləri izləyə və şirkət
+                                xəbərlərindən xəbərdar ola biləcəyi
+                                <span>
+                                    virtual məkan
+                                </span>
+                                yarada bilərsiniz.
+                            </strong>
+                        </p>
+                    </div>
+
+                    <!-- fiveth -->
+
+                    <div class="detail_right_questions">
+
+                        <h2>
+                            <span>
+                                5. Müştərilərinizə dəyər verin </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Mobil proqramlar müştərilərə proqram olmadan əldə edə bilmədikləri məhsul və xidmətlərə
+                                giriş imkanı verir. Məsələn, səhiyyə sahəsindəsinizsə, xəstələrə sağlamlıq məlumatlarını
+                                izləmək və həkimləri ilə bölüşmək üçün bir yol təklif edə bilərsiniz.
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Bu, müştərilərə əlavə dəyər verməyə kömək edə bilər və həm də
+                                <span>
+                                    xərcləri azaltmağa
+                                </span>
+                                kömək edə bilər.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+
+                                Məsələn, əgər siz ərzaq mağazası işlədirsinizsə və müştərilərə ərzaq məhsulları sifariş
+                                etmək və onları istədikləri vaxt götürmək imkanı verən mobil proqramınız varsa, siz
+                                çoxlu sayda məhsul ehtiyatı saxlama ehtiyacını aradan qaldırmış olursunuz.
+
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+
+                                Bir nümunə isə, müştərilərinizə mobil tətbiqiniz vasitəsilə kiçik mükafatlar toplamaq
+                                imkanı verin. Məsələn, Starbucks kofe şirkəti tətbiqdə qeydiyyatdan keçmiş müştərilər
+                                üçün hədiyyələr təklif edir. Bu da öz növbəsində müştərilərini onlardan kofe almağa sövq
+                                edir.
+
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                <span>
+                                    Nəticə?
+                                </span>
+                                Daha çox yükləmələr və daha çox geri qayıdan müştərilər.
+                            </strong>
+                        </p>
+                    </div>
+
+                    <!-- sixth -->
+                    <div class="detail_right_questions">
+
+                        <h2>
+                            <span>
+                                6. Rəqabətdə fərqlənin
+                            </span>
+                        </h2>
+                        <p>
+                            <strong>
+                                Əgər fərqlənmək istəyirsinizsə, müştərilərin ehtiyac duyduqları zaman məhsul və
+                                xidmətlərinizə daxil ola bilməsi üçün proqram yaratmalısınız. </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                Məsələn, gül mağazanız varsa, siz müştərilərə mağazanıza baş çəkmədən də gül buketi
+                                sifariş verməyi imkan verən proqram yarada bilərsiniz. Hətta, özəl günlərdə müxtəlif
+                                kampaniyalar yaradaraq və özəl günə aid buketlər təklif edərək müştərilərinizin sizdən
+                                sifariş etməsini təmin edə bilərsiniz.
+
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Bu günlərdə kiçik və orta ölçülü bizneslərin çox az hissəsinin mobil tətbiqi var, və bu,
+                                rəqiblərinizdən böyük bir üstünlük əldə edə biləcəyiniz yerdir. Öz sahənizdə
+                                müştərilərinizə
+                                <span>
+                                    mobil proqram təklif edən ilk
+                                </span>
+                                siz ola bilərsiniz.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Beləliklə, əgər siz hələ də biznesiniz üçün mobil proqram hazırlamağı
+                                planlaşdırmırsınızsa, rəqiblərinizdən geridə qala bilərsiniz.
+
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Sizin edəcəyiniz sadəcə
+                                <span style="color: #339966;"><a
+                                        href="https://thejavachip.com/az/blog/mobil-tetbiqin-biznesinize-6-esas-faydasi">bu
+                                        xidməti göstərən şirkətlə</a></span>
+                                əlaqə saxlamaqdır.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <strong>
+                                Javachip şirkəti olaraq, sizə innovativ ideyanızı mobil tətbiqə çevirməkdə 
+                                <span style="color: #339966;"><a
+                                        href="https://thejavachip.com/az/blog/mobil-tetbiqin-biznesinize-6-esas-faydasi">bu
+                                        kömək edə bilərik</a></span>
+                                əlaqə saxlamaqdır.
+                            </strong>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
+                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
+                        class="bold">}</span></p>
+                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Keçidlər</h3>
+                <ul>
+                    <li><a href="#">Xidmətlərimiz</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Bizimlə əlaqə</a></li>
+                    <li><a href="#">Gizlilik Siyasəti</a></li>
+                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Bizimlə əlaqə</h3>
+                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
+                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Bizi izləyin</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© JAVACHIP 2022</p>
+        </div>
+    </footer>
+    <div class="fixed-icons">
+        <div class="container">
+            <div class="centerCircle">
+                <img class="Jcip" src="https://thejavachip.com/static/media/favicon.46b6658e648123c737ec.png"
+                    alt="Main Icon" width="40">
+
+                <a href="#" class="littleCircle facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M9 8H6v4h3v12h3V12h3.642L15 8h-3V6.667c0-.955.192-1.333 1.115-1.333h2.885V0h-3.808C10.404 0 9 1.583 9 4.615V8z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.175-.896-.959-2.173-1.559-3.591-1.559-3.179 0-5.515 3.067-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.946 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.377 4.6 3.419-2.07 1.624-4.678 2.348-7.29 2.04 2.179 1.396 4.768 2.214 7.557 2.214 9.054 0 14-7.496 14-13.986 0-.209-.008-.42-.017-.63.961-.689 1.797-1.56 2.457-2.549z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.645.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.645-.069-1.645-.069-4.849 0-3.205.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-4.354.2-6.782 1.618-8.978 3.814-2.196 2.196-3.614 4.624-3.814 8.978-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.2 4.354 1.618 6.782 3.814 8.978 2.196 2.196 4.624 3.614 8.978 3.814 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.354-.2 6.782-1.618 8.978-3.814 2.196-2.196 3.614-4.624 3.814-8.978.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.354-1.618-6.782-3.814-8.978-2.196-2.196-4.624-3.614-8.978-3.814-1.28-.058-1.688-.072-4.947-.072zm0 5.838a6.162 6.162 0 0 0-6.162 6.162 6.162 6.162 0 0 0 6.162 6.162 6.162 6.162 0 0 0 6.162-6.162 6.162 6.162 0 0 0-6.162-6.162zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.796 1.796 0 1 1 1.796-1.796 1.796 1.796 0 0 1-1.796 1.796z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="#" class="littleCircle youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M15 4C10.814 4 5.3808594 5.0488281 5.3808594 5.0488281L5.3671875 5.0644531C3.4606632 5.3693645 2.7007625 2.9 2 9L2 15L2 21C2.7007625 27.099238 3.4606632 24.630636 5.3671875 24.935547L5.3808594 24.951172C5.3808594 24.951172 10.814 26.001953 15 26.001953L19.186 26.001953C24.619141 24.951172 24.619141 24.951172 24.621094 24.949219A4 4 0 0 0 28 21.001953L28 21L28 15.001953L28 9A4 4 0 0 0 24.623047 5.0546875C24.619141 5.0488281 24.619141 5.0488281 24.619141 5.0488281L19.186 4Z M12 10.398438L20 15L12 19.601562Z" />
+                    </svg>
+                </a>
+
+
+                <a href="#" class="littleCircle whatsapp">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-.209-.832-.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53-.115-.746-.315-.688-.645-1.032-1.318-1.06-2.264V4.114c-.015-.99.472-1.977 1.017-2.78 1.23-1.82 2.596-3.41 4.554-4.34 4.616-2.87 8.035-4.28 8.722-.888.817 0 2.15-.515 2.478-1.318 1.33-.244 3.73-.244 4.088 0 .058 0 .144-.03.215-.1.172-2.434-1.39-2.678-1.392-7.08 7.593-1.747 0-3.48-53-4.942-1.49 1.793 24.411 132-3.337 8.955 0 1 1.72-5.272c0-4.955 4.04-8.995 8.997-8.995 2.5 10.845 25.2 15.8 4.958-4.04 8.998-8.998 8.998 0-19.798-5.96-10.8-8.842-10.8 0 1.964 5.3 8.98 1.546 5.574L5 27.176 15.974 1.92 10.807 10.807 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" />
+                    </svg> -->
+
+                    <i class="fa-brands fa-whatsapp" style="color:white;"></i>
+
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../asset/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../asset/js/animate.js"></script>
+    <script src="../../asset/js/languages.js"></script>
+    <script src="../../asset/js/moods.js"></script>
+    <script src="../../asset/js/homeHeader.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../../asset/js/blog/blog.js"></script> -->
+    <script src="../../asset/js/blog/blogDetail.js"></script>
+</body>
+
+</html>

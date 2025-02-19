@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <head class="header">
+        <div class="header_All">
+            <a href="./Home.html"> <img
+                    src="https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                    alt=""></a>
+            <div class="header_Right">
+                <div class="header_moods">
+                    <button id="toggleTheme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <div class="home-custom-select">
+                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeLanguage('az')">
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeLanguage('en')">
+                            <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
+                        </div>
+                        <div class="home-custom-select-option" onclick="changeLanguage('ru')">
+                            <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button style="border: none;" class="offcanvas__btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                        class="fa-solid fa-bars"></i></button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+                            <li>
+                                duzelecek modlar
+
+                            </li>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <hr>
+                            <li><a href="./Contact.html">Contact</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="">Home</a></li>
+                            <hr>
+                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </head>
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h2 class="contact-title">Bizimlə əlaqə</h2>
+                    <p class="contact-text">
+                        Zəhmət olmasa sorğunuzla bağlı məlumatları forma doldurun.
+                        Sizinlə əməkdaşlıq etməkdən məmnun olarıq.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+994998822500</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>office@thejavachip.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form">
+                        <label for="name">Adınız*</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız" />
+
+                        <label for="email">E-poçt adresiniz*</label>
+                        <input type="email" id="email" name="email" required placeholder="E-poçt adresiniz" />
+
+                        <label for="phone">Mobil nömrəniz</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+994" />
+
+                        <label for="services">Xidmətlər</label>
+                        <select id="services" name="services">
+                            <option disabled selected value="">Seçin...</option>
+                            <option value="xidmet1">Xidmət 1</option>
+                            <option value="xidmet2">Xidmət 2</option>
+                        </select>
+
+                        <label for="message">Sorğunuzu daxil edin*</label>
+                        <textarea id="message" name="message" required placeholder="Sorğunuzu bura yazın..."></textarea>
+
+                        <button type="submit" class="submit-btn">
+                            Göndər
+                            <span class="arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="Jchep-location">
+            <div class="location-title"><h1>Biz Buradayiq</h1></div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.952631551477!2d49.83050607603838!3d40.365574658751285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307de589f96f27%3A0x30fb1daa2ffcbc45!2sThe%20Javachip%20LLC!5e0!3m2!1sen!2saz!4v1738155523026!5m2!1sen!2saz"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
+                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
+                        class="bold">}</span></p>
+                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Keçidlər</h3>
+                <ul>
+                    <li><a href="#">Xidmətlərimiz</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Bizimlə əlaqə</a></li>
+                    <li><a href="#">Gizlilik Siyasəti</a></li>
+                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Bizimlə əlaqə</h3>
+                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
+                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Bizi izləyin</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© JAVACHIP 2022</p>
+        </div>
+    </footer>
+    <div class="fixed-icons">
+        <div class="container">
+            <div class="centerCircle">
+                <img class="Jcip" src="https://thejavachip.com/static/media/favicon.46b6658e648123c737ec.png"
+                    alt="Main Icon" width="40">
+
+                <a href="#" class="littleCircle facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M9 8H6v4h3v12h3V12h3.642L15 8h-3V6.667c0-.955.192-1.333 1.115-1.333h2.885V0h-3.808C10.404 0 9 1.583 9 4.615V8z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.175-.896-.959-2.173-1.559-3.591-1.559-3.179 0-5.515 3.067-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.946 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.377 4.6 3.419-2.07 1.624-4.678 2.348-7.29 2.04 2.179 1.396 4.768 2.214 7.557 2.214 9.054 0 14-7.496 14-13.986 0-.209-.008-.42-.017-.63.961-.689 1.797-1.56 2.457-2.549z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.645.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.645-.069-1.645-.069-4.849 0-3.205.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-4.354.2-6.782 1.618-8.978 3.814-2.196 2.196-3.614 4.624-3.814 8.978-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.2 4.354 1.618 6.782 3.814 8.978 2.196 2.196 4.624 3.614 8.978 3.814 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c4.354-.2 6.782-1.618 8.978-3.814 2.196-2.196 3.614-4.624 3.814-8.978.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.2-4.354-1.618-6.782-3.814-8.978-2.196-2.196-4.624-3.614-8.978-3.814-1.28-.058-1.688-.072-4.947-.072zm0 5.838a6.162 6.162 0 0 0-6.162 6.162 6.162 6.162 0 0 0 6.162 6.162 6.162 6.162 0 0 0 6.162-6.162 6.162 6.162 0 0 0-6.162-6.162zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.796 1.796 0 1 1 1.796-1.796 1.796 1.796 0 0 1-1.796 1.796z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M24.4 6C24.895 6 25.4 6.4 25.4 6.895V18.6C25.4 19.105 25 19.6 24.4 19.6H6C5.505 19.6 5 19.105 5 18.6V6.895C5 6.4 5.505 6 6 6h18.4M10.954 22h2v-9.492H9.449V22M9.449 11.151c0 .951.1 1.72.771 1.72.949 0 1.719-.771 1.72-1.72 0-.949-.771-1.719-1.719-1.719-.949 0-1.72.771-1.72 1.719m11.168 10.397h2v-10.397h-2M22.004 22h2v-2.948h-2M22.004 19.052h2v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.535 1.771-1.771 2.437V22h-2V12.948h2V14.63c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
+                    </svg>
+                </a>
+
+                <a href="#" class="littleCircle youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M15 4C10.814 4 5.3808594 5.0488281 5.3808594 5.0488281L5.3671875 5.0644531C3.4606632 5.3693645 2.7007625 2.9 2 9L2 15L2 21C2.7007625 27.099238 3.4606632 24.630636 5.3671875 24.935547L5.3808594 24.951172C5.3808594 24.951172 10.814 26.001953 15 26.001953L19.186 26.001953C24.619141 24.951172 24.619141 24.951172 24.621094 24.949219A4 4 0 0 0 28 21.001953L28 21L28 15.001953L28 9A4 4 0 0 0 24.623047 5.0546875C24.619141 5.0488281 24.619141 5.0488281 24.619141 5.0488281L19.186 4Z M12 10.398438L20 15L12 19.601562Z" />
+                    </svg>
+                </a>
+
+
+                <a href="#" class="littleCircle whatsapp">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
+                        height="24px">
+                        <path
+                            d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-.209-.832-.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53-.115-.746-.315-.688-.645-1.032-1.318-1.06-2.264V4.114c-.015-.99.472-1.977 1.017-2.78 1.23-1.82 2.596-3.41 4.554-4.34 4.616-2.87 8.035-4.28 8.722-.888.817 0 2.15-.515 2.478-1.318 1.33-.244 3.73-.244 4.088 0 .058 0 .144-.03.215-.1.172-2.434-1.39-2.678-1.392-7.08 7.593-1.747 0-3.48-53-4.942-1.49 1.793 24.411 132-3.337 8.955 0 1 1.72-5.272c0-4.955 4.04-8.995 8.997-8.995 2.5 10.845 25.2 15.8 4.958-4.04 8.998-8.998 8.998 0-19.798-5.96-10.8-8.842-10.8 0 1.964 5.3 8.98 1.546 5.574L5 27.176 15.974 1.92 10.807 10.807 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" />
+                    </svg> -->
+
+                    <i class="fa-brands fa-whatsapp" style="color:white;"></i>
+
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="../asset/js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../asset/js/animate.js"></script>
+    <script src="../asset/js/languages.js"></script>
+    <script src="../asset/js/moods.js"></script>
+    <script src="../asset/js/homeHeader.js"></script>
+    <script src="../asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

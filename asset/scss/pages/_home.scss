@@ -18,12 +18,112 @@
 
 .HomeIntroduction_video__GoIQO {
     width: 100% !important;
-    height: 100vh !important;
+    height: 99vh !important;
     object-fit: cover;
     top: 0;
     left: 0;
 
 }
+
+.video_text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    // background: rgba(0, 0, 0, 0.5);
+    /* Arxa fon qismən şəffaf olsun */
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 2;
+    /* Vidyonun üzərində olsun */
+}
+
+.video_text_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+
+    a {
+        font-size: 36px;
+        color: white;
+        // font-weight: bold;
+        text-decoration: none;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: transform 0.3s ease-in-out;
+
+        span {
+            font-family: Manrope, sans-serif !important;
+        }
+
+        &:hover {
+            transform: translateX(10px);
+            white-space: inherit;
+        }
+
+        .text {
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 64px; // SVG ölçüsü
+            height: 32px;
+            transition: all 0.3s ease-in-out;
+
+            .ss {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.3s ease-in-out;
+
+                circle {
+                    stroke: white;
+                    transition: stroke 0.3s ease-in-out;
+                }
+
+                path {
+                    stroke: white;
+                    transition: stroke 0.3s ease-in-out;
+                }
+            }
+        }
+
+        &:hover .icon-container {
+            svg {
+                transform: translateX(5px); // SVG hover zamanı sağa hərəkət edir
+
+                circle {
+                    stroke: white;
+                }
+
+                path {
+                    stroke: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 
 
 // Second Section ///////////////////////////////////////////////////////
@@ -36,13 +136,13 @@
 
 .our_Services {
     width: 95%;
-    height: 30px;
-    background-color: #00acee;
-    position: relative;
-    clip-path: ellipse(100% 30% at 50% 0%);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 20px;
+    // background-color: #00acee;
+    border: 6px solid;
+    border-radius: 70% / 100px 100px 0 0;
+    height: 2vh;
+    margin-top: 1.5em;
+    position: absolute;
+    width: 100%;
 
 }
 
@@ -58,7 +158,7 @@
     justify-content: center;
     align-items: center;
     // padding: 20px;
-    // margin-top: 20px;
+    margin-top: 20px;
 
     h1 {
         -webkit-text-stroke: 1px #3bbeef;
@@ -101,7 +201,7 @@
     box-shadow: #3BBEEF;
     border: 1px solid #3BBEEF;
     border-radius: 10px;
-
+    max-height: 500px;
     box-shadow:
 
         rgba(91, 27, 228, 0.25) 10px 10px 50px,
@@ -111,7 +211,8 @@
 
     img {
         max-width: 100%;
-        height: auto;
+        // height: auto;
+        max-height: 500px;
         border-radius: 8px;
     }
 }
@@ -317,11 +418,36 @@ body:not(.dark-mode) .six_title {
 }
 
 
+@media only screen and (max-width: 960px) {
+    .home_FourthSection_title {
+        h1 {
+            font-size: 28px;
+        }
+    }
+}
+
+
+
+
+
+
 
 
 
 
 // //////////////////// fiveth section scss
+.home_fivethSection {
+    width: 100%;
+    // border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_five_all {
+    width: 90%;
+    // border: 3px solid green;
+}
 
 .fiveth_name {
     display: flex;
@@ -332,6 +458,8 @@ body:not(.dark-mode) .six_title {
     gap: 20px;
     flex-direction: column;
     margin-bottom: 20px;
+    // width: 80%;
+    text-align: center;
 
     h1 {
         -webkit-text-stroke: 1px #989b09;
@@ -357,6 +485,12 @@ body:not(.dark-mode) .six_title {
     justify-content: center;
     align-items: center;
 }
+
+
+// .sagol{
+//     border: 3px solid red !important;
+//     max-width: 100px;
+// }
 
 @media only screen and (max-width: 900px) {
     .fiveth_name {
@@ -414,6 +548,12 @@ body:not(.dark-mode) .our_Blogs {
 
 
 // seventh section 
+
+.home_sevenSection {
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
 .text-container-seventh {
     display: flex;
     justify-content: center;
@@ -458,28 +598,39 @@ body:not(.dark-mode) .our_Blogs {
         width: 50%;
 
         box-shadow: rgba(91, 27, 228, 0.25) 10px 10px 50px, rgba(91, 27, 228, 0.25) -10px 10px 50px, rgba(91, 27, 228, 0.25) 10px -10px 50px, rgba(91, 27, 228, 0.25) -10px -10px 50px;
-    
 
 
 
 
 
-}
 
-@media only screen and (max-width: 700px) {
-    .timer-container {
-        font-size: 48px;
-        font-weight: bold;
-        color: #16c4f4;
-        border: 2px solid #16c4f4;
-        border-radius: 50px;
-        display: inline-block;
-        padding: 15px 40px;
-        width: 90%;
     }
-}
-.timer-text {
-    font-size: 28px;
-    margin-top: 20px;
-}
+
+    @media only screen and (max-width: 700px) {
+        .timer-container {
+            font-size: 48px;
+            font-weight: bold;
+            color: #16c4f4;
+            border: 2px solid #16c4f4;
+            border-radius: 50px;
+            display: inline-block;
+            padding: 15px 40px;
+            width: 90%;
+        }
+
+        .text-seventh {
+            width: 100%;
+            border: 3px solid red !important;
+
+            p {
+                font-size: 15px;
+                color: red;
+            }
+        }
+    }
+
+    .timer-text {
+        font-size: 29px;
+        margin-top: 20px;
+    }
 }

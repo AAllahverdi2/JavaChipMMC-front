@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
+
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -15,17 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
             disableOnInteraction: false,
         },
         breakpoints: {
-            640: {
+            340: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                // spaceBetween: 20,
+            },
+            540: {
+                slidesPerView: 4,
+                // spaceBetween: 20,
             },
             768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
+                slidesPerView: 5,
+                spaceBetween: 20,
             },
             1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
+                slidesPerView: 10,
+                spaceBetween: 10,
             },
         },
     });
@@ -95,7 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             480: {
                 slidesPerView: 1,
-            }
+            },
+            320: {
+                slidesPerView: 1,
+
+            },
         }
     });
 });

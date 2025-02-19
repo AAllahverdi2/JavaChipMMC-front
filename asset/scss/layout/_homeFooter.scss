@@ -1,112 +1,265 @@
 .footer {
-    background: #fff;
-    padding: 50px 0;
-    text-align: center;
-    // border-top-left-radius: 40px;
-    // border-top-right-radius: 40px;
+  background: #fff;
+  padding: 50px 0;
+  text-align: center;
 
-    .footer-container {
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000;
+  }
+
+  .footer-logo {
+    text-align: left;
+
+    .company-name {
+      font-size: 36px;
+      font-weight: bold;
+      color: black;
+
+      .bold {
+        color: black;
+      }
+
+      .green {
+        color: #16c4f4;
+      }
+    }
+
+    .slogan {
+      color: #118c06;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+
+  .footer-links h3,
+  .footer-contact h3,
+  .footer-social h3 {
+    color: #118c06;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: start;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: start;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+
+        &:hover {
+          color: #118c06;
+        }
+      }
+    }
+  }
+
+  .footer-contact {}
+
+  .footer-contact p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    // flex-direction: column;
+    justify-content: start;
+
+    i {
+      color: #118c06;
+      margin-right: 10px;
+    }
+  }
+
+  .footer-social {
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+
+      a {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
         color: #000;
-    }
+        font-size: 18px;
+        transition: all 0.3s ease;
 
-    .footer-logo {
-        text-align: left;
-
-        .company-name {
-            font-size: 36px;
-            font-weight: bold;
-            color: black;
-
-            .bold {
-                color: black;
-            }
-
-            .green {
-                color: #16c4f4;
-            }
+        &:hover {
+          background: #118c06;
+          color: #fff;
         }
-
-        .slogan {
-            color: #118c06;
-            font-size: 18px;
-            margin-top: 5px;
-        }
+      }
     }
+  }
 
-    .footer-links h3,
-    .footer-contact h3,
-    .footer-social h3 {
-        color: #118c06;
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+}
 
-    .footer-links ul {
-        list-style: none;
-        padding: 0;
 
-        li {
-            margin-bottom: 10px;
 
-            a {
-                text-decoration: none;
-                color: black;
-                font-weight: bold;
+.fixed-icons {
+  align-items: center;
+  bottom: 3rem;
+  display: flex;
+  height: 4.5rem;
+  justify-content: center;
+  position: fixed;
+  right: 3rem;
+  width: 4.5rem;
+  z-index: 60;
+}
 
-                &:hover {
-                    color: #118c06;
-                }
-            }
-        }
-    }
 
-    .footer-contact p {
-        margin: 5px 0;
-        font-size: 16px;
-        color: #333;
+.container {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 10rem;
+  height: 10rem;
+  padding-right: 30px !important;
+}
 
-        i {
-            color: #118c06;
-            margin-right: 10px;
-        }
-    }
+.centerCircle {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-    .footer-social {
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
+  animation: spin 13s linear infinite;
+  transform-origin: center center;
+}
 
-            a {
-                width: 40px;
-                height: 40px;
-                background: #fff;
-                border: 1px solid #000;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #000;
-                font-size: 18px;
-                transition: all 0.3s ease;
+.centerCircle .Jcip {
+  border-radius: 50% !important;
 
-                &:hover {
-                    background: #118c06;
-                    color: #fff;
-                }
-            }
-        }
-    }
+  animation: spinReverse 13s linear infinite;
+  transform-origin: center center;
+}
 
-    .footer-bottom {
-        margin-top: 30px;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        font-size: 14px;
-    }
+.littleCircle svg,
+.littleCircle i {
+  animation: spinReverse 13s linear infinite;
+  transform-origin: center center;
+}
+
+.littleCircle {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.littleCircle:nth-child(2) {
+  transform: rotate(0deg) translateY(-5rem) rotate(0deg);
+}
+
+.littleCircle:nth-child(3) {
+  transform: rotate(60deg) translateY(-5rem) rotate(-60deg);
+}
+
+.littleCircle:nth-child(4) {
+  transform: rotate(120deg) translateY(-5rem) rotate(-120deg);
+}
+
+.littleCircle:nth-child(5) {
+  transform: rotate(180deg) translateY(-5rem) rotate(-180deg);
+}
+
+.littleCircle:nth-child(6) {
+  transform: rotate(240deg) translateY(-5rem) rotate(-240deg);
+}
+
+.littleCircle:nth-child(7) {
+  transform: rotate(300deg) translateY(-5rem) rotate(-300deg);
+}
+
+.facebook {
+  background: #1877F2;
+}
+
+.twitter {
+  background: #1DA1F2;
+}
+
+.instagram {
+  background: #E1306C;
+}
+
+.linkedin {
+  background: #0077B5;
+  color: white !important;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.youtube {
+  background: #FF0000;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white !important;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.littleCircle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
 }
