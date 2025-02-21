@@ -426,6 +426,9 @@ body:not(.dark-mode) .six_title {
     }
 }
 
+.sem_content{
+    max-width: 890px;
+}
 
 
 
@@ -546,6 +549,21 @@ body:not(.dark-mode) .our_Blogs {
     background-color: black;
 }
 
+
+.blog_next , .blog_prev{
+    color: white !important;
+    // min-width: 50px !important;
+    // height: 50px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: rgb(12, 12, 12);
+padding: 30px !important;
+    border-radius: 50%;
+    ::after{
+        width: 10px !important;
+    }
+}
 
 // seventh section 
 

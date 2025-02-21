@@ -31,22 +31,24 @@
                     </button>
                 </div>
                 <div class="home-custom-select">
-                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                    <div class="home-custom-select-selected" onclick="toggleHomeDropdown()">
                         <i class="fa-solid fa-language"></i>
                     </div>
-                    <div class="home-custom-select-options">
-                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('az')">
+                    <div id="languageMenu" class="home-custom-select-options">
+                        <div class="home-custom-select-option" data-lang="az">
                             <img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('en')">
+                        <div class="home-custom-select-option" data-lang="en">
                             <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeWebsiteLanguage('ru')">
+                        <div class="home-custom-select-option" data-lang="ru">
                             <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
                         </div>
                     </div>
                 </div>
+
+
 
 
 
@@ -63,21 +65,29 @@
                     <div class="offcanvas-body">
                         <ul>
 
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerHome" href="./Home.html">Ana Səhifə</a>
+                            </li>
                             <hr>
-                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <li class="home_header_elements"><a data-key="headerServices"
+                                    href="./Services.html">Xidmetlerimiz</a></li>
                             <hr>
-                            <li><a href="./Contact.html">Contact</a></li>
+                            <li class="home_header_elements"><a data-key="headerContact" href="./Contact.html">Bizimlə
+                                    Əlaqə</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerPrivacyPolicy"
+                                    href="./Secrecy.html">Gizlilik Siyasəti</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerBlog"
+                                    href="../Html/blog/Blog.html">Blog</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerAboutUs"
+                                    href="./About.html">Haqqimizda</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerFAQ" href="./Fag.html">Tez-tez verilən
+                                    sualar</a></li>
                             <hr>
-                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                            <li class="home_header_elements"><a data-key="headerPortfolio"
+                                    href="./Portfolio.html">Portfolio</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,24 +99,24 @@
         <section class="services-section">
             <div class="tab">
                 <div class="tab_all">
-                    <li class="tab_list"> <button class="tablinks active" onclick="openCity(event, 'Veb')">Vebsaytların
+                    <li class="tab_list"> <button data-key="websitesName" class="tablinks active" onclick="openCity(event, 'Veb')">Vebsaytların
                             hazırlanması</button>
                     </li>
                     <li>
-                        <button class="tablinks" onclick="openCity(event, 'Mobile')">Mobil tətbiqlərin
+                        <button data-key="mobileAppsName" class="tablinks" onclick="openCity(event, 'Mobile')">Mobil tətbiqlərin
                             hazırlanması</button>
 
                     </li>
                     <li>
-                        <button class="tablinks" onclick="openCity(event, 'Ai')">Süni İntellekt</button>
+                        <button class="tablinks" data-key="aiName" onclick="openCity(event, 'Ai')">Süni İntellekt</button>
 
                     </li>
                     <li>
-                        <button class="tablinks" onclick="openCity(event, 'Security')">Kibertəhlükəsizlik</button>
+                        <button class="tablinks" data-key="cybersecurityName" onclick="openCity(event, 'Security')">Kibertəhlükəsizlik</button>
 
                     </li>
                     <li>
-                        <button class="tablinks" onclick="openCity(event, 'Marketing')">Rəqəmsal Marketinq</button>
+                        <button class="tablinks" data-key="digitalMarketingName" onclick="openCity(event, 'Marketing')">Rəqəmsal Marketinq</button>
 
                     </li>
                 </div>
@@ -137,7 +147,7 @@
                             alt="Veb inkişaf xidmətləri">
                     </div>
                     <div class="services-opposite__content">
-                        <p class="services-opposite__description">
+                        <p class="services-opposite__description" data-key="websiteCustomDevelopment">
                             Buna görə də bizim veb inkişaf xidmətlərimiz sizin fərdi ehtiyaclarınıza uyğunlaşdırılıb.
                             İstər sadə scroll sayt istəyən kiçik biznes, istərsə də mürəkkəb e-ticarət platforması
                             tələb edən böyük müəssisə olsun, bizim bu layihələri uğurla təhvil vermək üçün yetərli
@@ -149,30 +159,32 @@
                     </div>
                 </div>
                 <div class="benefits">
-                    <h2 class="benefits__title">Nə əldə edəcəksiniz?</h2>
+                    <h2 class="benefits__title" data-key="websiteBenefitsTitle">Nə əldə edəcəksiniz?</h2>
                     <div class="benefits__content">
-                        <ul class="benefits__list">
-                            <li>Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və biznesinizi böyüdəcək
+                        <ul class="benefits__list" data-key="websiteBenefits">
+                            <li data-key="websiteFirstLi">Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və
+                                biznesinizi böyüdəcək
                                 mükəmməl və müasir onlayn mövcudluqla salamlaşmağın vaxtıdır.</li>
-                            <li>Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv veb-sayt xoşbəxt müştərilər və
+                            <li data-key="websiteSecondLi">Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv
+                                veb-sayt xoşbəxt müştərilər və
                                 artan konversiya deməkdir.</li>
-                            <li>24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış meneceri olacaq.</li>
+                            <li data-key="websiteThirdLi">24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış
+                                meneceri olacaq.</li>
                         </ul>
                         <ul class="benefits__list">
-                            <li>Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət üstünlüyü verə bilər və sizi öz
+                            <li data-key="websiteFourthLi">Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət
+                                üstünlüyü verə bilər və sizi öz
                                 sahənizdə arzulanan brendə çevirə bilər.</li>
-                            <li>Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın, çünki bizim həllimiz
+                            <li data-key="websiteFifthLi">Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın,
+                                çünki bizim həllimiz
                                 vebsaytınızı yeniləməyi və saxlamağı asanlaşdıracaq.</li>
-                            <li>İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt istənilən cihaz üçün mükəmməl
+                            <li data-key="websiteSixthLi">İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt
+                                istənilən cihaz üçün mükəmməl
                                 görünüş təmin edir.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="services-images">
-                    <h2>Hazirlama Merheleleri</h2>
-                    <img src="https://example.com/path/to/svg-file.svg" alt="SVG Image">
 
-                </div> -->
 
             </div>
 
@@ -180,8 +192,8 @@
                 <div class="services-images mobile">
                     <div class="content">
                         <div class="text">
-                            <h2>Mobil tətbiqlərin hazırlanması</h2>
-                            <p>
+                            <h2 data-key="mobilTitle">Mobil tətbiqlərin hazırlanması</h2>
+                            <p data-key="mobilDescription">
                                 Günümüzdə smartfonlar və digər texnoloji cihazlar bütün sektorlarda və bazarlarda önəmli
                                 bir yer tutmuşdur.
                                 Bilirsiniz ki, daha çox insanın hər şey üçün telefonlarına güvəndiyi bir vaxtda mobil
@@ -207,7 +219,7 @@
                                 alt="Mobil tətbiqlər">
                         </div>
                         <div class="text">
-                            <p>
+                            <p data-key="mobilExperience">
                                 Çoxillik təcrübəyə malik komandamız biznes ehtiyaclarınıza uyğunlaşdırılmış və
                                 gözləntilərinizi üstələyən fərdi mobil proqrama sahib olmağınıza kömək etmək üçün
                                 buradadır.
@@ -219,24 +231,28 @@
                     </div>
                 </div>
                 <div class="benefits">
-                    <h2 class="benefits__title">Nə əldə edəcəksiniz?</h2>
+                    <h2 class="benefits__title" data-key="mobilBenefitsTitle">Nə əldə edəcəksiniz?</h2>
                     <div class="benefits__content">
                         <ul class="benefits__list">
-                            <li>Sizə layiq bir vebsayt: Köhnə vebsaytlarla vidalaşmağın və biznesinizi böyüdəcək
-                                mükəmməl və müasir onlayn mövcudluqla salamlaşmağın vaxtıdır.</li>
-                            <li>Sürətli Yüklənmə, Daha Çox Konversiya: Sürətli, responsiv veb-sayt xoşbəxt müştərilər və
-                                artan konversiya deməkdir.</li>
-                            <li>24/7 İşləyən Vebsayt: Veb saytınız biznesiniz üçün 24/7 satış meneceri olacaq.</li>
+                            <li data-key="mobilFirstLi">App-Solute Həll: Fərdi hazırlanmış mobil proqramla biznesinizi
+                                üst səviyyəyə qaldırmağa hazır olun!</li>
+                            <li data-key="mobilSecondLi">İstifadəçi Dostu Əyləncə: Müştərilərinizin geri qayıtmasını
+                                təmin edəcək istifadəçi dostu, əyləncəli və interaktiv mobil proqrama sahib olun.</li>
+                            <li data-key="mobilThirdLi">Mobil Marvel: Müştərilərinizi ildırım sürətli yükləmə
+                                müddətləri, asan naviqasiya və lazım olan bütün funksiyalarla heyran edin.</li>
                         </ul>
                         <ul class="benefits__list">
-                            <li>Rəqabət Üstünlüyü: Yaxşı dizayn edilmiş veb sayt rəqabət üstünlüyü verə bilər və sizi öz
-                                sahənizdə arzulanan brendə çevirə bilər.</li>
-                            <li>Asan Saxlanma: Mürəkkəb veb sayt idarəçiliyi ilə sağollaşın, çünki bizim həllimiz
-                                vebsaytınızı yeniləməyi və saxlamağı asanlaşdıracaq.</li>
-                            <li>İstənilən Cihazda Mükəmməl Görünüş: Hazırladığımız vebsayt istənilən cihaz üçün mükəmməl
-                                görünüş təmin edir.</li>
+                            <li data-key="mobilFourthLi">Sektorda Cool Şirkət: Unikal olmağınızla fərqlənin və
+                                müştərilərinizə mükəmməl mobil tətbiqetməniz ilə rəqabətdə sizi seçmək üçün səbəb verin.
+                            </li>
+                            <li data-key="mobilFifthLi">Ulduzlar Qazanmaq: Mobil tətbiq dünyanın harasında olmalarından
+                                asılı olmayaraq daha geniş auditoriyaya çatmağınıza kömək edə bilər. İstifadəçilərin
+                                verdikləri ulduzlar biznesinizi inkişaf etdirmək üçün sizə güc verəcək.</li>
+                            <li data-key="mobilSixthLi">Hər Zaman Bağlantıda: Mobil proqramla şirkətiniz
+                                müştərilərinizin ovuc içində olacaq.</li>
                         </ul>
                     </div>
+
                 </div>
 
             </div>
@@ -245,8 +261,8 @@
                 <div class="services-images ai-section">
                     <div class="content">
                         <div class="text">
-                            <h2>Süni İntellekt</h2>
-                            <p>
+                            <h2 data-key="aiTitle">Süni İntellekt</h2>
+                            <p data-key="aiIntro">
                                 Təsəvvür edin ki, məlumatların daxil edilməsinə əsaslanaraq qərarlar qəbul edən,
                                 tək başına öyrənə və işləyə bilən maşınlardan ibarət komandanız var. Süni intellektlə bu
                                 arzu
@@ -273,7 +289,7 @@
                                 alt="Süni intellekt">
                         </div>
                         <div class="text">
-                            <p>
+                            <p data-key="aiSolutions">
                                 Javachip-də biz sizə ağıllı və avtomatlaşdırılmış həllər təqdim etməklə biznes
                                 məqsədlərinizə
                                 çatmağınıza kömək edəcəyik. Ən müasir süni intellekt texnologiyalarımızla
@@ -290,22 +306,33 @@
                     </div>
                 </div>
                 <div class="ai-benefits">
-                    <h2>Nə əldə edəcəksiniz?</h2>
+                    <h2 data-key="websiteBenefitsTitle">Nə əldə edəcəksiniz?</h2>
                     <div class="benefits-container">
                         <ul class="benefits-list">
-                            <li><strong>Daha ağıllı biznes qərarları:</strong> Süni intellekt həlləri ilə
+                            <li data-key="aiBenefit1"><strong>Daha ağıllı biznes qərarları:</strong> Süni intellekt
+                                həlləri ilə
                                 instinktlərinizə yox, dəqiq məlumatlara əsaslanan qərarlara güvənməlisiniz.</li>
-                            <li><strong>Artan Məhsuldarlıq:</strong> Süni intellekt sizin və komandanızın gördüyü rutin
+                            <li data-key="aiBenefit2"><strong>Artan Məhsuldarlıq:</strong> Süni intellekt sizin və
+                                komandanızın
+                                gördüyü rutin
                                 işləri avtomatlaşdıra bilər.</li>
-                            <li><strong>Gələcək Buradadır:</strong> Rəqabətdən öndə olun və texnologiyanın gücü ilə yeni
+                            <li data-key="aiBenefit3"><strong>Gələcək Buradadır:</strong> Rəqabətdən öndə olun və
+                                texnologiyanın
+                                gücü ilə yeni
                                 nailiyyətlər əldə edin.</li>
                         </ul>
                         <ul class="benefits-list">
-                            <li><strong>Zehni oxuma:</strong> Süni intellekt müştəri davranışını və seçimlərini təhlil
+                            <li data-key="aiBenefit4"><strong>Zehni oxuma:</strong> Süni intellekt müştəri davranışını
+                                və
+                                seçimlərini təhlil
                                 edərək fərdi təcrübələr təqdim edir.</li>
-                            <li><strong>Keyfiyyətin yox, xərclərin azaldılması:</strong> Süni intellekt yüksək
+                            <li data-key="aiBenefit5"><strong>Keyfiyyətin yox, xərclərin azaldılması:</strong> Süni
+                                intellekt
+                                yüksək
                                 keyfiyyətli nəticələri qoruyaraq xərclərinizi azaldır.</li>
-                            <li><strong>Sərhədsiz İmkanlar:</strong> Süni intellekt sonsuz imkanlar təqdim edərək
+                            <li data-key="aiBenefit6"><strong>Sərhədsiz İmkanlar:</strong> Süni intellekt sonsuz
+                                imkanlar təqdim
+                                edərək
                                 şirkətinizin böyüməsinə şərait yaradır.</li>
                         </ul>
                     </div>
@@ -314,8 +341,8 @@
             <div id="Security" class="tabcontent">
                 <div class="cybersecurity">
                     <div class="cybersecurity-content">
-                        <h2>Kibertəhlükəsizlik</h2>
-                        <p>
+                        <h2 data-key="securityTitle">Kibertəhlükəsizlik</h2>
+                        <p data-key="securityIntro">
                             Bugünkü rəqəmsal dünyada onlayn platformalarda mövcud olan hər bir şirkət
                             kiberhücumların riski altındadır. Buna görə də, veb saytınız və rəqəmsal aktivləriniz
                             həmişə qorunmalıdır. Təəssüf ki, məlumatların pozulmasının nəticələri şirkət üçün
@@ -334,7 +361,7 @@
                             alt="Kibertəhlükəsizlik Xidmətləri">
                     </div>
                     <div class="cybersecurity-advanced-content">
-                        <p>
+                        <p data-key="securitySolutions">
                             Amma biz kömək etmək üçün buradayıq. Biz bilirik ki, sizin diqqətiniz
                             şirkətin inkişafı və uğur qazanmasındadır və məşğul olmaq istədiyiniz son
                             şey kiberhücumdur. Buna görə də biz sistemlərinizi qorumaq üçün
@@ -345,22 +372,28 @@
                     </div>
                 </div>
                 <div class="security-benefit">
-                    <h1 class="secruty_advanced">Ne elde edeceksiniz??</h1>
+                    <h1 class="secruty_advanced" data-key="mobilBenefitsTitle">Ne elde edeceksiniz??</h1>
                     <div class="security-section">
                         <ul class="security-list">
-                            <li class="security-item">Gecələr Rahat Yuxu: Hər an biznesinizin kiberhücumlardan
+                            <li class="security-item" data-key="securityBenefit1">Gecələr Rahat Yuxu: Hər an
+                                biznesinizin kiberhücumlardan
                                 qorunduğundan əmin ola bilərsiniz.</li>
-                            <li class="security-item">Onlayn Dünyanızı Təhlükəsiz Saxlayın: Yüksək səviyyəli
+                            <li class="security-item" data-key="securityBenefit4">Onlayn Dünyanızı Təhlükəsiz Saxlayın:
+                                Yüksək səviyyəli
                                 kibertəhlükəsizlik həllərimizlə həssas məlumatlarınızı qoruyun.</li>
-                            <li class="security-item">Müştərilərinizin Gözündə Qəhrəman olun: Kibertəhlükəsizlik
+                            <li class="security-item" data-key="securityBenefit2">Müştərilərinizin Gözündə Qəhrəman
+                                olun: Kibertəhlükəsizlik
                                 xidmətlərinə sərmayə qoymaqla müştərilərinə onların məxfiliyinə və təhlükəsizliyinə
                                 dəyər verdiyinizi göstərin.</li>
-                            <li class="security-item">Növbəti Xəbər Başlığı Olmayın: Biznesinizi kiberhücumun növbəti
+                            <li class="security-item" data-key="securityBenefit5">Növbəti Xəbər Başlığı Olmayın:
+                                Biznesinizi kiberhücumun növbəti
                                 hədəfinə çevrilməkdən qoruya bilərsiniz.</li>
-                            <li class="security-item">Biznesinizi Hack-Proof edin: Bizim hərtərəfli təhlükəsizlik
+                            <li class="security-item" data-key="securityBenefit3">Biznesinizi Hack-Proof edin: Bizim
+                                hərtərəfli təhlükəsizlik
                                 həllərimizlə şirkət və müştərilərinizi məlumatların pozulmasının zərərli təsirlərindən
                                 qoruyun.</li>
-                            <li class="security-item">Effektiv Xidmət: İstifadəsi asan, effektiv kibertəhlükəsizlik
+                            <li class="security-item" data-key="securityBenefit6">Effektiv Xidmət: İstifadəsi asan,
+                                effektiv kibertəhlükəsizlik
                                 həllərimizlə hər şey sadə olacaqdır.</li>
                         </ul>
                     </div>
@@ -373,19 +406,19 @@
             <div id="Marketing" class="tabcontent">
                 <div class="smm-section">
                     <div class="smm-content">
-                        <h2 class="smm-title">SMM</h2>
-                        <h3 class="smm-subtitle">Üstünlükləri:</h3>
+                        <h2 class="smm-title" data-key="smmTitle">SMM</h2>
+                        <h3 class="smm-subtitle" data-key="smmAdvantagesTitle">Üstünlükləri:</h3>
                         <ul class="smm-list">
-                            <li>Brend şüurunun artması</li>
-                            <li>Təkmilləşdirilmiş müştəri əlaqəsi</li>
-                            <li>Daha çox konversiya</li>
-                            <li>Hədəf kütlənin daha yaxşı təyini</li>
-                            <li>Brend reputasiyası</li>
-                            <li>Artan potensial müştəri və satışlar</li>
-                            <li>Artan müştəri məmnuniyyəti</li>
-                            <li>Bazar məlumatlarının əldə olunması</li>
-                            <li>Rəqabət üstünlüyü</li>
-                            <li>Müştəri loyallığının yaxşılaşdırılması</li>
+                            <li data-key="smmAdvantage1">Brend şüurunun artması</li>
+                            <li data-key="smmAdvantage2">Təkmilləşdirilmiş müştəri əlaqəsi</li>
+                            <li data-key="smmAdvantage3">Daha çox konversiya</li>
+                            <li data-key="smmAdvantage4">Hədəf kütlənin daha yaxşı təyini</li>
+                            <li data-key="smmAdvantage5">Brend reputasiyası</li>
+                            <li data-key="smmAdvantage6">Artan potensial müştəri və satışlar</li>
+                            <li data-key="smmAdvantage7">Artan müştəri məmnuniyyəti</li>
+                            <li data-key="smmAdvantage8">Bazar məlumatlarının əldə olunması</li>
+                            <li data-key="smmAdvantage9">Rəqabət üstünlüyü</li>
+                            <li data-key="smmAdvantage10">Müştəri loyallığının yaxşılaşdırılması</li>
                         </ul>
                     </div>
                     <div class="smm-image">
@@ -399,37 +432,39 @@
                             alt="SMM Service">
                     </div>
                     <div class="smm-service-content">
-                        <h3 class="smm-service-title">SMM xidmətinə daxil olanlar:</h3>
+                        <h3 class="smm-service-title" data-key="smmServicesTitle">SMM xidmətinə daxil olanlar:</h3>
                         <ul class="smm-service-list">
-                            <li>SMM strategiyasının hazırlanması</li>
-                            <li>Aylıq məzmun planı</li>
-                            <li>Biznes hesablarının yaradılması və idarə olunması</li>
-                            <li>Yaradıcı postlar</li>
-                            <li>Reklam kampaniyalarının yaradılması</li>
-                            <li>Zənglər və mesajlar üçün avtomatlaşdırılmış cavab sistemi</li>
-                            <li>Professional foto və video çəkilişi</li>
-                            <li>Müxtəlif yarışların təşkili</li>
-                            <li>Aylıq hesabat</li>
+                            <li data-key="smmService1">SMM strategiyasının hazırlanması</li>
+                            <li data-key="smmService2">Aylıq məzmun planı</li>
+                            <li data-key="smmService3">Biznes hesablarının yaradılması və idarə olunması</li>
+                            <li data-key="smmService4">Yaradıcı postlar</li>
+                            <li data-key="smmService5">Reklam kampaniyalarının yaradılması</li>
+                            <li data-key="smmService6">Zənglər və mesajlar üçün avtomatlaşdırılmış cavab sistemi</li>
+                            <li data-key="smmService7">Professional foto və video çəkilişi</li>
+                            <li data-key="smmService8">Müxtəlif yarışların təşkili</li>
+                            <li data-key="smmService9">Aylıq hesabat</li>
                         </ul>
                     </div>
                 </div>
                 <div class="seo-section">
                     <div class="seo-content">
-                        <h2 class="seo-title">SEO</h2>
-                        <h3 class="seo-subtitle">Üstünlükləri:</h3>
+                        <h2 class="seo-title" data-key="seoTitle">SEO</h2>
+                        <h3 class="seo-subtitle" data-key="seoAdvantagesTitle">Üstünlükləri:</h3>
                         <ul class="seo-list">
-                            <li>Brend etibarının artması</li>
-                            <li>Axtarış sistemlərində üzvi olaraq üst sıralarda olmaq</li>
-                            <li>Veb sayta artan trafik</li>
-                            <li>Təkmilləşdirilmiş istifadəçi təcrübəsi</li>
-                            <li>Brend şüurunun artması</li>
-                            <li>Daha yaxşı istifadəçi təcrübəsi</li>
-                            <li>Uzunmüddətli marketinq strategiyası</li>
-                            <li>Artan potensial müştəri və satışlar</li>
-                            <li>Daha yüksək investisiya gəliri</li>
-                            <li>Rəqabət üstünlüyü</li>
+                            <li data-key="seoAdvantage1">Brend etibarının artması</li>
+                            <li data-key="seoAdvantage2">Axtarış sistemlərində üzvi olaraq üst sıralarda olmaq</li>
+                            <li data-key="seoAdvantage3">Veb sayta artan trafik</li>
+                            <li data-key="seoAdvantage4">Təkmilləşdirilmiş istifadəçi təcrübəsi</li>
+                            <li data-key="seoAdvantage5">Brend şüurunun artması</li>
+                            <li data-key="seoAdvantage6">Daha yaxşı istifadəçi təcrübəsi</li>
+                            <li data-key="seoAdvantage7">Uzunmüddətli marketinq strategiyası</li>
+                            <li data-key="seoAdvantage8">Artan potensial müştəri və satışlar</li>
+                            <li data-key="seoAdvantage9">Daha yüksək investisiya gəliri</li>
+                            <li data-key="seoAdvantage10">Rəqabət üstünlüyü</li>
                         </ul>
                     </div>
+
+
                     <div class="seo-image">
                         <img src="https://thejavachip.com/static/media/seo-first-image.7a2b150330458f6485f2.png"
                             alt="SEO image">
@@ -441,40 +476,40 @@
                             alt="SEO Services">
                     </div>
                     <div class="seo-services__content">
-                        <h3 class="seo-services__title">SEO xidmətinə daxil olanlar:</h3>
+                        <h3 class="seo-services__title" data-key="seoServicesTitle">SEO xidmətinə daxil olanlar:</h3>
                         <ul class="seo-services__list">
-                            <li>Vebsayt auditi</li>
-                            <li>SEO strategiyasının hazırlanması</li>
-                            <li>Açar sözlərin təyini</li>
-                            <li>Texniki SEO</li>
-                            <li>Şəkillərin optimizasiyası</li>
-                            <li>Schema markup</li>
-                            <li>Səhifə daxili SEO</li>
-                            <li>Semantik SEO</li>
-                            <li>Rəqiblərin təhlili</li>
-                            <li>Məzmun optimizasiyası</li>
-                            <li>Backlink auditi</li>
-                            <li>Link yaradılması</li>
-                            <li>SEO əsaslı bloq</li>
-                            <li>Aylıq hesabat</li>
+                            <li data-key="seoService1">Vebsayt auditi</li>
+                            <li data-key="seoService2">SEO strategiyasının hazırlanması</li>
+                            <li data-key="seoService3">Açar sözlərin təyini</li>
+                            <li data-key="seoService4">Texniki SEO</li>
+                            <li data-key="seoService5">Şəkillərin optimizasiyası</li>
+                            <li data-key="seoService6">Schema markup</li>
+                            <li data-key="seoService7">Səhifə daxili SEO</li>
+                            <li data-key="seoService8">Semantik SEO</li>
+                            <li data-key="seoService9">Rəqiblərin təhlili</li>
+                            <li data-key="seoService10">Məzmun optimizasiyası</li>
+                            <li data-key="seoService11">Backlink auditi</li>
+                            <li data-key="seoService12">Link yaradılması</li>
+                            <li data-key="seoService13">SEO əsaslı bloq</li>
+                            <li data-key="seoService14">Aylıq hesabat</li>
                         </ul>
                     </div>
                 </div>
                 <div class="sem-section">
                     <div class="sem-content">
-                        <h2 class="sem-title">SEM</h2>
-                        <h3 class="sem-subtitle">Üstünlükləri:</h3>
+                        <h2 class="sem-title" data-key="semTitle">SEM</h2>
+                        <h3 class="sem-subtitle" data-key="semAdvantagesTitle">Üstünlükləri:</h3>
                         <ul class="sem-list">
-                            <li>Veb-sayt trafikinın artması</li>
-                            <li>Xərc baxımından səmərəli</li>
-                            <li>Hədəf auditoriyasına uyğun reklam</li>
-                            <li>Ölçülə bilən nəticələr</li>
-                            <li>Brend şüurunun artması</li>
-                            <li>Artan konversiya</li>
-                            <li>Daha yaxşı istifadəçi təcrübəsi</li>
-                            <li>Rəqabət üstünlüyü</li>
-                            <li>Reklam büdcəsinə nəzarət</li>
-                            <li>Uzunmüddətli faydalar</li>
+                            <li data-key="semAdvantage1">Veb-sayt trafikinın artması</li>
+                            <li data-key="semAdvantage2">Xərc baxımından səmərəli</li>
+                            <li data-key="semAdvantage3">Hədəf auditoriyasına uyğun reklam</li>
+                            <li data-key="semAdvantage4">Ölçülə bilən nəticələr</li>
+                            <li data-key="semAdvantage5">Brend şüurunun artması</li>
+                            <li data-key="semAdvantage6">Artan konversiya</li>
+                            <li data-key="semAdvantage7">Daha yaxşı istifadəçi təcrübəsi</li>
+                            <li data-key="semAdvantage8">Rəqabət üstünlüyü</li>
+                            <li data-key="semAdvantage9">Reklam büdcəsinə nəzarət</li>
+                            <li data-key="semAdvantage10">Uzunmüddətli faydalar</li>
                         </ul>
                     </div>
                     <div class="sem-image">
@@ -490,14 +525,15 @@
                                 alt="SEM Services">
                         </div>
                         <div class="sem-services__text">
-                            <h3 class="sem-services__title">SEM xidmətinə daxil olanlar:</h3>
+                            <h3 class="sem-services__title" data-key="semServicesTitle">SEM xidmətinə daxil olanlar:
+                            </h3>
                             <ul class="sem-services__list">
-                                <li>Açar sözlərin araşdırılması və analizi</li>
-                                <li>Rəqiblərin reklam kampaniyalarının analizi və təhlili</li>
-                                <li>Reklam kampaniyalarının yaradılması</li>
-                                <li>Reklam kampaniyalarının monitorinqi və optimizasiyası</li>
-                                <li>Reklam üçün A/B testi</li>
-                                <li>Performans hesabatlarının hazırlanması</li>
+                                <li data-key="semService1">Açar sözlərin araşdırılması və analizi</li>
+                                <li data-key="semService2">Rəqiblərin reklam kampaniyalarının analizi və təhlili</li>
+                                <li data-key="semService3">Reklam kampaniyalarının yaradılması</li>
+                                <li data-key="semService4">Reklam kampaniyalarının monitorinqi və optimizasiyası</li>
+                                <li data-key="semService5">Reklam üçün A/B testi</li>
+                                <li data-key="semService6">Performans hesabatlarının hazırlanması</li>
                             </ul>
                         </div>
                     </div>
@@ -517,32 +553,33 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
-                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
-                        class="bold">}</span></p>
-                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+                <p class="company-name"><span class="bold"><img
+                            src="	https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                            alt=""></span></p>
+                <p class="slogan" data-key="footerCompanyTagline">Rəqəmsal Partnyorunuz</p>
             </div>
 
             <div class="footer-links">
-                <h3>Keçidlər</h3>
+                <h3 data-key="footerLinksTitle">Keçidlər</h3>
                 <ul>
-                    <li><a href="#">Xidmətlərimiz</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Bizimlə əlaqə</a></li>
-                    <li><a href="#">Gizlilik Siyasəti</a></li>
-                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                    <li><a data-key="footerServices" href="#">Xidmətlərimiz</a></li>
+                    <li><a data-key="footerPortfolio" href="#">Portfolio</a></li>
+                    <li><a data-key="footerAboutUs" href="#">Haqqımızda</a></li>
+                    <li><a data-key="footerContactUs" href="#">Bizimlə əlaqə</a></li>
+                    <li><a data-key="footerPrivacyPolicy" href="#">Gizlilik Siyasəti</a></li>
+                    <li><a data-key="footerFAQ" href="#">Tez-tez verilən suallar</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
-                <h3>Bizimlə əlaqə</h3>
-                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
-                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+                <h3 data-key="footerContactTitle"><strong>Bizimlə əlaqə</strong></h3>
+                <p i data-key="footerPhone"><i class="fas fa-phone-alt"></i> <strong>+994998822500</strong></p>
+                <p data-key="footerEmail"><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p data-key="footerAddress"><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
             </div>
 
             <div class="footer-social">
-                <h3>Bizi izləyin</h3>
+                <h3 data-key="footerFollowUsTitle">Bizi izləyin</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -620,7 +657,6 @@
 
 
     <script src="../asset/js/services.js"></script>
-    <script src="../asset/js/serviceslanguages.js"></script>
     <script src="../asset/js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../asset/js/animate.js"></script>
@@ -631,6 +667,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../asset/js/serviceslanguages.js"></script>
 </body>
 
 </html>

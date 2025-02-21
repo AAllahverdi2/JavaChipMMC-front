@@ -33,18 +33,18 @@
                     </button>
                 </div>
                 <div class="home-custom-select">
-                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                    <div class="home-custom-select-selected" onclick="toggleHomeDropdown()">
                         <i class="fa-solid fa-language"></i>
                     </div>
-                    <div class="home-custom-select-options">
-                        <div class="home-custom-select-option" onclick="changeLanguage('az')">
+                    <div id="languageMenu" class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeLanguage('az')" data-lang="az">
                             <img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('en')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('en')" data-lang="en">
                             <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('ru')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('ru')" data-lang="ru">
                             <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
                         </div>
                     </div>
@@ -65,21 +65,29 @@
                     <div class="offcanvas-body">
                         <ul>
 
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerHome" href="./Home.html">Ana Səhifə</a>
+                            </li>
                             <hr>
-                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <li class="home_header_elements"><a data-key="headerServices"
+                                    href="./Services.html">Xidmetlerimiz</a></li>
                             <hr>
-                            <li><a href="./Contact.html">Contact</a></li>
+                            <li class="home_header_elements"><a data-key="headerContact" href="./Contact.html">Bizimlə
+                                    Əlaqə</a></li>
                             <hr>
-                            <li><a href="./Secrecy.html">Secrety</a></li>
+                            <li class="home_header_elements"><a data-key="headerPrivacyPolicy"
+                                    href="./Secrecy.html">Gizlilik Siyasəti</a></li>
                             <hr>
-                            <li><a href="../Html/blog/Blog.html">Blog</a></li>
+                            <li class="home_header_elements"><a data-key="headerBlog"
+                                    href="../Html/blog/Blog.html">Blog</a></li>
                             <hr>
-                            <li><a href="./About.html">About</a></li>
+                            <li class="home_header_elements"><a data-key="headerAboutUs"
+                                    href="./About.html">Haqqimizda</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerFAQ" href="./Fag.html">Tez-tez verilən
+                                    sualar</a></li>
                             <hr>
-                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                            <li class="home_header_elements"><a data-key="headerPortfolio"
+                                    href="./Portfolio.html">Portfolio</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,16 +101,16 @@
 
     <main class="about_main">
         <section class="about">
-            <h1 class="about-title">Haqqımızda</h1>
+            <h1 class="about-title" data-key="aboutTitle">Haqqımızda</h1>
             <div class="about_all">
                 <div class="about-left">
-                    <p class="about-text">
+                    <p data-key="aboutIntro" class="about-text">
                         JavaChip MMC müxtəlif ölçülü bizneslər üçün rəqəmsal həllər təmin etmək məqsədilə yaradılmışdır.
                         Biz ən son və ən yaxşı texnologiyalardan istifadə edərək öz rəqəmsal xidmətlərimizi təqdim edən
                         müştəri
                         yönümlü şirkətik.
                     </p>
-                    <p class="about-text">
+                    <p data-key="aboutSuccess" class="about-text">
                         Müştərilərimizin onlayn uğur qazanmasına kömək edəcək keyfiyyətli, sərfəli və istifadəçi dostu
                         rəqəmsal
                         məhsullar təqdim edirik.
@@ -110,7 +118,7 @@
                         təklif
                         edir.
                     </p>
-                    <p class="about-text">
+                    <p data-key="aboutExpertise" class="about-text">
                         Bilik və təcrübəmizlə ən yaxşı həllər və xidmətlər təqdim etməyə qadirik.
                         Fərdi ehtiyaclarınızı anlamaq və bu ehtiyaclara cavab verən həll yolu hazırlamaq üçün sizinlə
                         sıx
@@ -118,18 +126,20 @@
                     </p>
                 </div>
                 <div class="about-right">
-                    <h2 class="about-highlight">
+                    <h2 data-key="aboutDigitalPresence" class="about-highlight">
                         Biznesinizin rəqəmsal əksinin etibarlı əllərdə olduğundan əmin olun, çünki bu, potensial
                         müştərilərinizin xidmət və məhsullarınızla tanış olacağı ilk yerdir.
                     </h2>
                     <ul class="about-list">
-                        <li class="about-item"><strong>Missiyamız</strong> bizneslərə, fiziki şəxslərə və
+                        <li data-key="aboutMission" class="about-item"><strong>Missiyamız</strong> bizneslərə, fiziki
+                            şəxslərə və
                             qeyri-kommersiya
                             təşkilatlarına öz brendlərini tanıtmaqda və
                             bütün dünyada geniş potensial müştərilərə çatmaqda kömək edəcək rəqəmsal xidmətlər təqdim
                             etməkdir.
                         </li>
-                        <li class="about-item"><strong>Vizyonumuz</strong> davamlı innovasiya və uzunmüddətli müştəri
+                        <li data-key="aboutVision" class="about-item"><strong>Vizyonumuz</strong> davamlı innovasiya və
+                            uzunmüddətli müştəri
                             əlaqələri
                             quraraq dünyanın aparıcı rəqəmsal həllər təminatçısı olmaqdır.</li>
                     </ul>
@@ -142,76 +152,76 @@
         <section class="team">
             <div class="team-member">
                 <img src="../asset/image/huseynli.8d9ea91b7e0b1a6045fa.png" alt="Huseynli" class="team-img">
-                <h2 class="team-name">Huseynli</h2>
-                <p class="team-role">İcraçı Direktor</p>
+                <h2 class="team-name" data-key="teamHuseynli">Huseynli</h2>
+                <p class="team-role" data-key="teamRoleHuseynli">İcraçı Direktor</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Atayev.png" alt="Atayev" class="team-img">
-                <h2 class="team-name">Atayev</h2>
-                <p class="team-role">Biznesin İnkişafı Şöbəsinin Müdiri</p>
+                <h2 class="team-name" data-key="teamAtayev">Atayev</h2>
+                <p class="team-role" data-key="teamRoleAtayev">Biznesin İnkişafı Şöbəsinin Müdiri</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Rahimov.png" alt="Rahimov" class="team-img">
-                <h2 class="team-name">Rahimov</h2>
-                <p class="team-role">Full Stack Veb Developer</p>
+                <h2 class="team-name" data-key="teamRahimov">Rahimov</h2>
+                <p class="team-role" data-key="teamRoleRahimov">Full Stack Veb Developer</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Tagi.png" alt="Tagi" class="team-img">
-                <h2 class="team-name">Tagi</h2>
-                <p class="team-role">Full Stack Veb Developer</p>
+                <h2 class="team-name" data-key="teamTagi">Tagi</h2>
+                <p class="team-role" data-key="teamRoleTagi">Full Stack Veb Developer</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Karimli.png" alt="Karimli" class="team-img">
-                <h2 class="team-name">Karimli</h2>
-                <p class="team-role">Süni İntellekt Komanda Rəhbəri</p>
+                <h2 class="team-name" data-key="teamKarimli">Karimli</h2>
+                <p class="team-role" data-key="teamRoleKarimli">Süni İntellekt Komanda Rəhbəri</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Salimli.png" alt="Salimov" class="team-img">
-                <h2 class="team-name">Salimov</h2>
-                <p class="team-role">Süni İntellekt Mühəndisi</p>
+                <h2 class="team-name" data-key="teamSalimli">Salimov</h2>
+                <p class="team-role" data-key="teamRoleSalimli">Süni İntellekt Mühəndisi</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Alakberli.png" alt="Alakbarli" class="team-img">
-                <h2 class="team-name">Alakbarli</h2>
-                <p class="team-role">Süni İntellekt Mühəndisi</p>
+                <h2 class="team-name" data-key="teamAlakberli">Alakbarli</h2>
+                <p class="team-role" data-key="teamRoleAlakberli">Süni İntellekt Mühəndisi</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Atakisiyeva.png" alt="Atakishiyeva" class="team-img">
-                <h2 class="team-name">Atakishiyeva</h2>
-                <p class="team-role">Rəqəmsal Marketinq Meneceri</p>
+                <h2 class="team-name" data-key="teamAtakishiyeva">Atakishiyeva</h2>
+                <p class="team-role" data-key="teamRoleAtakishiyeva">Rəqəmsal Marketinq Meneceri</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Guliyeva.png" alt="Guliyeva" class="team-img">
-                <h2 class="team-name">Guliyeva</h2>
-                <p class="team-role">Mobil Proqram Developer</p>
+                <h2 class="team-name" data-key="teamGuliyeva">Guliyeva</h2>
+                <p class="team-role" data-key="teamRoleGuliyeva">Mobil Proqram Developer</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Maharramova.png" alt="Maharramova" class="team-img">
-                <h2 class="team-name">Maharramova</h2>
-                <p class="team-role">UI/UX Dizayner</p>
+                <h2 class="team-name" data-key="teamMaharramova">Maharramova</h2>
+                <p class="team-role" data-key="teamRoleMaharramova">UI/UX Dizayner</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/Aliyeva.png" alt="Aliyeva" class="team-img">
-                <h2 class="team-name">Aliyeva</h2>
-                <p class="team-role">Qrafik Dizayner</p>
+                <h2 class="team-name" data-key="teamAliyeva">Aliyeva</h2>
+                <p class="team-role" data-key="teamRoleAliyeva">Qrafik Dizayner</p>
             </div>
             <div class="team-member">
                 <img src="../asset/image/sayilova.bce1c8d995b32fedcde1.png" alt="Sayilova" class="team-img">
-                <h2 class="team-name">Sayilova</h2>
-                <p class="team-role">SMM Menecer</p>
+                <h2 class="team-name" data-key="teamSayilova">Sayilova</h2>
+                <p class="team-role" data-key="teamRoleSayilova">SMM Menecer</p>
             </div>
         </section>
+
         <section class="about-services">
             <div class="about-services-line"></div>
 
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{1}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Arzuladığın komanda</h2>
-                    <p class="about-services-text">
+                    <h2 class="about-services-title" data-key="aboutServicesTitle1">Arzuladığın komanda</h2>
+                    <p class="about-services-text" data-key="aboutServicesText1">
                         Komandamızın hər bir üzvü ən yeni texnologiyalardan istifadə edərək istənilən çətinlikdə olan
-                        layihənizi
-                        hazırlama bacarığına malikdir.
+                        layihənizi hazırlama bacarığına malikdir.
                     </p>
                 </div>
             </div>
@@ -219,10 +229,10 @@
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{2}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Vaxtında təslimat</h2>
-                    <p class="about-services-text">
+                    <h2 class="about-services-title" data-key="aboutServicesTitle2">Vaxtında təslimat</h2>
+                    <p class="about-services-text" data-key="aboutServicesText2">
                         Layihələrin planlanması zamanı, biz agile metodologiyasından istifadə edirik. Müştərilərimizə
-                        istədikləri sifarişi müqaviləyə əsasən tam zamanında ən keyfiyyətli şəkildə təqdim edirik.
+                        istədikləri sifarişi müqaviləyə əsasən tam zamanında və keyfiyyətli şəkildə təqdim edirik.
                     </p>
                 </div>
             </div>
@@ -230,48 +240,50 @@
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{3}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Münasib qiymət</h2>
-                    <p class="about-services-text">
+                    <h2 class="about-services-title" data-key="aboutServicesTitle3">Münasib qiymət</h2>
+                    <p class="about-services-text" data-key="aboutServicesText3">
                         Təqdim etdiyimiz bütün rəqəmsal məhsul və xidmətlər, istər kiçik və yeni yaranmış biznes,
-                        istərsə də böyük
-                        şirkətlər üçün əlverişlidir.
+                        istərsə də böyük korporativ şirkət olmağınızdan asılı olmayaraq, biznesiniz üçün münasib
+                        qiymətlərdədir.
                     </p>
                 </div>
             </div>
+
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{4}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Münasib qiymət</h2>
-                    <p class="about-services-text">
-                        Təqdim etdiyimiz bütün rəqəmsal məhsul və xidmətlər, istər kiçik və yeni yaranmış biznes,
-                        istərsə də böyük
-                        şirkətlər üçün əlverişlidir.
+                    <h2 class="about-services-title" data-key="aboutServicesTitle4">Effektiv kommunikasiya</h2>
+                    <p class="about-services-text" data-key="aboutServicesText4">
+                        Müştərilərimizlə tam effektiv ünsiyyət qurmağımız vacibdir. Bu, onlara ən yaxşı xidməti
+                        göstərməyə və ehtiyaclarının ödənilməsini təmin etməyə imkan verir.
                     </p>
                 </div>
             </div>
+
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{5}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Münasib qiymət</h2>
-                    <p class="about-services-text">
-                        Təqdim etdiyimiz bütün rəqəmsal məhsul və xidmətlər, istər kiçik və yeni yaranmış biznes,
-                        istərsə də böyük
-                        şirkətlər üçün əlverişlidir.
+                    <h2 class="about-services-title" data-key="aboutServicesTitle5">Sizə uyğunlaşdırılmış</h2>
+                    <p class="about-services-text" data-key="aboutServicesText5">
+                        Hər bir şirkətin unikallığı olduğunu bilirik və hamımız fərdi ehtiyaclarınıza uyğun xüsusi
+                        proqram təminatını təqdim etmək üçün buradayıq.
                     </p>
                 </div>
             </div>
+
             <div class="about-services-item">
                 <div class="about-services-circle"><span>{6}</span></div>
                 <div class="about-services-content">
-                    <h2 class="about-services-title">Münasib qiymət</h2>
-                    <p class="about-services-text">
-                        Təqdim etdiyimiz bütün rəqəmsal məhsul və xidmətlər, istər kiçik və yeni yaranmış biznes,
-                        istərsə də böyük
-                        şirkətlər üçün əlverişlidir.
+                    <h2 class="about-services-title" data-key="aboutServicesTitle6">Dəstək</h2>
+                    <p class="about-services-text" data-key="aboutServicesText6">
+                        Öz sahələrində peşəkar olan komandamızın hər bir üzvü, sifarişinizin tam təslimatından sonra
+                        bütün sual və problemlərinizin qısa müddətdə həlli üçün hazırdır.
                     </p>
                 </div>
             </div>
         </section>
+
+
     </main>
 
 
@@ -291,32 +303,33 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
-                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
-                        class="bold">}</span></p>
-                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+                <p class="company-name"><span class="bold"><img
+                            src="	https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                            alt=""></span></p>
+                <p class="slogan" data-key="footerCompanyTagline">Rəqəmsal Partnyorunuz</p>
             </div>
 
             <div class="footer-links">
-                <h3>Keçidlər</h3>
+                <h3 data-key="footerLinksTitle">Keçidlər</h3>
                 <ul>
-                    <li><a href="#">Xidmətlərimiz</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Bizimlə əlaqə</a></li>
-                    <li><a href="#">Gizlilik Siyasəti</a></li>
-                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                    <li><a data-key="footerServices" href="#">Xidmətlərimiz</a></li>
+                    <li><a data-key="footerPortfolio" href="#">Portfolio</a></li>
+                    <li><a data-key="footerAboutUs" href="#">Haqqımızda</a></li>
+                    <li><a data-key="footerContactUs" href="#">Bizimlə əlaqə</a></li>
+                    <li><a data-key="footerPrivacyPolicy" href="#">Gizlilik Siyasəti</a></li>
+                    <li><a data-key="footerFAQ" href="#">Tez-tez verilən suallar</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
-                <h3>Bizimlə əlaqə</h3>
-                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
-                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+                <h3 data-key="footerContactTitle"><strong>Bizimlə əlaqə</strong></h3>
+                <p i data-key="footerPhone"><i class="fas fa-phone-alt"></i> <strong>+994998822500</strong></p>
+                <p data-key="footerEmail"><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p data-key="footerAddress"><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
             </div>
 
             <div class="footer-social">
-                <h3>Bizi izləyin</h3>
+                <h3 data-key="footerFollowUsTitle">Bizi izləyin</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -386,11 +399,11 @@
 
     </div>
 
+    <script src="../asset/js/languages.js"></script>
     <script src="../asset/js/homeHeader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../asset/js/swiper.js"></script>
     <script src="../asset/js/animate.js"></script>
-    <script src="../asset/js/languages.js"></script>
     <script src="../asset/js/moods.js"></script>
     <script src="../asset/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

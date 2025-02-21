@@ -31,18 +31,18 @@
                     </button>
                 </div>
                 <div class="home-custom-select">
-                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                    <div class="home-custom-select-selected" onclick="toggleHomeDropdown()">
                         <i class="fa-solid fa-language"></i>
                     </div>
-                    <div class="home-custom-select-options">
-                        <div class="home-custom-select-option" onclick="changeLanguage('az')">
+                    <div id="languageMenu" class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeLanguage('az')" data-lang="az">
                             <img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('en')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('en')" data-lang="en">
                             <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('ru')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('ru')" data-lang="ru">
                             <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
                         </div>
                     </div>
@@ -62,25 +62,30 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul>
-                            <li>
-                                duzelecek modlar
 
+                            <li class="home_header_elements"><a data-key="headerHome" href="./Home.html">Ana Səhifə</a>
                             </li>
-                            <li><a href="">Home</a></li>
                             <hr>
-                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <li class="home_header_elements"><a data-key="headerServices"
+                                    href="./Services.html">Xidmetlerimiz</a></li>
                             <hr>
-                            <li><a href="./Contact.html">Contact</a></li>
+                            <li class="home_header_elements"><a data-key="headerContact" href="./Contact.html">Bizimlə
+                                    Əlaqə</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerPrivacyPolicy"
+                                    href="./Secrecy.html">Gizlilik Siyasəti</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerBlog"
+                                    href="../Html/blog/Blog.html">Blog</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerAboutUs"
+                                    href="./About.html">Haqqimizda</a></li>
                             <hr>
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerFAQ" href="./Fag.html">Tez-tez verilən
+                                    sualar</a></li>
                             <hr>
-                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                            <li class="home_header_elements"><a data-key="headerPortfolio"
+                                    href="./Portfolio.html">Portfolio</a></li>
                         </ul>
                     </div>
                 </div>
@@ -92,8 +97,8 @@
         <section class="contact-section">
             <div class="contact-container">
                 <div class="contact-left">
-                    <h2 class="contact-title">Bizimlə əlaqə</h2>
-                    <p class="contact-text">
+                    <h2 class="contact-title" data-key="contactTitle">Bizimlə əlaqə</h2>
+                    <p class="contact-text" data-key="contactDescription">
                         Zəhmət olmasa sorğunuzla bağlı məlumatları forma doldurun.
                         Sizinlə əməkdaşlıq etməkdən məmnun olarıq.
                     </p>
@@ -124,38 +129,45 @@
 
                 <div class="contact-right">
                     <form class="contact-form">
-                        <label for="name">Adınız*</label>
-                        <input type="text" id="name" name="name" required placeholder="Adınız" />
+                        <label for="name" data-key="contactNameLabel">Adınız*</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız"
+                            data-key="contactNamePlaceholder" />
 
-                        <label for="email">E-poçt adresiniz*</label>
-                        <input type="email" id="email" name="email" required placeholder="E-poçt adresiniz" />
+                        <label for="email" data-key="contactEmailLabel">E-poçt adresiniz*</label>
+                        <input type="email" id="email" name="email" required placeholder="E-poçt adresiniz"
+                            data-key="contactEmailPlaceholder" />
 
-                        <label for="phone">Mobil nömrəniz</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+994" />
+                        <label for="phone" data-key="contactPhoneLabel">Mobil nömrəniz</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+994"
+                            data-key="contactPhonePlaceholder" />
 
-                        <label for="services">Xidmətlər</label>
+                        <label for="services" data-key="contactServicesLabel">Xidmətlər</label>
                         <select id="services" name="services">
-                            <option disabled selected value="">Seçin...</option>
-                            <option value="xidmet1">Xidmət 1</option>
-                            <option value="xidmet2">Xidmət 2</option>
+                            <option disabled selected value="" data-key="contactServicesSelect">Seçin...</option>
+                            <option value="xidmet1" data-key="contactService1">Xidmət 1</option>
+                            <option value="xidmet2" data-key="contactService2">Xidmət 2</option>
                         </select>
 
-                        <label for="message">Sorğunuzu daxil edin*</label>
-                        <textarea id="message" name="message" required placeholder="Sorğunuzu bura yazın..."></textarea>
+                        <label for="message" data-key="contactMessageLabel">Sorğunuzu daxil edin*</label>
+                        <textarea id="message" name="message" required placeholder="Sorğunuzu bura yazın..."
+                            data-key="contactMessagePlaceholder"></textarea>
 
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn" data-key="contactSubmit">
                             Göndər
                             <span class="arrow">→</span>
                         </button>
                     </form>
                 </div>
+
             </div>
         </section>
         <section class="Jchep-location">
-            <div class="location-title"><h1>Biz Buradayiq</h1></div>
+            <div class="location-title">
+                <h1 data-key="contactLocation">Biz Buradayiq</h1>
+            </div>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.952631551477!2d49.83050607603838!3d40.365574658751285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307de589f96f27%3A0x30fb1daa2ffcbc45!2sThe%20Javachip%20LLC!5e0!3m2!1sen!2saz!4v1738155523026!5m2!1sen!2saz"
-                style="border:0;" allowfullscreen="" loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.9526315514845!2d49.83050607603838!3d40.365574658751285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307de589f96f27%3A0x30fb1daa2ffcbc45!2sThe%20Javachip%20LLC!5e0!3m2!1sen!2saz!4v1740078538725!5m2!1sen!2saz"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </section>
@@ -165,32 +177,33 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <!-- <img src="your-logo-path.png" alt="Javachip Logo" /> -->
-                <p class="company-name"><span class="bold">{</span>java<span class="green">chip</span><span
-                        class="bold">}</span></p>
-                <p class="slogan">Rəqəmsal Partnyorunuz</p>
+                <p class="company-name"><span class="bold"><img
+                            src="	https://thejavachip.com/static/media/javachip-logo-footer.6a120542a65692ed145538f6fdfccc04.svg"
+                            alt=""></span></p>
+                <p class="slogan" data-key="footerCompanyTagline">Rəqəmsal Partnyorunuz</p>
             </div>
 
             <div class="footer-links">
-                <h3>Keçidlər</h3>
+                <h3 data-key="footerLinksTitle">Keçidlər</h3>
                 <ul>
-                    <li><a href="#">Xidmətlərimiz</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Haqqımızda</a></li>
-                    <li><a href="#">Bizimlə əlaqə</a></li>
-                    <li><a href="#">Gizlilik Siyasəti</a></li>
-                    <li><a href="#">Tez-tez verilən suallar</a></li>
+                    <li><a data-key="footerServices" href="#">Xidmətlərimiz</a></li>
+                    <li><a data-key="footerPortfolio" href="#">Portfolio</a></li>
+                    <li><a data-key="footerAboutUs" href="#">Haqqımızda</a></li>
+                    <li><a data-key="footerContactUs" href="#">Bizimlə əlaqə</a></li>
+                    <li><a data-key="footerPrivacyPolicy" href="#">Gizlilik Siyasəti</a></li>
+                    <li><a data-key="footerFAQ" href="#">Tez-tez verilən suallar</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
-                <h3>Bizimlə əlaqə</h3>
-                <p><i class="fas fa-phone-alt"></i> +994998822500</p>
-                <p><i class="fas fa-envelope"></i> office@thejavachip.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
+                <h3 data-key="footerContactTitle"><strong>Bizimlə əlaqə</strong></h3>
+                <p i data-key="footerPhone"><i class="fas fa-phone-alt"></i> <strong>+994998822500</strong></p>
+                <p data-key="footerEmail"><i class="fas fa-envelope"></i> office@thejavachip.com</p>
+                <p data-key="footerAddress"><i class="fas fa-map-marker-alt"></i> İçərişəhər 18, İlyas Əfəndiyev küç</p>
             </div>
 
             <div class="footer-social">
-                <h3>Bizi izləyin</h3>
+                <h3 data-key="footerFollowUsTitle">Bizi izləyin</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -232,11 +245,7 @@
                 </a>
 
                 <a href="#" class="littleCircle linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="24px"
-                        height="24px">
-                        <path
-                            d="M24.4 6C24.895 6 25.4 6.4 25.4 6.895V18.6C25.4 19.105 25 19.6 24.4 19.6H6C5.505 19.6 5 19.105 5 18.6V6.895C5 6.4 5.505 6 6 6h18.4M10.954 22h2v-9.492H9.449V22M9.449 11.151c0 .951.1 1.72.771 1.72.949 0 1.719-.771 1.72-1.72 0-.949-.771-1.719-1.719-1.719-.949 0-1.72.771-1.72 1.719m11.168 10.397h2v-10.397h-2M22.004 22h2v-2.948h-2M22.004 19.052h2v-4.616c0-1.101-.02-2.517-1.533-2.517-1.535 0-1.535 1.771-1.771 2.437V22h-2V12.948h2V14.63c.394-.746 1.356-1.533 2.791-1.533 2.987 0 3.539 1.966 3.539 4.522V22z" />
-                    </svg>
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
 
                 <a href="#" class="littleCircle youtube">
@@ -265,10 +274,10 @@
     </div>
 
 
+    <script src="../asset/js/languages.js"></script>
     <script src="../asset/js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../asset/js/animate.js"></script>
-    <script src="../asset/js/languages.js"></script>
     <script src="../asset/js/moods.js"></script>
     <script src="../asset/js/homeHeader.js"></script>
     <script src="../asset/js/main.js"></script>

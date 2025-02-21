@@ -54,7 +54,6 @@ const blogs = [
 const blogRow = document.getElementById("blogRow");
 const categorySelect = document.getElementById("categoryFilter");
 
-// 🔹 **1. Kateqoriyaları avtomatik doldur**
 const categories = ["All", ...new Set(blogs.flatMap(blog => blog.categories))]; // Unikal kateqoriyalar
 categories.forEach(category => {
     const option = document.createElement("option");
@@ -72,7 +71,7 @@ function displayBlogs(filteredBlogs) {
         blogWrapper.innerHTML = `
             <a href="./blogDetail.html?id=${blog.id}" class="blog-link">
                 <div class="circle-blog">
-                    <img src="${blog.image}" alt="${blog.name}" />
+                    <img src="${blog.image}" alt="${blog.name}"  />
                 </div>
                 <p class="circle-text-blog">${shortName}</p>
             </a>

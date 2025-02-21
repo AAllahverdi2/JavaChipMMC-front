@@ -99,6 +99,13 @@ body {
   color: green;
 }
 
+.marketing-prev-fourth,
+.marketing-next-fourth::after {
+  content: none !important;
+  color: black !important;
+}
+
+
 .section-fourtl-all {
   display: flex;
   justify-content: center;
@@ -109,11 +116,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   svg {
     height: 150px !important;
   }
 
- 
+
 }
 
 
@@ -129,6 +137,23 @@ body {
     transform: scaleX(-1); // Şəkili tərsinə çevirir
   }
 }
+
+.marketing-slide-fourth-left_pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .flipped-svg {
+    width: 150px;
+    height: 150px;
+    padding-left: 50px;
+  }
+
+}
+
+
+
+
 
 
 
@@ -252,6 +277,7 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+
 }
 
 .smm_link_btn:hover .icon-container .ss svg {
@@ -363,4 +389,3 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
     }
   }
 }
-

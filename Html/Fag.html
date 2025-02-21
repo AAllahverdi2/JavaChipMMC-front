@@ -31,18 +31,18 @@
                     </button>
                 </div>
                 <div class="home-custom-select">
-                    <div class="home-custom-select-selected" onclick="openHomeDropdown()">
+                    <div class="home-custom-select-selected" onclick="toggleHomeDropdown()">
                         <i class="fa-solid fa-language"></i>
                     </div>
-                    <div class="home-custom-select-options">
-                        <div class="home-custom-select-option" onclick="changeLanguage('az')">
+                    <div id="languageMenu" class="home-custom-select-options">
+                        <div class="home-custom-select-option" onclick="changeLanguage('az')" data-lang="az">
                             <img
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAABhElEQVR4Xu2VvUpDQRCF540sfIE8QATLpFbSKtgK2qWx0yaNWtnYCWJpYStYi52Flpp7jfE/Hh1Y3Jm7k9yoTIpdPgLn7JI9mZ3dEB1fzwRSeyG1F1J7IbUXUnshtRdSeyG1F1J7IbUXUnshtRdSeyG1F3fzjSm4bzSL9lLZWek3W3p2CkhbNv2F1vPRyUdRjr7H+83t6/nFYLOrV9aCtGVQtJc5AbZ/WFtHVYL/y8KQtlKgEtieQ4QEfwVpKwWOg8/C/ulPB4faHAtpKwWfCNLoKQZTj1vbWIPPumlIW5XganAx0BZ6lhlsdHmNvawS0lYlIUfZWdWzYNjbCyF4wNHLUpC2KsGN4G83rigfCo//qgcuCPeHcfB4SIa9/dFXf+wYbVQJaSsFEmAPpLHvC6JocyykrRQoCb8fb5dXRpTpnhbSlgG6JDxlPxsFXZzq3wkhbdnw/0voRwR6OT2r25Ua0taEoADAOKBa0OLu3CyQc8TkHDE5R0zOEZNzxOQcMTlHzCcrli7hv8xWxAAAAABJRU5ErkJggg==" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('en')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('en')" data-lang="en">
                             <img src="https://thejavachip.com/static/media/en-flag.8825e8ac3472a89ae2cb.png" />
                         </div>
-                        <div class="home-custom-select-option" onclick="changeLanguage('ru')">
+                        <div class="home-custom-select-option" onclick="changeLanguage('ru')" data-lang="ru">
                             <img src="https://thejavachip.com/static/media/ru-flag.143e2d2b10c45cd59e9e.png" />
                         </div>
                     </div>
@@ -63,21 +63,29 @@
                     <div class="offcanvas-body">
                         <ul>
 
-                            <li><a href="">Home</a></li>
+                            <li class="home_header_elements"><a data-key="headerHome" href="./Home.html">Ana Səhifə</a>
+                            </li>
                             <hr>
-                            <li><a href="./Services.html">Xidmetlerimiz</a></li>
+                            <li class="home_header_elements"><a data-key="headerServices"
+                                    href="./Services.html">Xidmetlerimiz</a></li>
                             <hr>
-                            <li><a href="./Contact.html">Contact</a></li>
+                            <li class="home_header_elements"><a data-key="headerContact" href="./Contact.html">Bizimlə
+                                    Əlaqə</a></li>
                             <hr>
-                            <li><a href="./Secrecy.html">Secrety</a></li>
+                            <li class="home_header_elements"><a data-key="headerPrivacyPolicy"
+                                    href="./Secrecy.html">Gizlilik Siyasəti</a></li>
                             <hr>
-                            <li><a href="../Html/blog/Blog.html">Blog</a></li>
+                            <li class="home_header_elements"><a data-key="headerBlog"
+                                    href="../Html/blog/Blog.html">Blog</a></li>
                             <hr>
-                            <li><a href="./About.html">About</a></li>
+                            <li class="home_header_elements"><a data-key="headerAboutUs"
+                                    href="./About.html">Haqqimizda</a></li>
                             <hr>
-                            <li><a href="./Fag.html">Fag</a></li>
+                            <li class="home_header_elements"><a data-key="headerFAQ" href="./Fag.html">Tez-tez verilən
+                                    sualar</a></li>
                             <hr>
-                            <li><a href="./Portfolio.html">Portfolio</a></li>
+                            <li class="home_header_elements"><a data-key="headerPortfolio"
+                                    href="./Portfolio.html">Portfolio</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,48 +97,114 @@
     <main>
         <section class="faq-all">
             <div class="faq-container">
+
                 <div class="faq-item">
                     <div class="faq-number">1</div>
-                    <h2>Siz vebsaytları yığarkən şablonlardan (template) istifadə edirsiniz?</h2>
-                    <p>Biz heç vaxt şablonlardan istifadə etmirik. Javachip şirkətinin texniki komandası sıfırdan müştərinin istəyinə uyğun vebsaytları və digər rəqəmsal məhsulları hazırlayır.</p>
+                    <h2 data-key="faqTitle1">Siz vebsaytları yığarkən şablonlardan (template) istifadə edirsiniz?</h2>
+                    <p data-key="faqText1">Biz heç vaxt şablonlardan istifadə etmirik. Javachip şirkətinin texniki
+                        komandası sıfırdan müştərinin istəyinə uyğun vebsaytları və digər rəqəmsal məhsulları
+                        hazırlayır.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-number">5</div>
-                    <h2>Süni intellekt xidmətlərinizə nələr daxildir?</h2>
-                    <p>NLP əsaslı Çatbotlar, Proqnozlaşdırıcı Analitika, Maşın Öyrənmə, NLP, IVR avtomatlaşdırması təqdim etdiyimiz süni intellekt həllərindən bəziləridir.</p>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-number">9</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-number">19</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
-                </div>
+
                 <div class="faq-item">
                     <div class="faq-number">2</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
+                    <h2 data-key="faqTitle2">Web dizaynlarınız responsivdirmi?</h2>
+                    <p data-key="faqText2">Qurduğumuz bütün vebsaytlar responsivdir. Bu o deməkdir ki, onlar istənilən
+                        ekran ölçüsündə düzgün işləyir.</p>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">3</div>
+                    <h2 data-key="faqTitle3">Yalnız yerli bizneslərlə işləyirsiniz?</h2>
+                    <p data-key="faqText3">Xeyr. Biz təkcə yerli deyil, həmçinin qlobal bizneslərə rəqəmsal həllərimizi
+                        təqdim edirik.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">4</div>
+                    <h2 data-key="faqTitle4">Layihənin gedişatından necə xəbərdar olacam?</h2>
+                    <p data-key="faqText4">İstər e-poçt, istər zəng, istərsə də üz-üzə görüşlər vasitəsilə siz layihənin
+                        gedişatı haqqında daima məlumat alacaqsınız.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">5</div>
+                    <h2 data-key="faqTitle5">Süni intellekt xidmətlərinizə nələr daxildir?</h2>
+                    <p data-key="faqText5">NLP əsaslı Çatbotlar, Proqnozlaşdırıcı Analitika, Maşın Öyrənmə, NLP, IVR
+                        avtomatlaşdırması təqdim etdiyimiz süni intellekt həllərindən bəziləridir.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">6</div>
+                    <h2 data-key="faqTitle6">Süni intellekt chatbotları müştəri xidmətlərində mənə necə kömək edə bilər?
+                    </h2>
+                    <p data-key="faqText6">Süni intellekt chatbotları avtomatlaşdırılmış şəkildə müştərilərə kömək edə
+                        bilər.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">7</div>
+                    <h2 data-key="faqTitle7">Mobil tətbiqimi qurdurub daha sonra ondan pul qazana bilərəm?</h2>
+                    <p data-key="faqText7">Bəli. Mobil tətbiqiniz vasitəsilə ödənişli xidmətlər təqdim edərək pul qazana
+                        bilərsiniz.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">8</div>
+                    <h2 data-key="faqTitle8">Vebsaytdan necə istifadə etməyi öyrədəcəksinizmi?</h2>
+                    <p data-key="faqText8">Biz sizə CMS-dən (məzmun idarəetmə sistemi) necə istifadə edəcəyinizi
+                        öyrədəcəyik. Siz heç bir kodlaşdırma bilmədən vebsaytda dəyişikliklər etməyə imkan verəcəyik.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">9</div>
+                    <h2 data-key="faqTitle9">Sizi fərqli edən nədir?</h2>
+                    <p data-key="faqText9">Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq.
+                        Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə
+                        təqdim edirik.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">10</div>
+                    <h2 data-key="faqTitle10">Layihənin gedişatından necə xəbərdar olacam?</h2>
+                    <p data-key="faqText10">İstər e-poçt, istər zəng, istərsə də üz-üzə görüşlər vasitəsilə siz
+                        layihənin gedişatı haqqında məlumat alacaqsınız.</p>
+                </div>
+
                 <div class="faq-item">
                     <div class="faq-number">11</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
+                    <h2 data-key="faqTitle11">Veb sayt və ya mobil tətbiqetmənin hazırlanması prosesi necədir?</h2>
+                    <p data-key="faqText11">Bizim layihə prosesimiz planlaşdırma, dizayn, inkişaf, sınaq və təhvil vermə
+                        mərhələlərindən ibarətdir.</p>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-number">22</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
+                    <div class="faq-number">12</div>
+                    <h2 data-key="faqTitle12">Sizi digər proqram təminatı şirkətlərindən fərqləndirən nədir?</h2>
+                    <p data-key="faqText12">Biz müştərilərimizin unikallığını anlayırıq və fərdi həllər təqdim edirik.
+                    </p>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-number">15</div>
-                    <h2>Sizi fərqli edən nədir?</h2>
-                    <p>Biz bütün layihələrimizə son dərəcə diqqətli və dəqiqliklə yanaşırıq. Müştərilərimizə ən yaxşı sistemləri qabaqcıl texnologiyadan istifadə etməklə sərfəli qiymətlərlə təqdim edirik...</p>
+                    <div class="faq-number">13</div>
+                    <h2 data-key="faqTitle13">Bir veb sayt və ya mobil proqram hazırlamaq üçün adətən nə qədər vaxt
+                        lazımdır?</h2>
+                    <p data-key="faqText13">Layihə üçün vaxt qrafiki layihənin mürəkkəbliyindən və işin həcmindən
+                        asılıdır.</p>
                 </div>
+
+                <div class="faq-item">
+                    <div class="faq-number">14</div>
+                    <h2 data-key="faqTitle14">Süni intellekt xidmətləri üçün şirkətinizi seçsəm nə əldə edəcəm?</h2>
+                    <p data-key="faqText14">Süni intellekt həllərimiz sizin tapşırıqlarınızı avtomatlaşdırmağa və
+                        biznesinizə dəyər qatmağa kömək edəcək.</p>
+                </div>
+
             </div>
         </section>
+
+
     </main>
 
 

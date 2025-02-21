@@ -130,6 +130,7 @@ body {
   position: relative;
   display: inline-block;
   background-color: transparent;
+  background-color: transparent !important;
 }
 
 .home-custom-select-selected {
@@ -156,6 +157,10 @@ body {
   height: 30px !important;
   border: none !important;
   border-radius: 50%;
+}
+
+.home_header_elements {
+  font-weight: bold;
 }
 
 .home-show {
@@ -567,6 +572,7 @@ body {
   color: #333;
   display: flex;
   justify-content: start;
+  font-weight: bold;
 }
 .footer .footer-contact p i {
   color: #118c06;
@@ -836,6 +842,12 @@ body {
   color: green;
 }
 
+.marketing-prev-fourth,
+.marketing-next-fourth::after {
+  content: none !important;
+  color: black !important;
+}
+
 .section-fourtl-all {
   display: flex;
   justify-content: center;
@@ -860,6 +872,17 @@ body {
   width: 150px;
   height: 150px;
   transform: scaleX(-1);
+}
+
+.marketing-slide-fourth-left_pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marketing-slide-fourth-left_pre .flipped-svg {
+  width: 150px;
+  height: 150px;
+  padding-left: 50px;
 }
 
 .marketing-slide-fourth-right h2 {
@@ -1410,6 +1433,10 @@ body:not(.dark-mode) .six_title h1 {
     font-size: 28px;
   }
 }
+.sem_content {
+  max-width: 890px;
+}
+
 .home_fivethSection {
   width: 100%;
   display: flex;
@@ -1497,6 +1524,19 @@ body:not(.dark-mode) .six_title h1 {
 
 body:not(.dark-mode) .our_Blogs {
   background-color: black;
+}
+
+.blog_next, .blog_prev {
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 12, 12);
+  padding: 30px !important;
+  border-radius: 50%;
+}
+.blog_next ::after, .blog_prev ::after {
+  width: 10px !important;
 }
 
 .home_sevenSection {
@@ -3852,8 +3892,16 @@ body {
     margin-left: 150px !important;
     text-align: center;
   }
+  .team_title {
+    font-size: 1.8rem;
+  }
 }
 /* 📌 300px qədər ən kiçik ekranlar üçün */
+@media (max-width: 660px) {
+  .about-left {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 430px) {
   .about-services {
     width: 95%;
