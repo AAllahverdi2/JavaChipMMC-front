@@ -222,15 +222,12 @@ body {
     position: relative;
 }
 
-/* Alternasiya olunmuş düzülüş */
 .about-services-item:nth-child(odd) {
     flex-direction: row-reverse;
-    /* Tək rəqəmlər üçün (1,3,5) sağ tərəfdə olacaq */
 }
 
 .about-services-item:nth-child(even) {
     flex-direction: row;
-    /* Cüt rəqəmlər üçün (2,4,6) sol tərəfdə olacaq */
 }
 
 .about-services-circle {
@@ -253,7 +250,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Mətn hissəsinin düzülməsi */
 .about-services-content {
     width: 45%;
 }
@@ -270,7 +266,6 @@ body {
         align-items: center;
     }
 
-    /* 📌 Dairələr olduğu kimi qalır */
     .about-services-circle {
         position: absolute;
         left: 20%;
@@ -296,7 +291,6 @@ body {
     }
 }
 
-/* 📌 300px qədər ən kiçik ekranlar üçün */
 
 
 @media (max-width: 660px) {

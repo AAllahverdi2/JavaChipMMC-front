@@ -1,15 +1,11 @@
 @media only screen and (max-width: 1200px) {
     .detail_right_img {
 
-        // max-width: 500px;
         img {
-            // max-width: 500px;
         }
     }
-
     .detail_right {
         max-width: 600px !important;
-        // border: 3px solid red;
     }
 }
 
@@ -50,26 +46,17 @@
 }
 
 .blog_detail_image {
-    // max-width: 400px;
-    // border-radius: 50px;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     margin: 10px;
     background: conic-gradient(from 270deg,
-            /* Başlanğıc nöqtəsini tənzimləyirik */
             #00AEEF 0deg,
-            /* Yuxarı hissədə mavi başlayır */
             #00AEEF 60deg,
-            /* Mavi 40 dərəcəyə qədər gedir */
             #008000 140deg,
-            /* Yaşıl yumşaq şəkildə 120 dərəcəyə keçir */
             #008000 210deg,
-            /* Alt tərəfdə yaşıl davam edir */
             #00AEEF 320deg,
-            /* Yenidən yuxarıda mavi ilə birləşir */
             #00AEEF 360deg
-            /* Tam mavi ilə qapanır */
         );
     display: flex;
     align-items: center;
@@ -110,7 +97,6 @@
 
 
 
-/* Axtarış qutusu */
 .search-container-blogdetail {
     display: flex;
     align-items: center;
@@ -146,26 +132,22 @@
     background-color: #00cc77;
 }
 
-/* Bölmə başlığı */
 .section-title-blogdetail {
     color: #00ff99;
     font-size: 18px;
     margin-top: 20px;
 }
 
-/* Blog Siyahısı */
 .blog-list-blogdetail {
     margin-top: 10px;
 }
 
-/* Blog elementləri */
 .blog-item-blogdetail {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-/* Profil şəkilləri */
 .avatar-blogdetail {
     width: 50px;
     height: 50px;
@@ -180,19 +162,12 @@
     height: 100px;
     border-radius: 50%;
     background: conic-gradient(from 270deg,
-            /* Başlanğıc nöqtəsini tənzimləyirik */
             #00AEEF 0deg,
-            /* Yuxarı hissədə mavi başlayır */
             #00AEEF 60deg,
-            /* Mavi 40 dərəcəyə qədər gedir */
             #008000 140deg,
-            /* Yaşıl yumşaq şəkildə 120 dərəcəyə keçir */
             #008000 210deg,
-            /* Alt tərəfdə yaşıl davam edir */
             #00AEEF 320deg,
-            /* Yenidən yuxarıda mavi ilə birləşir */
             #00AEEF 360deg
-            /* Tam mavi ilə qapanır */
         );
 }
 
@@ -206,7 +181,6 @@
     object-fit: contain;
 }
 
-/* Blog məzmunu */
 .blog-content-blogdetail h3 {
     font-size: 16px;
     margin: 0;
@@ -233,7 +207,6 @@
     max-width: 900px;
 
     img {
-        // max-width: 100%;
         width: 100%;
         max-height: 450px;
         object-fit: cover;

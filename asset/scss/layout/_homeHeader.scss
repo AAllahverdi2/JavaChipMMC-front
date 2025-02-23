@@ -30,7 +30,6 @@ body {
     align-items: center;
     padding: 10px;
     position: fixed !important;
-    // position: absolute;
     width: 100% !important;
     top: 0;
     bottom: 100px !important;
@@ -120,13 +119,11 @@ body {
 .offcanvas {
     width: 400px !important;
     height: 80% !important;
-    // background-color:  !important;
     border-radius: 10px;
     padding-top: 10px;
 }
 
 .offcanvas-body {
-    // border: 3px solid red;
 
     ul {
         li {
@@ -147,7 +144,6 @@ body {
     align-items: center;
     padding: 0px !important;
     width: auto;
-    // display: none;
    }
    .header{
     border: 3px solid red;

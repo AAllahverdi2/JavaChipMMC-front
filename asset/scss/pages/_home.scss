@@ -6,12 +6,9 @@
     width: 100% !important;
 }
 
-.header {
-    // position: relative;
-}
+
 
 .main {
-    // position: absolute;
     top: 0;
     left: 0;
 }
@@ -32,12 +29,9 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
-    // background: rgba(0, 0, 0, 0.5);
-    /* Arxa fon qismən şəffaf olsun */
     padding: 10px 15px;
     border-radius: 5px;
     z-index: 2;
-    /* Vidyonun üzərində olsun */
 }
 
 .video_text_container {
@@ -50,7 +44,6 @@
     a {
         font-size: 36px;
         color: white;
-        // font-weight: bold;
         text-decoration: none;
         padding-right: 1rem;
         display: flex;
@@ -78,7 +71,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            width: 64px; // SVG ölçüsü
+            width: 64px; 
             height: 32px;
             transition: all 0.3s ease-in-out;
 
@@ -107,7 +100,7 @@
 
         &:hover .icon-container {
             svg {
-                transform: translateX(5px); // SVG hover zamanı sağa hərəkət edir
+                transform: translateX(5px); 
 
                 circle {
                     stroke: white;
@@ -122,7 +115,11 @@
 }
 
 
-
+@media only screen and (max-width: 600px) {
+    .text {
+        font-size: 1.6rem;
+    }
+}
 
 
 
@@ -135,14 +132,14 @@
 }
 
 .our_Services {
-    width: 95%;
-    // background-color: #00acee;
+    width: 100%;
     border: 6px solid;
     border-radius: 70% / 100px 100px 0 0;
-    height: 2vh;
+    height: 8vh;
     margin-top: 1.5em;
     position: absolute;
     width: 100%;
+    margin-top: 100px !important;
 
 }
 
@@ -152,12 +149,14 @@
 
 // third Section ///////////////////////////////////////////////
 
+.home__thirdSection {
+    margin-top: 100px;
+}
 
 .home__thirdSection__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 20px;
     margin-top: 20px;
 
     h1 {
@@ -182,13 +181,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // border: 1px solid #ccc;
     height: auto !important;
     border-radius: 10px;
     max-width: 1200px;
     width: 100%;
     gap: 20px;
-    // border: 2px solid white;
     margin: 10px;
 }
 
@@ -199,19 +196,17 @@
     align-items: center;
     padding: 10px;
     box-shadow: #3BBEEF;
-    border: 1px solid #3BBEEF;
     border-radius: 10px;
     max-height: 500px;
     box-shadow:
 
-        rgba(91, 27, 228, 0.25) 10px 10px 50px,
-        rgba(91, 27, 228, 0.25) -10px 10px 50px,
-        rgba(91, 27, 228, 0.25) 10px -10px 50px,
-        rgba(91, 27, 228, 0.25) -10px -10px 50px;
+        rgba(110, 46, 248, 0.25) 10px 10px 50px,
+        rgba(106, 42, 243, 0.25) -10px 10px 50px,
+        rgba(115, 49, 255, 0.25) 10px -10px 50px,
+        rgba(112, 50, 246, 0.25) -10px -10px 50px;
 
     img {
         max-width: 100%;
-        // height: auto;
         max-height: 500px;
         border-radius: 8px;
     }
@@ -282,7 +277,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            width: 64px; // SVG ölçüsü
+            width: 64px; 
             height: 32px;
             transition: all 0.3s ease-in-out;
 
@@ -311,7 +306,7 @@
 
         &:hover .icon-container {
             svg {
-                transform: translateX(5px); // SVG hover zamanı sağa hərəkət edir
+                transform: translateX(5px);
 
                 circle {
                     stroke: #1E90FF;
@@ -342,8 +337,6 @@
     }
 
     .free_div {
-        // width: 100%;
-        // height: 1px !important;
         width: 1px;
         height: 2px !important;
         border: 3px solid red;
@@ -367,9 +360,14 @@ body:not(.dark-mode) .firstCard_left {
 @media only screen and (max-width: 680px) {
     .home__thirdSection__title {
         h1 {
-            font-size: 23px !important;
+            font-size: 43px;
         }
     }
+
+    .home__thirdSection {
+        margin-top: 50px;
+    }
+
 }
 
 
@@ -377,6 +375,10 @@ body:not(.dark-mode) .firstCard_left {
 
 
 // /////////////// fourth Section
+.home_FourthSection {
+    margin-top: 100px;
+}
+
 .home_FourthSection_title {
     display: flex;
     justify-content: center;
@@ -421,16 +423,28 @@ body:not(.dark-mode) .six_title {
 @media only screen and (max-width: 960px) {
     .home_FourthSection_title {
         h1 {
-            font-size: 28px;
+            font-size: 48px;
         }
     }
 }
 
-.sem_content{
+.sem_content {
     max-width: 890px;
 }
 
 
+
+@media only screen and (max-width: 560px) {
+    .home_FourthSection_title {
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .home_FourthSection {
+        margin-top: 50px;
+    }
+}
 
 
 
@@ -439,17 +453,17 @@ body:not(.dark-mode) .six_title {
 
 
 // //////////////////// fiveth section scss
+
 .home_fivethSection {
     width: 100%;
-    // border: 3px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 
 .home_five_all {
     width: 90%;
-    // border: 3px solid green;
 }
 
 .fiveth_name {
@@ -461,7 +475,6 @@ body:not(.dark-mode) .six_title {
     gap: 20px;
     flex-direction: column;
     margin-bottom: 20px;
-    // width: 80%;
     text-align: center;
 
     h1 {
@@ -490,10 +503,7 @@ body:not(.dark-mode) .six_title {
 }
 
 
-// .sagol{
-//     border: 3px solid red !important;
-//     max-width: 100px;
-// }
+
 
 @media only screen and (max-width: 900px) {
     .fiveth_name {
@@ -544,28 +554,30 @@ body:not(.dark-mode) .six_title {
     margin-top: 0px;
 }
 
+.home_sixthSection {
+    margin-top: 80px;
+}
 
 body:not(.dark-mode) .our_Blogs {
     background-color: black;
 }
 
 
-.blog_next , .blog_prev{
+.blog_next,
+.blog_prev {
     color: white !important;
-    // min-width: 50px !important;
-    // height: 50px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-background-color: rgb(12, 12, 12);
-padding: 30px !important;
+    background-color: rgb(12, 12, 12);
+    padding: 30px !important;
     border-radius: 50%;
-    ::after{
+
+    ::after {
         width: 10px !important;
     }
 }
 
-// seventh section 
 
 .home_sevenSection {
     padding-bottom: 100px;
@@ -576,21 +588,20 @@ padding: 30px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 100vh; // Ekranın hündürlüyünə uyğunlaşdırır
     text-align: center;
 
     .text-seventh {
         font-size: 38px;
         font-weight: bold;
-        color: #0f8c42; // Yaşıl rəng
+        color: #0f8c42; 
         line-height: 1.5;
-        max-width: 80%; // Mətni ortada tutmaq üçün
+        max-width: 80%; 
     }
 }
 
 @media (max-width: 768px) {
     .text-seventh {
-        font-size: 21px; // Mobil ekranlarda font ölçüsünü kiçilt
+        font-size: 20px !important;
     }
 }
 
@@ -615,13 +626,19 @@ padding: 30px !important;
         padding: 15px 40px;
         width: 50%;
 
-        box-shadow: rgba(91, 27, 228, 0.25) 10px 10px 50px, rgba(91, 27, 228, 0.25) -10px 10px 50px, rgba(91, 27, 228, 0.25) 10px -10px 50px, rgba(91, 27, 228, 0.25) -10px -10px 50px;
+        box-shadow: rgba(91, 27, 228, 0.2) 7px 7px 35px,
+            rgba(91, 27, 228, 0.2) -7px 7px 35px,
+            rgba(91, 27, 228, 0.2) 7px -7px 35px,
+            rgba(91, 27, 228, 0.2) -7px -7px 35px;
 
 
+        margin: 10px;
 
 
+    }
 
-
+    .timer-title {
+        margin: 30px;
     }
 
     @media only screen and (max-width: 700px) {
@@ -651,4 +668,8 @@ padding: 30px !important;
         font-size: 29px;
         margin-top: 20px;
     }
+}
+
+.blog_next {
+    color: white !important;
 }

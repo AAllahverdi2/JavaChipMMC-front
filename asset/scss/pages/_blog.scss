@@ -100,19 +100,12 @@
     height: 250px;
     border-radius: 50%;
     background: conic-gradient(from 270deg,
-            /* Başlanğıc nöqtəsini tənzimləyirik */
             #00AEEF 0deg,
-            /* Yuxarı hissədə mavi başlayır */
             #00AEEF 60deg,
-            /* Mavi 40 dərəcəyə qədər gedir */
             #008000 140deg,
-            /* Yaşıl yumşaq şəkildə 120 dərəcəyə keçir */
             #008000 210deg,
-            /* Alt tərəfdə yaşıl davam edir */
             #00AEEF 320deg,
-            /* Yenidən yuxarıda mavi ilə birləşir */
             #00AEEF 360deg
-            /* Tam mavi ilə qapanır */
         );
     display: flex;
     align-items: center;
@@ -126,7 +119,6 @@
 
 .circle-blog:hover  {
     transform: scale(1.1);
-    /* Şəkili 10% böyüdür */
 }
 
 .circle-blog  {

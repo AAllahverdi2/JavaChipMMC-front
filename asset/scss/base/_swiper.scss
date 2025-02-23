@@ -56,13 +56,15 @@ body {
   width: 50%;
 }
 
-// //////////////////////
+
+// ////////////4
+
+
 .marketing-swiper-fourth {
   width: 70%;
   margin: auto;
   min-height: 300px !important;
   overflow: hidden;
-  // border: 3px solid red !important;
 }
 
 .marketing-wrapper-fourth {
@@ -89,7 +91,6 @@ body {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  // background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -102,9 +103,18 @@ body {
 .marketing-prev-fourth,
 .marketing-next-fourth::after {
   content: none !important;
+  color: red !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
   color: black !important;
 }
 
+body:not(.dark-mode) .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: white !important;
+}
 
 .section-fourtl-all {
   display: flex;
@@ -116,65 +126,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  svg {
-    height: 150px !important;
-  }
-
-
 }
 
-
+.marketing-slide-fourth-left svg {
+  height: 150px !important;
+}
 
 .marketing-slide-fourth-left_opposite {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  .flipped-svg {
-    width: 150px;
-    height: 150px;
-    transform: scaleX(-1); // Şəkili tərsinə çevirir
-  }
+.marketing-slide-fourth-left_opposite .flipped-svg {
+  width: 150px;
+  height: 150px;
+  transform: scaleX(-1);
 }
 
 .marketing-slide-fourth-left_pre {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .flipped-svg {
-    width: 150px;
-    height: 150px;
-    padding-left: 50px;
-  }
-
 }
 
-
-
-
-
-
-
-.marketing-slide-fourth-right {
-  h2 {
-    color: green;
-  }
-
-  p {}
-
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: green;
-  }
+.marketing-slide-fourth-left_pre .flipped-svg {
+  width: 150px;
+  height: 150px;
+  padding-left: 50px;
 }
 
-body:not(.dark-mode) .marketing-slide-fourth-right {
-  p {
-    color: gray;
-  }
+.marketing-slide-fourth-right h2 {
+  color: green;
+}
+
+.marketing-slide-fourth-right a {
+  text-decoration: none;
+  font-size: 20px;
+  color: green;
+}
+
+body:not(.dark-mode) .marketing-slide-fourth-right p {
+  color: gray;
 }
 
 .smm_link_btn {
@@ -189,59 +182,68 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
 
 @media only screen and (max-width: 900px) {
   .marketing-swiper-fourth {
-    min-height: 500px !important;
-    // border: 3px solid red;
+    max-height: 500px !important;
     display: flex !important;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
 
   .marketing-slide-fourth {
-    // border: 2px solid yellow !important;
-    // margin-top: 100px;
+    justify-content: center;
+    align-items: center;
     height: auto !important;
   }
 
-  .home_FourthSection_title {
-    h1 {
-      font-size: 40px;
-    }
+  .home_FourthSection_title h1 {
+    font-size: 40px;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .home_FourthSection_title {
-    p {
-      width: 100% !important;
-    }
-  }
-
-  .marketing-slide-fourth-left {
-    display: none !important;
+  .home_FourthSection_title p {
+    width: 100% !important;
   }
 
   .marketing-slide-fourth-left_opposite {
-    display: none;
+    svg {
+      width: 60px !important;
+      height: 60px !important;
+    }
   }
 
+  .marketing-slide-fourth-left_pre{
+    svg{
+      width: 100px !important;
+      height: 100px !important;
+      padding: 20px !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  .marketing-slide-fourth-left {
-    display: none !important;
-  }
+ 
 
-  .home_FourthSection_title {
-    h1 {
-      font-size: 30px;
-    }
+  .home_FourthSection_title h1 {
+    font-size: 30px;
+  }
+  .marketing-slide-fourth {
+    min-height: 650px !important;
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  .marketing-slide-fourth-right{
+    margin-bottom: 400px !important;
+  }
+  .section-fourtl-all{
+    max-height: 0px !important;
   }
 }
 
 @media only screen and (max-width: 360px) {
   .marketing-slide-fourth {
-    min-height: 550px !important;
-    margin-bottom: 100px;
+    min-height: 450px !important;
+    margin-top: 200px;
   }
 
   .marketing-swiper-fourth {
@@ -251,33 +253,26 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
 
 .smm_link_btn:hover {
   transform: translateY(-3px);
-  /* Hover zamanı yüngülcə yuxarı hərəkət */
 }
 
 .smm_link_btn .icon-container .ss svg {
   width: 40px;
-  /* İstədiyiniz ölçüyə uyğun dəyişə bilərsiniz */
   height: 40px;
   fill: transparent !important;
-  /* Dairənin içini şəffaf etmək */
   stroke: green !important;
-  /* Border rəngi yaşıl */
   transition: all 0.3s ease-in-out;
 }
 
 .smm_link_btn .icon-container .ss svg circle {
   stroke: green !important;
-  /* Dairənin sərhədini yaşıl etmək */
   stroke-width: 2;
 }
 
 .smm_link_btn .icon-container .ss svg path {
   stroke: green !important;
-  /* Ox işarəsini yaşıl etmək */
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-
 }
 
 .smm_link_btn:hover .icon-container .ss svg {
@@ -292,6 +287,13 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
 .smm_link_btn span .ss {
   color: green !important;
 }
+
+.home_FourthSection_title h1 {
+  margin-bottom: 0;
+}
+
+
+
 
 
 
@@ -388,4 +390,12 @@ body:not(.dark-mode) .marketing-slide-fourth-right {
       text-align: center;
     }
   }
+}
+
+
+
+
+#blog_next:after,
+.swiper-rtl .swiper-button-next:after {
+  color: white !important;
 }

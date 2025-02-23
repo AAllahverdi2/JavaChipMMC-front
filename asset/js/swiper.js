@@ -1,5 +1,3 @@
-// const { default: Swiper } = require("swiper");
-// const { Navigation, Pagination } = require("swiper/modules");
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,11 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             340: {
                 slidesPerView: 2,
-                // spaceBetween: 20,
             },
             540: {
                 slidesPerView: 4,
-                // spaceBetween: 20,
             },
             768: {
                 slidesPerView: 5,
@@ -49,18 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var swiperFourth = new Swiper(".marketing-swiper-fourth", {
-        slidesPerView: 1,  // Hər dəfə 1 slayd göstər
-        spaceBetween: 50,  // Slaydlar arası boşluq
-        loop: true,  // Sonsuz sürüşmə aktivdir
+        slidesPerView: 1,  
+        spaceBetween: 50,  
+        loop: true,  
         navigation: {
             nextEl: ".marketing-next-fourth",
             prevEl: ".marketing-prev-fourth",
         },
         pagination: {
             el: ".swiper-pagination",
-            clickable: true, // Səhifələmənin kliklənməsini aktivləşdir
+            clickable: true, 
         },
-        grabCursor: true,  // Sürüşdürmə imkanı
+        grabCursor: true,  
         breakpoints: {
             1200: { slidesPerView: 1 },
             992: { slidesPerView: 1 },
@@ -80,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".mySwiperSixth", {
-        slidesPerView: 3,  // Standart olaraq 3 slayd göstər
-        spaceBetween: 20,  // Slaydlar arası məsafə
+        slidesPerView: 3,  
+        spaceBetween: 20, 
         loop: true,
         navigation: {
             nextEl: ".mySwiperSixth-button-next",

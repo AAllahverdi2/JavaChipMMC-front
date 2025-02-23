@@ -122,16 +122,12 @@
 .body:not(.dark-mode) .faq-number {
     color: white !important;
     background-color: white !important;
-    /* Arxa fonu dəyişir */
     padding: 10px;
-    /* Arxa fonun görünməsi üçün boşluq əlavə edir */
     display: inline-block;
-    /* Rəqəmin ətrafında fonun olması üçün */
     text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #3bbeef, 1px -1px 0 #3bbeef, -1px 1px 0 #3bbeef, 1px 1px 0 #3bbeef;
 }
 
 
-/* Dark mode üçün - qara rəqəm və text-shadow */
 .body.dark-mode .faq-number {
     color: black !important;
     text-shadow: 2px 2px 5px rgba(59, 190, 239, 0.7),
@@ -152,7 +148,6 @@ body:not(.dark-mode) .faq-number {
 @media (max-width: 1024px) {
     .faq-item {
         width: 100%;
-        /* Bütün genişliyi əhatə etsin */
     }
 
     .faq-number {
@@ -161,7 +156,6 @@ body:not(.dark-mode) .faq-number {
     }
 }
 
-/* Mobil telefonlar üçün */
 @media (max-width: 768px) {
     .faq-container {
         padding: 20px;
@@ -175,7 +169,6 @@ body:not(.dark-mode) .faq-number {
     .faq-number {
         font-size: 12vw;
         right: 10px;
-        /* Mobil cihazlarda rəqəmləri bir az sola yaxınlaşdırırıq */
         top: -10px;
     }
 }

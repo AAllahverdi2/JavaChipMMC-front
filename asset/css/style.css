@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body:not(.dark-mode) p, h3, li {
+  color: black;
+  font-weight: bold;
+}
+
 :root {
   --background-light: #ffffff;
   --text-light: #000000;
@@ -512,14 +517,19 @@ body {
   background: #fff;
   padding: 50px 0;
   text-align: center;
+  border: 1px solid gray;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
 }
 .footer .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   color: #000;
+  padding: 20px;
 }
 .footer .footer-logo {
   text-align: left;
@@ -605,6 +615,10 @@ body {
   border-top: 1px solid #ccc;
   padding-top: 10px;
   font-size: 14px;
+}
+.footer .footer-bottom strong {
+  color: black;
+  font-weight: bold;
 }
 
 .fixed-icons {
@@ -845,7 +859,17 @@ body {
 .marketing-prev-fourth,
 .marketing-next-fourth::after {
   content: none !important;
+  color: red !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
   color: black !important;
+}
+
+body:not(.dark-mode) .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: white !important;
 }
 
 .section-fourtl-all {
@@ -859,6 +883,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .marketing-slide-fourth-left svg {
   height: 150px !important;
 }
@@ -868,6 +893,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .marketing-slide-fourth-left_opposite .flipped-svg {
   width: 150px;
   height: 150px;
@@ -879,6 +905,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .marketing-slide-fourth-left_pre .flipped-svg {
   width: 150px;
   height: 150px;
@@ -888,6 +915,7 @@ body {
 .marketing-slide-fourth-right h2 {
   color: green;
 }
+
 .marketing-slide-fourth-right a {
   text-decoration: none;
   font-size: 20px;
@@ -910,12 +938,15 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
 
 @media only screen and (max-width: 900px) {
   .marketing-swiper-fourth {
-    min-height: 500px !important;
+    max-height: 500px !important;
     display: flex !important;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
   .marketing-slide-fourth {
+    justify-content: center;
+    align-items: center;
     height: auto !important;
   }
   .home_FourthSection_title h1 {
@@ -926,25 +957,36 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
   .home_FourthSection_title p {
     width: 100% !important;
   }
-  .marketing-slide-fourth-left {
-    display: none !important;
+  .marketing-slide-fourth-left_opposite svg {
+    width: 60px !important;
+    height: 60px !important;
   }
-  .marketing-slide-fourth-left_opposite {
-    display: none;
+  .marketing-slide-fourth-left_pre svg {
+    width: 100px !important;
+    height: 100px !important;
+    padding: 20px !important;
   }
 }
 @media only screen and (max-width: 450px) {
-  .marketing-slide-fourth-left {
-    display: none !important;
-  }
   .home_FourthSection_title h1 {
     font-size: 30px;
+  }
+  .marketing-slide-fourth {
+    min-height: 650px !important;
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  .marketing-slide-fourth-right {
+    margin-bottom: 400px !important;
+  }
+  .section-fourtl-all {
+    max-height: 0px !important;
   }
 }
 @media only screen and (max-width: 360px) {
   .marketing-slide-fourth {
-    min-height: 550px !important;
-    margin-bottom: 100px;
+    min-height: 450px !important;
+    margin-top: 200px;
   }
   .marketing-swiper-fourth {
     min-height: 550px !important;
@@ -952,29 +994,23 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
 }
 .smm_link_btn:hover {
   transform: translateY(-3px);
-  /* Hover zamanı yüngülcə yuxarı hərəkət */
 }
 
 .smm_link_btn .icon-container .ss svg {
   width: 40px;
-  /* İstədiyiniz ölçüyə uyğun dəyişə bilərsiniz */
   height: 40px;
   fill: transparent !important;
-  /* Dairənin içini şəffaf etmək */
   stroke: green !important;
-  /* Border rəngi yaşıl */
   transition: all 0.3s ease-in-out;
 }
 
 .smm_link_btn .icon-container .ss svg circle {
   stroke: green !important;
-  /* Dairənin sərhədini yaşıl etmək */
   stroke-width: 2;
 }
 
 .smm_link_btn .icon-container .ss svg path {
   stroke: green !important;
-  /* Ox işarəsini yaşıl etmək */
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -991,6 +1027,10 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
 .smm_link_btn span,
 .smm_link_btn span .ss {
   color: green !important;
+}
+
+.home_FourthSection_title h1 {
+  margin-bottom: 0;
 }
 
 .mySwiperSixth {
@@ -1077,6 +1117,11 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
   text-align: center;
 }
 
+#blog_next:after,
+.swiper-rtl .swiper-button-next:after {
+  color: white !important;
+}
+
 .home-custom-select-options {
   display: none;
   position: absolute;
@@ -1125,11 +1170,9 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  /* Arxa fon qismən şəffaf olsun */
   padding: 10px 15px;
   border-radius: 5px;
   z-index: 2;
-  /* Vidyonun üzərində olsun */
 }
 
 .video_text_container {
@@ -1198,6 +1241,11 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
   stroke: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: 1.6rem;
+  }
+}
 .home_SecondSection {
   margin-top: 20px;
   display: flex;
@@ -1206,13 +1254,18 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
 }
 
 .our_Services {
-  width: 95%;
+  width: 100%;
   border: 6px solid;
   border-radius: 70%/100px 100px 0 0;
-  height: 2vh;
+  height: 8vh;
   margin-top: 1.5em;
   position: absolute;
   width: 100%;
+  margin-top: 100px !important;
+}
+
+.home__thirdSection {
+  margin-top: 100px;
 }
 
 .home__thirdSection__title {
@@ -1257,10 +1310,9 @@ body:not(.dark-mode) .marketing-slide-fourth-right p {
   align-items: center;
   padding: 10px;
   box-shadow: #3BBEEF;
-  border: 1px solid #3BBEEF;
   border-radius: 10px;
   max-height: 500px;
-  box-shadow: rgba(91, 27, 228, 0.25) 10px 10px 50px, rgba(91, 27, 228, 0.25) -10px 10px 50px, rgba(91, 27, 228, 0.25) 10px -10px 50px, rgba(91, 27, 228, 0.25) -10px -10px 50px;
+  box-shadow: rgba(110, 46, 248, 0.25) 10px 10px 50px, rgba(106, 42, 243, 0.25) -10px 10px 50px, rgba(115, 49, 255, 0.25) 10px -10px 50px, rgba(112, 50, 246, 0.25) -10px -10px 50px;
 }
 .firstCard_left img {
   max-width: 100%;
@@ -1389,9 +1441,16 @@ body:not(.dark-mode) .firstCard_left {
 
 @media only screen and (max-width: 680px) {
   .home__thirdSection__title h1 {
-    font-size: 23px !important;
+    font-size: 43px;
+  }
+  .home__thirdSection {
+    margin-top: 50px;
   }
 }
+.home_FourthSection {
+  margin-top: 100px;
+}
+
 .home_FourthSection_title {
   display: flex;
   justify-content: center;
@@ -1430,18 +1489,27 @@ body:not(.dark-mode) .six_title h1 {
 
 @media only screen and (max-width: 960px) {
   .home_FourthSection_title h1 {
-    font-size: 28px;
+    font-size: 48px;
   }
 }
 .sem_content {
   max-width: 890px;
 }
 
+@media only screen and (max-width: 560px) {
+  .home_FourthSection_title h1 {
+    font-size: 28px;
+  }
+  .home_FourthSection {
+    margin-top: 50px;
+  }
+}
 .home_fivethSection {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 
 .home_five_all {
@@ -1522,11 +1590,16 @@ body:not(.dark-mode) .six_title h1 {
   margin-top: 0px;
 }
 
+.home_sixthSection {
+  margin-top: 80px;
+}
+
 body:not(.dark-mode) .our_Blogs {
   background-color: black;
 }
 
-.blog_next, .blog_prev {
+.blog_next,
+.blog_prev {
   color: white !important;
   display: flex;
   justify-content: center;
@@ -1535,7 +1608,8 @@ body:not(.dark-mode) .our_Blogs {
   padding: 30px !important;
   border-radius: 50%;
 }
-.blog_next ::after, .blog_prev ::after {
+.blog_next ::after,
+.blog_prev ::after {
   width: 10px !important;
 }
 
@@ -1560,7 +1634,7 @@ body:not(.dark-mode) .our_Blogs {
 
 @media (max-width: 768px) {
   .text-seventh {
-    font-size: 21px;
+    font-size: 20px !important;
   }
 }
 .countdown-timer {
@@ -1581,7 +1655,11 @@ body:not(.dark-mode) .our_Blogs {
   display: inline-block;
   padding: 15px 40px;
   width: 50%;
-  box-shadow: rgba(91, 27, 228, 0.25) 10px 10px 50px, rgba(91, 27, 228, 0.25) -10px 10px 50px, rgba(91, 27, 228, 0.25) 10px -10px 50px, rgba(91, 27, 228, 0.25) -10px -10px 50px;
+  box-shadow: rgba(91, 27, 228, 0.2) 7px 7px 35px, rgba(91, 27, 228, 0.2) -7px 7px 35px, rgba(91, 27, 228, 0.2) 7px -7px 35px, rgba(91, 27, 228, 0.2) -7px -7px 35px;
+  margin: 10px;
+}
+.countdown-timer .timer-title {
+  margin: 30px;
 }
 @media only screen and (max-width: 700px) {
   .countdown-timer .timer-container {
@@ -1606,6 +1684,10 @@ body:not(.dark-mode) .our_Blogs {
 .countdown-timer .timer-text {
   font-size: 29px;
   margin-top: 20px;
+}
+
+.blog_next {
+  color: white !important;
 }
 
 .tab {
@@ -1641,6 +1723,7 @@ body:not(.dark-mode) .our_Blogs {
   font-size: 17px;
   position: relative;
   text-align: left;
+  font-weight: bold;
 }
 
 .tablinks {
@@ -1657,6 +1740,12 @@ body:not(.dark-mode) .our_Blogs {
   color: white !important;
 }
 
+body:not(.dark-mode) .tab button.active {
+  background-color: inherit;
+  padding-right: 30px;
+  color: black !important;
+}
+
 .tab button.active::after {
   content: "";
   position: absolute;
@@ -1666,6 +1755,18 @@ body:not(.dark-mode) .our_Blogs {
   width: 0;
   height: 2px;
   background-color: white;
+  animation: expandWidth 0.5s ease-in-out forwards;
+}
+
+body:not(.dark-mode) .tab button.active::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: black !important;
   animation: expandWidth 0.5s ease-in-out forwards;
 }
 
@@ -1844,6 +1945,14 @@ body:not(.dark-mode) .our_Blogs {
   font-size: 20px;
 }
 
+.benefits__list li {
+  color: white;
+}
+
+body:not(.dark-mode) .benefits__list li {
+  color: black !important;
+}
+
 @media (max-width: 768px) {
   .benefits__content {
     grid-template-columns: 1fr;
@@ -1940,7 +2049,6 @@ body:not(.dark-mode) .our_Blogs {
   margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.mobile-section .content {
   display: flex;
   align-items: center;
@@ -1948,7 +2056,6 @@ body:not(.dark-mode) .our_Blogs {
   gap: 10px;
 }
 
-/* Şəkil hissəsi */
 .services-images.mobile-section .image {
   width: 50%;
   text-align: left;
@@ -1960,7 +2067,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: floatAnimation 5s ease-in-out infinite;
 }
 
-/* Mətn hissəsi */
 .services-images.mobile-section .text {
   width: 45%;
   text-align: right;
@@ -1969,7 +2075,6 @@ body:not(.dark-mode) .our_Blogs {
   color: #ffffff;
 }
 
-/* Şəkilə animasiya */
 @keyframes floatAnimation {
   0% {
     transform: translate(0, 0);
@@ -1981,7 +2086,6 @@ body:not(.dark-mode) .our_Blogs {
     transform: translate(0, 0);
   }
 }
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .services-images.mobile-section .content {
     flex-direction: column;
@@ -2012,14 +2116,12 @@ body:not(.dark-mode) .our_Blogs {
   margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.ai-section .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Mətn hissəsi */
 .services-images.ai-section .text {
   width: 50%;
   text-align: left;
@@ -2033,14 +2135,12 @@ body:not(.dark-mode) .our_Blogs {
   color: #35a8ff;
 }
 
-/* Şəkil hissəsi */
 .services-images.ai-section .image {
   width: 50%;
   text-align: right;
   position: relative;
 }
 
-/* Şəkil animasiyası sağa-sola */
 .services-images.ai-section .image img {
   max-width: 100%;
   height: auto;
@@ -2048,7 +2148,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: swayAnimation 4s ease-in-out infinite alternate;
 }
 
-/* Sağa-sola hərəkət animasiyası */
 @keyframes swayAnimation {
   0% {
     transform: translateX(0);
@@ -2060,7 +2159,6 @@ body:not(.dark-mode) .our_Blogs {
     transform: translateX(0);
   }
 }
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .services-images.ai-section .content {
     flex-direction: column;
@@ -2097,14 +2195,12 @@ body:not(.dark-mode) .our_Blogs {
   margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.ai-section-reverse .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Mətn hissəsi */
 .services-images.ai-section-reverse .text {
   width: 50%;
   text-align: left;
@@ -2113,14 +2209,12 @@ body:not(.dark-mode) .our_Blogs {
   color: #ffffff;
 }
 
-/* Şəkil hissəsi */
 .services-images.ai-section-reverse .image {
   width: 50%;
   text-align: left;
   position: relative;
 }
 
-/* Şəkil animasiyası sola-sağa hərəkət */
 .services-images.ai-section-reverse .image img {
   max-width: 100%;
   height: auto;
@@ -2128,7 +2222,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: swayAnimation 4s ease-in-out infinite alternate;
 }
 
-/* Sağa-sola hərəkət animasiyası */
 @keyframes swayAnimation {
   0% {
     transform: translateX(0);
@@ -2140,7 +2233,6 @@ body:not(.dark-mode) .our_Blogs {
     transform: translateX(0);
   }
 }
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .services-images.ai-section-reverse .content {
     flex-direction: column;
@@ -2177,14 +2269,12 @@ body:not(.dark-mode) .our_Blogs {
   margin-bottom: 30px;
 }
 
-/* Siyahı konteyneri */
 .benefits-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-/* Siyahıların tərtibatı */
 .benefits-list {
   width: 48%;
   list-style: none;
@@ -2193,7 +2283,6 @@ body:not(.dark-mode) .our_Blogs {
   line-height: 1.8;
 }
 
-/* Siyahı nöqtəsinin rəngini dəyişmək */
 .benefits-list li {
   position: relative;
   padding-left: 25px;
@@ -2204,11 +2293,9 @@ body:not(.dark-mode) .our_Blogs {
   position: absolute;
   left: 0;
   top: 0;
-  /* Mavi rəng */
   font-size: 24px;
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .benefits-container {
     flex-direction: column;
@@ -2225,7 +2312,6 @@ body:not(.dark-mode) .our_Blogs {
     font-size: 16px;
   }
 }
-/* Kibertəhlükəsizlik bölməsi */
 .cybersecurity {
   display: flex;
   align-items: center;
@@ -2251,17 +2337,19 @@ body:not(.dark-mode) .our_Blogs {
   line-height: 1.8;
 }
 
-/* Şəkil bölməsi */
 .cybersecurity-image {
   width: 30%;
   animation: moveSideToSide 4s infinite ease-in-out;
+}
+
+body:not(.dark-mode) .security-list li {
+  color: black;
 }
 
 .cybersecurity-image img {
   width: 100%;
 }
 
-/* Şəkilin sağa-sola hərəkət animasiyası */
 @keyframes moveSideToSide {
   0% {
     transform: translateX(0);
@@ -2273,7 +2361,6 @@ body:not(.dark-mode) .our_Blogs {
     transform: translateX(0);
   }
 }
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .cybersecurity {
     flex-direction: column;
@@ -2295,7 +2382,6 @@ body:not(.dark-mode) .our_Blogs {
     font-size: 16px;
   }
 }
-/* Kibertəhlükəsizlik bölməsi */
 .cybersecurity-advanced {
   display: flex;
   align-items: center;
@@ -2305,14 +2391,12 @@ body:not(.dark-mode) .our_Blogs {
   padding: 50px 20px;
 }
 
-/* Məzmunun stili */
 .cybersecurity-advanced-content {
   width: 50%;
   font-size: 18px;
   line-height: 1.8;
 }
 
-/* Şəkil bölməsi */
 .cybersecurity-advanced-image {
   width: 40%;
   animation: floatAnimation 4s infinite ease-in-out;
@@ -2322,7 +2406,6 @@ body:not(.dark-mode) .our_Blogs {
   width: 100%;
 }
 
-/* Şəkilin sağa-sola hərəkət animasiyası */
 @keyframes floatAnimation {
   0% {
     transform: translateX(0);
@@ -2334,7 +2417,6 @@ body:not(.dark-mode) .our_Blogs {
     transform: translateX(0);
   }
 }
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
   .cybersecurity-advanced {
     flex-direction: column-reverse;
@@ -2368,9 +2450,7 @@ body:not(.dark-mode) .our_Blogs {
 .security-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* İki sütunlu düzən */
   gap: 20px;
-  /* Elementlər arasında boşluq */
   list-style: none;
   padding: 0;
 }
@@ -2381,12 +2461,10 @@ body:not(.dark-mode) .our_Blogs {
   color: white;
   position: relative;
   padding-left: 25px;
-  /* Nöqtə üçün yer */
 }
 
 .security-item::before {
   content: "•";
-  /* Siyahı nöqtəsi */
   color: white;
   font-size: 24px;
   position: absolute;
@@ -2397,7 +2475,6 @@ body:not(.dark-mode) .our_Blogs {
 @media (max-width: 768px) {
   .security-list {
     grid-template-columns: 1fr;
-    /* Kiçik ekranlarda bir sütunlu düzən */
   }
 }
 .security-benefit {
@@ -2446,9 +2523,30 @@ body:not(.dark-mode) .our_Blogs {
   line-height: 1.8;
 }
 
-.smm-list li {
+.smm-list li,
+.smm-service-list li,
+.seo-list li,
+.seo-services__list li,
+.sem-list li,
+.sem-services__list li {
+  color: white;
   position: relative;
   padding-left: 25px;
+}
+
+body:not(.dark-mode) .smm-list li,
+body:not(.dark-mode) .smm-service-list li,
+body:not(.dark-mode) .seo-list li,
+body:not(.dark-mode) .seo-services__list li,
+body:not(.dark-mode) .sem-list li,
+body:not(.dark-mode) .sem-services__list li,
+body:not(.dark-mode) .smm-subtitle,
+body:not(.dark-mode) .seo-subtitle,
+body:not(.dark-mode) .sem-subtitle,
+body:not(.dark-mode) .smm-service-title,
+body:not(.dark-mode) .seo-services__title,
+body:not(.dark-mode) .sem-services__title {
+  color: black !important;
 }
 
 .smm-list li::before {
@@ -2456,7 +2554,6 @@ body:not(.dark-mode) .our_Blogs {
   position: absolute;
   left: 0;
   top: 0;
-  color: white;
   font-size: 20px;
 }
 
@@ -2466,7 +2563,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Animation for image movement */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -2539,7 +2635,6 @@ body:not(.dark-mode) .our_Blogs {
   font-size: 20px;
 }
 
-/* Animation for floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -2618,7 +2713,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Animation for floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -2691,7 +2785,6 @@ body:not(.dark-mode) .our_Blogs {
   font-size: 20px;
 }
 
-/* Floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -2770,7 +2863,6 @@ body:not(.dark-mode) .our_Blogs {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -2849,7 +2941,6 @@ body:not(.dark-mode) .our_Blogs {
   font-size: 20px;
 }
 
-/* Floating effect */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -3262,7 +3353,6 @@ body:not(.dark-mode) .our_Blogs {
   .security_keft_first img {
     width: 50px !important;
     height: 70px;
-    border: 3px solid red;
   }
   .security_keft_first p {
     font-size: 10px;
@@ -3389,7 +3479,6 @@ body:not(.dark-mode) .our_Blogs {
 
 .circle-blog:hover {
   transform: scale(1.1);
-  /* Şəkili 10% böyüdür */
 }
 
 .circle-blog {
@@ -3489,7 +3578,6 @@ body:not(.dark-mode) .circle-text-blog {
   width: 90%;
 }
 
-/* Axtarış qutusu */
 .search-container-blogdetail {
   display: flex;
   align-items: center;
@@ -3525,26 +3613,22 @@ body:not(.dark-mode) .circle-text-blog {
   background-color: #00cc77;
 }
 
-/* Bölmə başlığı */
 .section-title-blogdetail {
   color: #00ff99;
   font-size: 18px;
   margin-top: 20px;
 }
 
-/* Blog Siyahısı */
 .blog-list-blogdetail {
   margin-top: 10px;
 }
 
-/* Blog elementləri */
 .blog-item-blogdetail {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-/* Profil şəkilləri */
 .avatar-blogdetail {
   width: 50px;
   height: 50px;
@@ -3571,7 +3655,6 @@ body:not(.dark-mode) .circle-text-blog {
   object-fit: contain;
 }
 
-/* Blog məzmunu */
 .blog-content-blogdetail h3 {
   font-size: 16px;
   margin: 0;
@@ -3828,15 +3911,12 @@ body {
   position: relative;
 }
 
-/* Alternasiya olunmuş düzülüş */
 .about-services-item:nth-child(odd) {
   flex-direction: row-reverse;
-  /* Tək rəqəmlər üçün (1,3,5) sağ tərəfdə olacaq */
 }
 
 .about-services-item:nth-child(even) {
   flex-direction: row;
-  /* Cüt rəqəmlər üçün (2,4,6) sol tərəfdə olacaq */
 }
 
 .about-services-circle {
@@ -3859,7 +3939,6 @@ body {
   font-size: 1.5rem;
 }
 
-/* Mətn hissəsinin düzülməsi */
 .about-services-content {
   width: 45%;
 }
@@ -3873,7 +3952,6 @@ body {
     text-align: center;
     align-items: center;
   }
-  /* 📌 Dairələr olduğu kimi qalır */
   .about-services-circle {
     position: absolute;
     left: 20%;
@@ -3896,7 +3974,6 @@ body {
     font-size: 1.8rem;
   }
 }
-/* 📌 300px qədər ən kiçik ekranlar üçün */
 @media (max-width: 660px) {
   .about-left {
     font-size: 1rem;
@@ -3964,15 +4041,11 @@ body {
 .body:not(.dark-mode) .faq-number {
   color: white !important;
   background-color: white !important;
-  /* Arxa fonu dəyişir */
   padding: 10px;
-  /* Arxa fonun görünməsi üçün boşluq əlavə edir */
   display: inline-block;
-  /* Rəqəmin ətrafında fonun olması üçün */
   text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #3bbeef, 1px -1px 0 #3bbeef, -1px 1px 0 #3bbeef, 1px 1px 0 #3bbeef;
 }
 
-/* Dark mode üçün - qara rəqəm və text-shadow */
 .body.dark-mode .faq-number {
   color: black !important;
   text-shadow: 2px 2px 5px rgba(59, 190, 239, 0.7), -2px -2px 5px rgba(59, 190, 239, 0.7);
@@ -3987,14 +4060,12 @@ body:not(.dark-mode) .faq-number {
 @media (max-width: 1024px) {
   .faq-item {
     width: 100%;
-    /* Bütün genişliyi əhatə etsin */
   }
   .faq-number {
     font-size: 10vw;
     right: 30px;
   }
 }
-/* Mobil telefonlar üçün */
 @media (max-width: 768px) {
   .faq-container {
     padding: 20px;
@@ -4006,7 +4077,6 @@ body:not(.dark-mode) .faq-number {
   .faq-number {
     font-size: 12vw;
     right: 10px;
-    /* Mobil cihazlarda rəqəmləri bir az sola yaxınlaşdırırıq */
     top: -10px;
   }
 }

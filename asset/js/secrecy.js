@@ -100,78 +100,17 @@ const websiteTranslations = {
 };
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const items = document.querySelectorAll(".security_keft_first");
-//     const middleBottom = document.querySelector(".security_middle_bottom");
-
-//     let currentLanguage = localStorage.getItem("selectedLanguage") || "az";
-
-//     function updateMiddleBottom(index) {
-//         const imgSrc = items[index].querySelector("img").src;
-//         const text = items[index].querySelector("p").getAttribute("data-key"); // `data-key` oxu
-//         const description = descriptions[index]?.[currentLanguage] || "Məlumat mövcud deyil";
-
-//         middleBottom.innerHTML = `
-//             <div class="selected_content">
-//                 <img src="${imgSrc}" alt="Seçilmiş Şəkil">
-//                 <h2>${websiteTranslations[currentLanguage][text] || text}</h2> 
-//                 <p>${description}</p>
-//             </div>
-//         `;
-
-//         middleBottom.style.display = "block"; // Göstər
-//     }
-
-//     if (items.length > 0) {
-//         items[0].classList.add("active");
-//         updateMiddleBottom(0);
-//     }
-
-//     items.forEach((item, index) => {
-//         item.addEventListener("click", function () {
-//             items.forEach(i => i.classList.remove("active"));
-//             this.classList.add("active");
-//             updateMiddleBottom(index);
-//         });
-//     });
-
-//     function changeLanguage(lang) {
-//         currentLanguage = lang;
-//         localStorage.setItem("selectedLanguage", lang); // Seçilmiş dili yadda saxla
-
-//         const activeIndex = [...items].findIndex(item => item.classList.contains("active"));
-//         if (activeIndex !== -1) {
-//             updateMiddleBottom(activeIndex);
-//         }
-
-//         const elements = document.querySelectorAll("[data-key]");
-//         elements.forEach(element => {
-//             const key = element.getAttribute("data-key");
-//             if (websiteTranslations[lang] && websiteTranslations[lang][key]) {
-//                 element.textContent = websiteTranslations[lang][key]; // Yeni dilin mətnini əlavə et
-//             }
-//         });
-//     }
-
-//     document.querySelectorAll(".home-custom-select-option").forEach(option => {
-//         option.addEventListener("click", function () {
-//             const lang = this.getAttribute("data-lang");
-//             changeLanguage(lang);
-//         });
-//     });
-// });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".security_keft_first");
     const middleBottom = document.querySelector(".security_middle_bottom");
 
-    let currentLanguage = localStorage.getItem("selectedLanguage") || "az"; // Saxlanılmış dili götür
+    let currentLanguage = localStorage.getItem("selectedLanguage") || "az"; 
 
     function updateMiddleBottom(index) {
         const imgSrc = items[index].querySelector("img").src;
-        const text = items[index].querySelector("p").getAttribute("data-key"); // `data-key` oxu
+        const text = items[index].querySelector("p").getAttribute("data-key"); 
         const description = descriptions[index]?.[currentLanguage] || "Məlumat mövcud deyil";
 
         middleBottom.innerHTML = `
@@ -182,12 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        middleBottom.style.display = "block"; // Göstər
+        middleBottom.style.display = "block"; 
     }
 
     function changeLanguage(lang) {
         currentLanguage = lang;
-        localStorage.setItem("selectedLanguage", lang); // Seçilmiş dili yadda saxla
+        localStorage.setItem("selectedLanguage", lang); 
 
         const activeIndex = [...items].findIndex(item => item.classList.contains("active"));
         if (activeIndex !== -1) {
@@ -198,12 +137,11 @@ document.addEventListener("DOMContentLoaded", function () {
         elements.forEach(element => {
             const key = element.getAttribute("data-key");
             if (websiteTranslations[lang] && websiteTranslations[lang][key]) {
-                element.textContent = websiteTranslations[lang][key]; // Yeni dilin mətnini əlavə et
+                element.textContent = websiteTranslations[lang][key]; 
             }
         });
     }
 
-    // Dili səhifə yüklənəndə təyin et
     changeLanguage(currentLanguage);
 
     if (items.length > 0) {

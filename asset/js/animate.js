@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         },
         {
-            threshold: 0.1, // Daha həssas et
+            threshold: 0.1, 
         }
     );
 
     animatedElements.forEach((element) => {
-        element.style.opacity = "0"; // Animasiya başlamazdan əvvəl görünməzlik
+        element.style.opacity = "0"; 
         observer.observe(element);
     });
 });

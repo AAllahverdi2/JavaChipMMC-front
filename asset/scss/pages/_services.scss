@@ -12,7 +12,8 @@
     gap: 70px;
 
 }
-.services-section{
+
+.services-section {
     margin-top: 130px;
 }
 
@@ -31,6 +32,7 @@
     font-size: 17px;
     position: relative;
     text-align: left;
+    font-weight: bold;
 }
 
 .tablinks {
@@ -47,6 +49,13 @@
     color: white !important;
 }
 
+body:not(.dark-mode) .tab button.active {
+    background-color: inherit;
+    padding-right: 30px;
+    color: black !important;
+}
+
+
 .tab button.active::after {
     content: "";
     position: absolute;
@@ -58,6 +67,21 @@
     background-color: white;
     animation: expandWidth 0.5s ease-in-out forwards;
 }
+
+body:not(.dark-mode) .tab button.active::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background-color: black !important;
+    animation: expandWidth 0.5s ease-in-out forwards;
+}
+
+
+
 
 .tabcontent {
     display: none;
@@ -270,6 +294,16 @@
     }
 }
 
+.benefits__list {
+    li {
+        color: white;
+    }
+}
+
+body:not(.dark-mode) .benefits__list li {
+    color: black !important;
+}
+
 @media (max-width: 768px) {
     .benefits__content {
         grid-template-columns: 1fr;
@@ -384,7 +418,6 @@
     margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.mobile-section .content {
     display: flex;
     align-items: center;
@@ -392,7 +425,6 @@
     gap: 10px;
 }
 
-/* Şəkil hissəsi */
 .services-images.mobile-section .image {
     width: 50%;
     text-align: left;
@@ -404,7 +436,6 @@
     animation: floatAnimation 5s ease-in-out infinite;
 }
 
-/* Mətn hissəsi */
 .services-images.mobile-section .text {
     width: 45%;
     text-align: right;
@@ -413,7 +444,6 @@
     color: #ffffff;
 }
 
-/* Şəkilə animasiya */
 @keyframes floatAnimation {
     0% {
         transform: translate(0, 0);
@@ -428,7 +458,6 @@
     }
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .services-images.mobile-section .content {
         flex-direction: column;
@@ -457,7 +486,6 @@
     }
 }
 
-// * Süni intellekt bölməsi */ 
 .services-images.ai-section {
     text-align: center;
     padding: 50px 20px;
@@ -465,14 +493,12 @@
     margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.ai-section .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Mətn hissəsi */
 .services-images.ai-section .text {
     width: 50%;
     text-align: left;
@@ -486,14 +512,12 @@
     color: #35a8ff;
 }
 
-/* Şəkil hissəsi */
 .services-images.ai-section .image {
     width: 50%;
     text-align: right;
     position: relative;
 }
 
-/* Şəkil animasiyası sağa-sola */
 .services-images.ai-section .image img {
     max-width: 100%;
     height: auto;
@@ -501,7 +525,6 @@
     animation: swayAnimation 4s ease-in-out infinite alternate;
 }
 
-/* Sağa-sola hərəkət animasiyası */
 @keyframes swayAnimation {
     0% {
         transform: translateX(0);
@@ -516,7 +539,6 @@
     }
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .services-images.ai-section .content {
         flex-direction: column;
@@ -560,14 +582,12 @@
     margin: 0 auto;
 }
 
-/* Bölmə kontenti */
 .services-images.ai-section-reverse .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Mətn hissəsi */
 .services-images.ai-section-reverse .text {
     width: 50%;
     text-align: left;
@@ -576,14 +596,12 @@
     color: #ffffff;
 }
 
-/* Şəkil hissəsi */
 .services-images.ai-section-reverse .image {
     width: 50%;
     text-align: left;
     position: relative;
 }
 
-/* Şəkil animasiyası sola-sağa hərəkət */
 .services-images.ai-section-reverse .image img {
     max-width: 100%;
     height: auto;
@@ -591,7 +609,6 @@
     animation: swayAnimation 4s ease-in-out infinite alternate;
 }
 
-/* Sağa-sola hərəkət animasiyası */
 @keyframes swayAnimation {
     0% {
         transform: translateX(0);
@@ -606,7 +623,6 @@
     }
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .services-images.ai-section-reverse .content {
         flex-direction: column;
@@ -648,14 +664,12 @@
     margin-bottom: 30px;
 }
 
-/* Siyahı konteyneri */
 .benefits-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* Siyahıların tərtibatı */
 .benefits-list {
     width: 48%;
     list-style: none;
@@ -664,7 +678,6 @@
     line-height: 1.8;
 }
 
-/* Siyahı nöqtəsinin rəngini dəyişmək */
 .benefits-list li {
     position: relative;
     padding-left: 25px;
@@ -675,12 +688,10 @@
     position: absolute;
     left: 0;
     top: 0;
-    // color: #29ABE2;
-    /* Mavi rəng */
+
     font-size: 24px;
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .benefits-container {
         flex-direction: column;
@@ -704,7 +715,6 @@
 
 
 
-/* Kibertəhlükəsizlik bölməsi */
 .cybersecurity {
     display: flex;
     align-items: center;
@@ -730,17 +740,20 @@
     line-height: 1.8;
 }
 
-/* Şəkil bölməsi */
 .cybersecurity-image {
     width: 30%;
     animation: moveSideToSide 4s infinite ease-in-out;
 }
 
+body:not(.dark-mode) .security-list li {
+    color: black;
+}
+
+
 .cybersecurity-image img {
     width: 100%;
 }
 
-/* Şəkilin sağa-sola hərəkət animasiyası */
 @keyframes moveSideToSide {
     0% {
         transform: translateX(0);
@@ -755,7 +768,6 @@
     }
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .cybersecurity {
         flex-direction: column;
@@ -782,7 +794,6 @@
     }
 }
 
-/* Kibertəhlükəsizlik bölməsi */
 .cybersecurity-advanced {
     display: flex;
     align-items: center;
@@ -792,14 +803,12 @@
     padding: 50px 20px;
 }
 
-/* Məzmunun stili */
 .cybersecurity-advanced-content {
     width: 50%;
     font-size: 18px;
     line-height: 1.8;
 }
 
-/* Şəkil bölməsi */
 .cybersecurity-advanced-image {
     width: 40%;
     animation: floatAnimation 4s infinite ease-in-out;
@@ -809,7 +818,6 @@
     width: 100%;
 }
 
-/* Şəkilin sağa-sola hərəkət animasiyası */
 @keyframes floatAnimation {
     0% {
         transform: translateX(0);
@@ -824,7 +832,6 @@
     }
 }
 
-/* Responsive uyğunluq */
 @media (max-width: 992px) {
     .cybersecurity-advanced {
         flex-direction: column-reverse;
@@ -851,7 +858,6 @@
 
 .secruty_advanced {
     color: #35a8ff;
-    // font-size: ;
     display: flex;
     align-items: center;
 }
@@ -865,9 +871,7 @@
 .security-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* İki sütunlu düzən */
     gap: 20px;
-    /* Elementlər arasında boşluq */
     list-style: none;
     padding: 0;
 }
@@ -878,12 +882,10 @@
     color: white;
     position: relative;
     padding-left: 25px;
-    /* Nöqtə üçün yer */
 }
 
 .security-item::before {
     content: '•';
-    /* Siyahı nöqtəsi */
     color: white;
     font-size: 24px;
     position: absolute;
@@ -894,7 +896,6 @@
 @media (max-width: 768px) {
     .security-list {
         grid-template-columns: 1fr;
-        /* Kiçik ekranlarda bir sütunlu düzən */
     }
 }
 
@@ -923,7 +924,6 @@
     margin: 0 auto;
     padding: 40px 20px;
     color: white;
-    // gap: 100px;
 }
 
 .smm-content {
@@ -950,17 +950,39 @@
     line-height: 1.8;
 }
 
-.smm-list li {
+.smm-list li,
+.smm-service-list li,
+.seo-list li,
+.seo-services__list li,
+.sem-list li,
+.sem-services__list li {
+    color: white;
     position: relative;
     padding-left: 25px;
 }
+
+body:not(.dark-mode) .smm-list li,
+body:not(.dark-mode) .smm-service-list li,
+body:not(.dark-mode) .seo-list li,
+body:not(.dark-mode) .seo-services__list li,
+body:not(.dark-mode) .sem-list li,
+body:not(.dark-mode) .sem-services__list li,
+body:not(.dark-mode) .smm-subtitle,
+body:not(.dark-mode) .seo-subtitle,
+body:not(.dark-mode) .sem-subtitle,
+body:not(.dark-mode) .smm-service-title,
+body:not(.dark-mode) .seo-services__title,
+body:not(.dark-mode) .sem-services__title {
+    color: black !important;
+}
+
+
 
 .smm-list li::before {
     content: '•';
     position: absolute;
     left: 0;
     top: 0;
-    color: white;
     font-size: 20px;
 }
 
@@ -970,7 +992,6 @@
     animation: float 3s ease-in-out infinite;
 }
 
-/* Animation for image movement */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1050,7 +1071,6 @@
     font-size: 20px;
 }
 
-/* Animation for floating effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1135,7 +1155,6 @@
     animation: float 3s ease-in-out infinite;
 }
 
-/* Animation for floating effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1214,7 +1233,6 @@
     font-size: 20px;
 }
 
-/* Floating effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1300,7 +1318,6 @@
     animation: float 3s ease-in-out infinite;
 }
 
-/* Floating effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1388,7 +1405,6 @@
     font-size: 20px;
 }
 
-/* Floating effect */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -1417,5 +1433,10 @@
     .sem-services__image {
         max-width: 80%;
         margin: 0 auto;
+    }
+}
+
+body:not(.dark-mode) .benefits__list {
+    li {
     }
 }

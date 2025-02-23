@@ -14,5 +14,4 @@ function startCountdown() {
     setInterval(updateTimer, 1000);
 }
 
-// Sayğacı başlat
 document.addEventListener("DOMContentLoaded", startCountdown);
